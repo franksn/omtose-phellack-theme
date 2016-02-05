@@ -113,8 +113,8 @@
    ;; Built-in syntax
    `(font-lock-builtin-face             ((t (:foreground ,omtose-phellack-bright_cyan))))
    `(font-lock-constant-face            ((t (:foreground ,omtose-phellack-bright_red))))
-   `(font-lock-comment-face             ((t (:foreground ,omtose-phellack-dark4))))
-   `(font-lock-function-name-face       ((t (:foreground ,omtose-phellack-neutral_red :weight bold))))
+   `(font-lock-comment-face             ((t (:foreground ,omtose-phellack-dark4 :background ,omtose-phellack-dark0))))
+   `(font-lock-function-name-face       ((t (:foreground ,omtose-phellack-neutral_red))))
    `(font-lock-keyword-face             ((t (:foreground ,omtose-phellack-neutral_blue :weight bold))))
    `(font-lock-negation-char-face       ((t (:foreground ,omtose-phellack-dark4))))
    `(font-lock-preprocessor-face        ((t (:foreground ,omtose-phellack-neutral_red))))
@@ -126,7 +126,7 @@
 
    ;; Font lock extras
    `(clojure-keyword-face               ((t (:foreground ,omtose-phellack-neutral_cyan))))
-   `(clojure-interop-method-face        ((t (:foreground ,omtose-phellack-dark_cyan))))
+   `(clojure-interop-method-face        ((t (:foreground ,omtose-phellack-neutral_yellow))))
    `(elixir-atom-face                   ((t (:foreground ,omtose-phellack-light4 :weight bold))))
    `(css-selector                       ((t (:inherit font-lock-keyword-face))))
    `(css-property                       ((t (:inherit font-lock-string-face))))
@@ -349,7 +349,7 @@
    `(magit-log-reflog-label-remote      ((t (:foreground ,omtose-phellack-neutral_blue))))
    `(magit-log-reflog-label-reset       ((t (:foreground ,omtose-phellack-neutral_yellow))))
    `(magit-log-sha1                     ((t (:foreground ,omtose-phellack-bright_blue))))
-   `(magit-process-ng                   ((t (:foreground ,omtose-phellack-bright_red :weight bold))))
+   `(magit-process-ng                   ((t (:foreground ,omtose-phellack-bright_blue :weight bold))))
    `(magit-process-ok                   ((t (:foreground ,omtose-phellack-bright_green :weight bold))))
    `(magit-section-heading              ((t (:foreground ,omtose-phellack-light2 :background ,omtose-phellack-dark_blue))))
    `(magit-signature-bad                ((t (:foreground ,omtose-phellack-bright_red :weight bold))))
@@ -406,7 +406,7 @@
    `(org-table                          ((t (:foreground ,omtose-phellack-bright_green))))
    `(org-tag                            ((t (:bold t :weight bold))))
    `(org-time-grid                      ((t (:foreground ,omtose-phellack-bright_blue))))
-   `(org-todo                           ((t (:foreground ,omtose-phellack-bright_red :weight bold :bold t))))
+   `(org-todo                           ((t (:foreground ,omtose-phellack-bright_purple :weight bold :bold t))))
    `(org-upcoming-deadline              ((t (:inherit font-lock-keyword-face))))
    `(org-warning                        ((t (:foreground ,omtose-phellack-bright_red :weight bold :underline nil :bold t))))
    `(org-column                         ((t (:background ,omtose-phellack-dark0))))
