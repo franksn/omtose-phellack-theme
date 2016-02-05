@@ -66,14 +66,14 @@
       (omtose-phellack-bright_cyan     (if (display-graphic-p) "#95A5C4" "color-189"))
 
       ;; Needs some work
-      (omtose-phellack-neutral_red     (if (display-graphic-p) "#8E6261" "color-133"))
+      (omtose-phellack-neutral_red     (if (display-graphic-p) "#8E62a1" "color-133"))
       (omtose-phellack-neutral_green   (if (display-graphic-p) "#72A8A2" "color-115"))
       (omtose-phellack-neutral_yellow  (if (display-graphic-p) "#98B5A5" "color-151"))
       (omtose-phellack-neutral_blue    (if (display-graphic-p) "#4C7191" "color-67"))
       (omtose-phellack-neutral_purple  (if (display-graphic-p) "#676EA1" "color-61"))
       (omtose-phellack-neutral_cyan    (if (display-graphic-p) "#7D8CA8" "color-146"))
 
-      (omtose-phellack-dark_red       (if (display-graphic-p)  "#5C4666" "color-1"))
+      (omtose-phellack-dark_red       (if (display-graphic-p)  "#674470" "color-1"))
       (omtose-phellack-dark_green     (if (display-graphic-p)  "#4D6966" "color-2"))
       (omtose-phellack-dark_yellow    (if (display-graphic-p)  "#708077" "color-3"))
       (omtose-phellack-dark_blue      (if (display-graphic-p)  "#3A4D5E" "color-4"))
@@ -114,6 +114,8 @@
    `(font-lock-builtin-face             ((t (:foreground ,omtose-phellack-bright_cyan))))
    `(font-lock-constant-face            ((t (:foreground ,omtose-phellack-bright_red))))
    `(font-lock-comment-face             ((t (:foreground ,omtose-phellack-dark4 :background ,omtose-phellack-dark0))))
+   `(font-lock-doc-face                 ((t (:inherit font-lock-comment-face))))
+   `(font-lock-doc-string-face          ((t (:inherit font-lock-comment-face))))
    `(font-lock-function-name-face       ((t (:foreground ,omtose-phellack-neutral_red))))
    `(font-lock-keyword-face             ((t (:foreground ,omtose-phellack-neutral_blue :weight bold))))
    `(font-lock-negation-char-face       ((t (:foreground ,omtose-phellack-dark4))))
@@ -201,6 +203,16 @@
    `(elscreen-tab-control-face                 ((t (:foreground ,omtose-phellack-neutral_red :background ,omtose-phellack-dark2 :box nil :underline nil))))
    `(elscreen-tab-current-screen-face          ((t (:foreground ,omtose-phellack-dark0 :background ,omtose-phellack-dark4 :box nil)))) ;; Current tab
    `(elscreen-tab-other-screen-face            ((t (:foreground ,omtose-phellack-light4 :background ,omtose-phellack-dark2 :box nil :underline nil))))
+
+   ;; Flycheck
+   `(flycheck-error                            ((t (:foreground ,omtose-phellack-light0_hard :background ,omtose-phellack-bright_red :weight bold :underline t))))
+   `(flycheck-error-list-checker-name          ((t (:foreground ,omtose-phellack-neutral_blue))))
+   `(flycheck-fringe-error                     ((t (:foreground ,omtose-phellack-bright_red :weight bold))))
+   `(flycheck-fringe-info                      ((t (:foreground ,omtose-phellack-dark_blue :weight bold))))
+   `(flycheck-fringe-warning                   ((t (:foreground ,omtose-phellack-bright_yellow :weight bold))))
+   `(flycheck-info                             ((t (:foreground ,omtose-phellack-light0 :background ,omtose-phellack-bright_purple :weight bold :underline t))))
+   `(flycheck-warning                          ((t (:foreground ,omtose-phellack-light0 :background ,omtose-phellack-bright_yellow :weight bold :underline t))))
+
 
    ;; Haskell
    `(haskell-interactive-face-compile-warning  ((t (:underline (:color ,omtose-phellack-bright_yellow :style wave)))))
