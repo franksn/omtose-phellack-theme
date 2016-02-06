@@ -1,11 +1,11 @@
-;;; omtose-phellack-theme.el --- omtose-phellack for Emacs.
+;;; omtose-phellack-theme.el --- A dark, soothing theme with a cold bluish touch
 
 ;; Created 2016 by Alexander F. Adhyatma
 
 ;; Author: Alexander F. Adhyatma
 ;; URL: http:/gitlab.com/franksn/omtose-phellack-theme/
 ;; Version: 0.0.1-alpha
-;; This theme is like the illegitimate son of Gruvbox and Cyberpunk
+;; Package-Requires: ((emacs "24"))
 ;;
 ;; This file is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -21,6 +21,8 @@
 ;; along with GNU Emacs.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
+;;
+;; This theme is like the illegitimate son of Gruvbox and Cyberpunk
 ;;
 ;;; Installation:
 ;;
@@ -565,9 +567,5 @@
                    (file-name-directory load-file-name))))
 
 (provide-theme 'omtose-phellack)
-
-;; Local Variables:
-;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode +1))
-;; End:
 
 ;;; omtose-phellack-theme.el ends here
