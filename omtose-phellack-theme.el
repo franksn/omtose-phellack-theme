@@ -39,7 +39,7 @@
 (unless (>= emacs-major-version 24)
   (error "Requires Emacs 24 or later"))
 
-(deftheme omtose-phellack "Color theme for Emacs, when soothe and gruvbox collide")
+(deftheme omtose-phellack "A dark, soothing theme with a cold bluish touch")
 
 (let (
       (omtose-phellack-dark0_hard      (if (display-graphic-p) "#232326" "color-234"))
