@@ -39,6 +39,11 @@
   "omtose-phellack-theme options."
   :group 'faces)
 
+(defcustom omtose-phellack-theme-variable-pitch t
+  "Use variable pitch for latex, markdown, or org-mode"
+  :type 'boolean
+  :group 'omtose-phellack-theme)
+
 (defcustom omtose-phellack-theme-org-height t
   "Use varying text heights for org headings."
   :type 'boolean
@@ -80,10 +85,10 @@
         (light0_hard     (if (display-graphic-p) "#CFCFCF" "color-230"))
         (light0          (if (display-graphic-p) "#DBDBDB" "color-231"))
         (light0_soft     (if (display-graphic-p) "#D5D8DE" "color-253"))
-        (light1          (if (display-graphic-p) "#DADDE3" "color-189"))
-        (light2          (if (display-graphic-p) "#D0D3D9" "color-250"))
+        (light1          (if (display-graphic-p) "#D4D4D4" "color-252"))
+        (light2          (if (display-graphic-p) "#CCCCCC" "color-250"))
         (light3          (if (display-graphic-p) "#BCC1C4" "color-248"))
-        (light4          (if (display-graphic-p) "#A9ADB0" "color-246"))
+        (light4          (if (display-graphic-p) "#ADADAD" "color-246"))
 
         (bright_red      (if (display-graphic-p) "#A980C2" "color-219"))
         (bright_green    (if (display-graphic-p) "#8ABFB7" "color-142"))
@@ -115,6 +120,8 @@
         (white           (if (display-graphic-p) "#FFFFFF" "white"))
         (black           (if (display-graphic-p) "#4D4D4D" "color-239"))
         (match           (if (display-graphic-p) "#C1DBDB" "color-195"))
+
+        (omp-variable-pitch (if omtose-phellack-theme-variable-pitch 'variable-pitch 'default))
         )
 
     (custom-theme-set-faces
@@ -163,6 +170,32 @@
      ;; ag (The Silver Searcher)
      `(ag-hit-face                               ((,class (:foreground ,neutral_blue))))
      `(ag-match-face                             ((,class (:foreground ,neutral_red))))
+
+     ;; auctex / latex-mode
+     `(font-latex-bold-face                      ((,class (:foreground ,light0_hard))))
+     `(font-latex-italic-face                    ((,class (:foreground ,light0_soft :italic t))))
+     `(font-latex-match-reference-keywords       ((,class (:foreground ,neutral_purple))))
+     `(font-latex-match-variable-keywords        ((,class (:foreground ,bright_blue))))
+     `(font-latex-math-face                      ((,class (:foreground ,bright_cyan :weight bold))))
+     `(font-latex-sectioning-0-face              ((,class (:inherit font-latex-sectioning-1-face
+                                                                    :height ,omtose-phellack-theme-tex-height-120))))
+     `(font-latex-sectioning-1-face              ((,class (:inherit font-latex-sectioning-2-face
+                                                                    :height ,omtose-phellack-theme-tex-height-110))))
+     `(font-latex-sectioning-2-face              ((,class (:inherit font-latex-sectioning-3-face
+                                                                    :height ,omtose-phellack-theme-tex-height-110))))
+     `(font-latex-sectioning-3-face              ((,class (:inherit font-latex-sectioning-4-face
+                                                                    :height ,omtose-phellack-theme-tex-height-110))))
+     `(font-latex-sectioning-4-face              ((,class (:inherit font-latex-sectioning-5-face
+                                                                    :height ,omtose-phellack-theme-tex-height-110))))
+     `(font-latex-sectioning-5-face              ((,class (:inherit ,omp-variable-pitch :foreground ,bright_yellow
+                                                                    :weight bold))))
+     `(font-latex-sedate-face                    ((,class (:foreground ,dark4))))
+     `(font-latex-slide-title-face               ((,class (:inherit (,omp-variable-pitch font-lock-type-face)
+                                                                    :weight bold :height ,omtose-phellack-theme-tex-height-130))))
+     `(font-latex-string-face                    ((,class (:foreground ,bright_green))))
+     `(font-latex-subscript-face                 ((,class (:height ,omtose-phellack-theme-tex-height-90))))
+     `(font-latex-superscript-face               ((,class (:height ,omtose-phellack-theme-tex-height-90))))
+     `(font-latex-warning-face                   ((,class (:inherit bold :foreground ,bright_yellow :underline t))))
 
      ;; Auto completion mode
      `(ac-dabbrev-menu-face                      ((,class (:inherit popup-face))))
@@ -597,7 +630,7 @@
 
     ;; TODO:
     ;; Add these modes:
-    ;; Auctex/LaTEX, Cscope, ERC, Gnus, etc.
+    ;; cscope, ERC, evil (perhaps), Gnus, etc.
 
     (custom-theme-set-variables
      'omtose-phellack
