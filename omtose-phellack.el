@@ -187,11 +187,11 @@
                                                   (,t-class (:background ,t-light0_soft :inverse-video t))))
      `(link                                      ((,class (:foreground ,bright_blue :underline t))
                                                   (,t-class (:foreground ,t-bright_blue :underline t))))
-     `(link-visited                              ((,class (:foreground ,bright_red :underline nil))
+     `(link-visited                              ((,class (:foreground ,bright_red :underline t))
                                                   (,t-class (:foreground ,t-bright_red :underline t))))
 
-     `(mode-line                                 ((,class (:foreground ,light0_soft :background ,dark2 :box nil))
-                                                  (,t-class (:foreground ,t-light0_soft :background ,t-dark2 :box nil))))
+     `(mode-line                                 ((,class (:foreground ,light0_soft :background ,dark0_soft :box (:color ,dark_blue :line-width 1)))
+                                                  (,t-class (:foreground ,t-light0_soft :background ,t-dark0_soft :box (:color ,dark_blue :line-width 1)))))
      `(mode-line-inactive                        ((,class (:foreground ,light4 :background ,dark2 :box nil))
                                                   (,t-class (:foreground ,t-light4 :background ,t-dark2 :box nil))))
      `(fringe                                    ((,class (:background ,dark0))
@@ -212,6 +212,10 @@
                                                   (,t-class (:foreground ,t-neutral_blue :background ,t-dark0 :bold nil))))
      `(success                                   ((,class (:foreground ,match))
                                                   (,t-class (:foreground ,t-match))))
+     `(eval-sexp-fu-flash                        ((,class (:foreground ,light0_soft :background ,dark_blue))
+                                                  (,t-class (:foreground ,t-light0_soft :background ,t-dark_blue))))
+     `(eval-sexp-fu-flash-error                  ((,class (:foreground ,light0_hard :background ,dark_red))
+                                                  (,t-class (:foreground ,t-light0_hard :background ,t-dark_red))))
 
      ;; Built-in syntax
      `(font-lock-builtin-face                    ((,class (:foreground ,bright_cyan))
@@ -566,6 +570,8 @@
                                                   (,t-class (:foreground ,t-neutral_red))))
      `(helm-header                               ((,class (:foreground ,neutral_yellow))
                                                   (,t-class (:foreground ,t-neutral_yellow))))
+     `(helm-header-line-left-margin              ((,class (:foreground ,dark_blue))
+                                                  (,t-class (:foreground ,t-dark_blue))))
      `(helm-helper                               ((,class (:foreground ,neutral_yellow))
                                                   (,t-class (:foreground ,t-neutral_yellow))))
      `(helm-history-deleted                      ((,class (:foreground ,black :background ,bright_red))
@@ -626,6 +632,12 @@
                                                   (,t-class (:foreground ,t-dark4))))
      `(ido-vertical-match-face                   ((,class (:foreground ,match))
                                                   (,t-class (:foreground ,t-match))))
+
+     ;; info
+     `(info-menu                                 ((,class (:foreground ,bright_green))
+                                                  (,t-class (:foreground ,t-bright_green))))
+     `(info-quoted-name                          ((,class (:foreground ,neutral_cyan))
+                                                  (,t-class (:foreground ,t-neutral_cyan))))
 
      ;; Js2
      `(js2-warning                               ((,class (:underline (:color ,bright_yellow :style wave)))
@@ -806,8 +818,8 @@
                                                   (,t-class (:foreground ,t-light2))))
 
      ;; Matches and Isearch
-     `(lazy-highlight                            ((,class (:foreground ,light0 :background ,dark2))
-                                                  (,t-class (:foreground ,t-light0 :background ,t-dark2))))
+     `(lazy-highlight                            ((,class (:foreground ,light0 :background ,dark1))
+                                                  (,t-class (:foreground ,t-light0 :background ,t-dark1))))
      `(highlight                                 ((,class (:foreground ,light0_hard :background ,neutral_blue))
                                                   (,t-class (:foreground ,t-light0_hard :background ,t-neutral_blue))))
      `(match                                     ((,class (:foreground ,light0 :background ,dark2))
@@ -920,8 +932,8 @@
                                                   (,t-class (:foreground ,t-light0_hard :background ,t-dark_cyan))))
 
      ;; Powerline
-     `(powerline-active1                         ((,class (:background ,dark2 :inherit mode-line))
-                                                  (,t-class (:background ,t-dark2 :inherit mode-line))))
+     `(powerline-active1                         ((,class (:background ,dark0_soft :inherit mode-line))
+                                                  (,t-class (:background ,t-dark0_soft :inherit mode-line))))
      `(powerline-active2                         ((,class (:background ,dark1 :inherit mode-line))
                                                   (,t-class (:background ,t-dark1 :inherit mode-line))))
      `(powerline-inactive1                       ((,class (:background ,medium :inherit mode-line-inactive))
