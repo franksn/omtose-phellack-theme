@@ -299,13 +299,13 @@
      `(font-latex-sectioning-5-face              ((,class (:inherit ,omp-variable-pitch :foreground ,bright_yellow
                                                                     :weight bold))
                                                   (,t-class (:inherit ,omp-variable-pitch :foreground ,t-bright_yellow
-                                                                    :weight bold))))
+                                                                      :weight bold))))
      `(font-latex-sedate-face                    ((,class (:foreground ,dark4))
                                                   (,t-class (:foreground ,t-dark4))))
      `(font-latex-slide-title-face               ((,class (:inherit (,omp-variable-pitch font-lock-type-face)
                                                                     :weight bold :height ,omtose-phellack-theme-tex-height-130))
                                                   (,t-class (:inherit (,omp-variable-pitch font-lock-type-face)
-                                                                    :weight bold :height ,omtose-phellack-theme-tex-height-130))))
+                                                                      :weight bold :height ,omtose-phellack-theme-tex-height-130))))
      `(font-latex-string-face                    ((,class (:foreground ,bright_green))
                                                   (,t-class (:foreground ,t-bright_green))))
      `(font-latex-subscript-face                 ((,class (:height ,omtose-phellack-theme-tex-height-90))
@@ -622,16 +622,16 @@
                                                   (,t-class (:foreground ,t-neutral_purple))))
 
      ;; Ido
-     `(ido-first-match                           ((,class (:foreground ,bright_green :background ,dark0_hard))
-                                                  (,t-class (:foreground ,t-bright_green :background ,t-dark0_hard))))
+     `(ido-first-match                           ((,class (:foreground ,bright_blue :background ,dark0_hard))
+                                                  (,t-class (:foreground ,t-bright_blue :background ,t-dark0_hard))))
      `(ido-incomplete-regexp                     ((,class (:foreground ,neutral_red :weight bold))
                                                   (,t-class (:foreground ,t-bright_red :weight bold))))
-     `(ido-only-match                            ((,class (:foreground ,match))
-                                                  (,t-class (:foreground ,t-match))))
+     `(ido-only-match                            ((,class (:foreground ,neutral_purple))
+                                                  (,t-class (:foreground ,t-neutral_purple))))
      `(ido-subdir                                ((,class (:foreground ,dark4))
                                                   (,t-class (:foreground ,t-dark4))))
-     `(ido-vertical-match-face                   ((,class (:foreground ,match))
-                                                  (,t-class (:foreground ,t-match))))
+     `(ido-vertical-match-face                   ((,class (:foreground ,bright_purple))
+                                                  (,t-class (:foreground ,t-bright_purple))))
 
      ;; info
      `(info-menu                                 ((,class (:foreground ,bright_green))
@@ -1104,39 +1104,52 @@
      `(web-mode-warning-face ((,class (:inherit ,font-lock-warning-face))
                               (,t-class (:inherit ,font-lock-warning-face))))
 
-    ;; Which-key
-    `(which-key-command-description-face         ((,class (:foreground ,light2))
-                                                  (,t-class (:foreground ,t-light2))))
-    `(which-key-group-description-face           ((,class (:foreground ,medium))
-                                                  (,t-class (:foreground ,t-medium))))
-    `(which-key-key-face                         ((,class (:foreground ,neutral_purple :weight bold))
-                                                  (,t-class (:foreground ,t-neutral_purple :weight bold))))
-    `(which-key-separator-face                   ((,class (:background nil :foreground ,dark_green))
-                                                  (,t-class (:background nil :foreground ,t-dark_green))))
-    `(which-key-special-key-face                 ((,class (:background ,neutral_red :foreground ,dark0))
-                                                  (,t-class (:background ,t-neutral_red :foreground ,t-dark0))))
+     ;; Which-key
+     `(which-key-command-description-face         ((,class (:foreground ,light2))
+                                                   (,t-class (:foreground ,t-light2))))
+     `(which-key-group-description-face           ((,class (:foreground ,medium))
+                                                   (,t-class (:foreground ,t-medium))))
+     `(which-key-key-face                         ((,class (:foreground ,neutral_purple :weight bold))
+                                                   (,t-class (:foreground ,t-neutral_purple :weight bold))))
+     `(which-key-separator-face                   ((,class (:background nil :foreground ,dark_green))
+                                                   (,t-class (:background nil :foreground ,t-dark_green))))
+     `(which-key-special-key-face                 ((,class (:background ,neutral_red :foreground ,dark0))
+                                                   (,t-class (:background ,t-neutral_red :foreground ,t-dark0))))
 
-    ;; whitespace-mode
-    `(whitespace-space                           ((,class (:foreground ,dark4 :background ,dark0))
-                                                  (,t-class (:foreground ,t-dark4 :background ,t-dark0))))
-    `(whitespace-hspace                          ((,class (:foreground ,dark4 :background ,dark0))
-                                                  (,t-class (:foreground ,t-dark4 :background ,t-dark0))))
-    `(whitespace-tab                             ((,class (:foreground ,dark4 :background ,dark0))
-                                                  (,t-class (:foreground ,t-dark4 :background ,t-dark0))))
-    `(whitespace-newline                         ((,class (:foreground ,dark4 :background ,dark0))
-                                                  (,t-class (:foreground ,t-dark4 :background ,t-dark0))))
-    `(whitespace-trailing                        ((,class (:foreground ,bright_yellow :background ,dark1))
-                                                  (,t-class (:foreground ,t-bright_yellow))))
-    `(whitespace-line                            ((,class (:foreground ,bright_red :background ,dark1))
-                                                  (,t-class (:foreground ,t-bright_red :background ,t-dark1))))
-    `(whitespace-space-before-tab                ((,class (:foreground ,dark4 :background ,dark0))
-                                                  (,t-class (:foreground ,t-dark4 :background ,t-dark0))))
-    `(whitespace-indentation                     ((,class (:foreground ,dark4 :background ,dark0))
-                                                  (,t-class (:foreground ,t-dark4 :background ,t-dark0))))
-    `(whitespace-empty                           ((,class (:foreground nil :background nil))
-                                                  (,t-class (:foreground nil :background nil))))
-    `(whitespace-space-after-tab                 ((,class (:foreground ,dark4 :background ,dark0))
-                                                  (,t-class (:foreground ,t-dark4 :background ,t-dark0)))))
+     ;; whitespace-mode
+     `(whitespace-space                           ((,class (:foreground ,dark4 :background ,dark0))
+                                                   (,t-class (:foreground ,t-dark4 :background ,t-dark0))))
+     `(whitespace-hspace                          ((,class (:foreground ,dark4 :background ,dark0))
+                                                   (,t-class (:foreground ,t-dark4 :background ,t-dark0))))
+     `(whitespace-tab                             ((,class (:foreground ,dark4 :background ,dark0))
+                                                   (,t-class (:foreground ,t-dark4 :background ,t-dark0))))
+     `(whitespace-newline                         ((,class (:foreground ,dark4 :background ,dark0))
+                                                   (,t-class (:foreground ,t-dark4 :background ,t-dark0))))
+     `(whitespace-trailing                        ((,class (:foreground ,bright_yellow :background ,dark1))
+                                                   (,t-class (:foreground ,t-bright_yellow))))
+     `(whitespace-line                            ((,class (:foreground ,bright_red :background ,dark1))
+                                                   (,t-class (:foreground ,t-bright_red :background ,t-dark1))))
+     `(whitespace-space-before-tab                ((,class (:foreground ,dark4 :background ,dark0))
+                                                   (,t-class (:foreground ,t-dark4 :background ,t-dark0))))
+     `(whitespace-indentation                     ((,class (:foreground ,dark4 :background ,dark0))
+                                                   (,t-class (:foreground ,t-dark4 :background ,t-dark0))))
+     `(whitespace-empty                           ((,class (:foreground nil :background nil))
+                                                   (,t-class (:foreground nil :background nil))))
+     `(whitespace-space-after-tab                 ((,class (:foreground ,dark4 :background ,dark0))
+                                                   (,t-class (:foreground ,t-dark4 :background ,t-dark0))))
+
+     ;; Weechat
+     `(weechat-color-list
+       `(unspecified ,dark1 ,dark3
+                     ,neutral_red ,bright_red
+                     ,neutral_green ,bright_green
+                     ,neutral_yellow ,bright_yellow
+                     ,neutral_blue ,bright_blue
+                     ,neutral_purple ,bright_purple
+                     ,neutral_cyan ,bright_cyan
+                     ,light0_soft ,light3
+                     )))
+
     ;; TODO:
     ;; Add these modes:
     ;; cscope, ERC, evil (perhaps), Gnus, etc.
