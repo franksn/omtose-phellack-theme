@@ -90,20 +90,20 @@
         (light3          "#BCC1C4")
         (light4          "#ADADAD")
 
-        (bright_red      "#B88CD4")
-        (bright_green    "#9CD6CD")
-        (bright_yellow   "#BFDECD")
-        (bright_blue     "#7498B8")
-        (bright_purple   "#9198C9")
-        (bright_cyan     "#A3B4D4")
+        (bright_red      "#CC68C8")
+        (bright_green    "#7CCFC1")
+        (bright_yellow   "#B4DEC7")
+        (bright_blue     "#6CA7D9")
+        (bright_purple   "#868DD9")
+        (bright_cyan     "#B2B2D4")
 
         ;; Needs some work
-        (neutral_red     "#A06BB0")
-        (neutral_green   "#80BAB4")
-        (neutral_yellow  "#ABCCBA")
-        (neutral_blue    "#5D809E")
-        (neutral_purple  "#7276A6")
-        (neutral_cyan    "#8797B5")
+        (neutral_red     "#B262AF")
+        (neutral_green   "#74B2A8")
+        (neutral_yellow  "#AFCCBC")
+        (neutral_blue    "#668EB0")
+        (neutral_purple  "#7F84BA")
+        (neutral_cyan    "#7F8FB2")
 
         (dark_red        "#674470")
         (dark_green      "#6B9692")
@@ -119,7 +119,7 @@
 
         (white           "#FFFFFF")
         (black           "#4D4D4D")
-        (match           "#C1DBDB")
+        (match           "#A1F0E3")
 
         ;; Color definitions for terminals that doesn't support 256 colors.
         ;; Needs some more work, expect some heavy color-regression in the mean time.
@@ -144,19 +144,19 @@
         (t-light3          "#BCC1C4")
         (t-light4          "#ADADAD")
 
-        (t-bright_red      "#AF87AF")
-        (t-bright_green    "#AFD7D7")
-        (t-bright_yellow   "#AFD7AF")
-        (t-bright_blue     "#87AFAF")
+        (t-bright_red      "#D75FD7")
+        (t-bright_green    "#87D7AF")
+        (t-bright_yellow   "#AFD7D7")
+        (t-bright_blue     "#5FAFD7")
         (t-bright_purple   "#8787D7")
         (t-bright_cyan     "#AFAFD7")
 
-        (t-neutral_red     "#875FAF")
+        (t-neutral_red     "#AF5FAF")
         (t-neutral_green   "#87AFAF")
-        (t-neutral_yellow  "#87AF87")
+        (t-neutral_yellow  "#AFD7AF")
         (t-neutral_blue    "#5F87AF")
         (t-neutral_purple  "#8787AF")
-        (t-neutral_cyan    "#626262")
+        (t-neutral_cyan    "#888888")
 
         (t-dark_red        "#8700D7")
         (t-dark_green      "#5F5F5F")
@@ -236,8 +236,8 @@
                                                   (,t-class (:foreground ,t-dark4))))
      `(font-lock-preprocessor-face               ((,class (:foreground ,neutral_red))
                                                   (,t-class (:foreground ,t-neutral_red))))
-     `(font-lock-reference-face                  ((,class (:foreground ,dark_purple))
-                                                  (,t-class (:foreground ,t-dark_purple))))
+     `(font-lock-reference-face                  ((,class (:foreground ,light0_soft))
+                                                  (,t-class (:foreground ,light0_soft))))
      `(font-lock-string-face                     ((,class (:foreground ,neutral_green))
                                                   (,t-class (:foreground ,t-neutral_green))))
      `(font-lock-type-face                       ((,class (:foreground ,neutral_purple))
@@ -248,8 +248,8 @@
                                                   (,t-class (:foreground ,t-dark_yellow :bold t))))
 
      ;; Font lock extras
-     `(clojure-keyword-face                      ((,class (:foreground ,neutral_cyan))
-                                                  (,t-class (:foreground ,t-neutral_cyan))))
+     `(clojure-keyword-face                      ((,class (:foreground ,bright_green))
+                                                  (,t-class (:foreground ,t-bright_green))))
      `(clojure-interop-method-face               ((,class (:foreground ,neutral_yellow))
                                                   (,t-class (:foreground ,t-neutral_yellow))))
      `(elixir-atom-face                          ((,class (:foreground ,light4 :weight bold))
@@ -274,8 +274,8 @@
                                                   (,t-class (:foreground ,t-neutral_purple))))
      `(font-latex-match-variable-keywords        ((,class (:foreground ,bright_blue))
                                                   (,t-class (:foreground ,t-bright_blue))))
-     `(font-latex-math-face                      ((,class (:foreground ,bright_cyan :weight bold))
-                                                  (,t-class (:foreground ,bright_cyan :weight bold))))
+     `(font-latex-math-face                      ((,class (:foreground ,bright_green :weight bold))
+                                                  (,t-class (:foreground ,t-bright_green :weight bold))))
      `(font-latex-sectioning-0-face              ((,class (:inherit font-latex-sectioning-1-face
                                                                     :height ,omtose-phellack-theme-tex-height-120))
                                                   (,t-class (:inherit font-latex-sectioning-1-face
@@ -622,16 +622,16 @@
                                                   (,t-class (:foreground ,t-neutral_purple))))
 
      ;; Ido
-     `(ido-first-match                           ((,class (:foreground ,bright_blue :background ,dark0_hard))
-                                                  (,t-class (:foreground ,t-bright_blue :background ,t-dark0_hard))))
+     `(ido-first-match                           ((,class (:foreground ,delimiter-one :background ,dark0_hard))
+                                                  (,t-class (:foreground ,t-delimiter-one :background ,t-dark0_hard))))
      `(ido-incomplete-regexp                     ((,class (:foreground ,neutral_red :weight bold))
                                                   (,t-class (:foreground ,t-bright_red :weight bold))))
-     `(ido-only-match                            ((,class (:foreground ,neutral_purple))
-                                                  (,t-class (:foreground ,t-neutral_purple))))
+     `(ido-only-match                            ((,class (:foreground ,bright_blue))
+                                                  (,t-class (:foreground ,t-bright_blue))))
      `(ido-subdir                                ((,class (:foreground ,dark4))
                                                   (,t-class (:foreground ,t-dark4))))
-     `(ido-vertical-match-face                   ((,class (:foreground ,bright_purple))
-                                                  (,t-class (:foreground ,t-bright_purple))))
+     `(ido-vertical-match-face                   ((,class (:foreground ,delimiter-one))
+                                                  (,t-class (:foreground ,t-delimiter-one))))
 
      ;; info
      `(info-menu                                 ((,class (:foreground ,bright_green))
@@ -706,8 +706,8 @@
                                                   (,t-class (:foreground ,t-dark3 :background nil))))
      `(magit-diff-context-highlight              ((,class (:foreground ,dark4 :background ,dark0_soft))
                                                   (,t-class (:foreground ,t-dark4 :background ,t-dark0_soft))))
-     `(magit-diff-added                          ((,class (:foreground ,bright_green :background ,dark_green))
-                                                  (,t-class (:foreground ,t-bright_green :background ,t-dark_green))))
+     `(magit-diff-added                          ((,class (:foreground ,match :background ,dark_green))
+                                                  (,t-class (:foreground ,t-match :background ,t-dark_green))))
      `(magit-diff-added-highlight                ((,class (:foreground ,bright_green :background ,dark_green))
                                                   (,t-class (:foreground ,t-bright_green :background ,t-dark_green))))
      `(magit-diff-removed                        ((,class (:foreground ,bright_red :background ,dark_red))
