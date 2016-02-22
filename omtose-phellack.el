@@ -639,6 +639,24 @@
      `(info-quoted-name                          ((,class (:foreground ,neutral_cyan))
                                                   (,t-class (:foreground ,t-neutral_cyan))))
 
+     ;; ivy
+     `(ivy-confirm-face                          ((,class (:foreground ,delimiter-one))
+                                                  (,t-class (:foreground ,t-delimiter-one))))
+     `(ivy-current-match                         ((,class (:foreground ,light0_hard :background ,dark_blue))
+                                                  (,t-class (:foreground ,t-light0_hard :background ,t-dark_blue))))
+     `(ivy-match-required-face                   ((,class (:foreground ,neutral_purple))
+                                                  (,t-class (:foreground ,neutral_purple))))
+     `(ivy-minibuffer-match-face-1               ((,class (:foreground ,light3))
+                                                  (,t-class (:foreground ,t-light3))))
+     `(ivy-minibuffer-match-face-2               ((,class (:foreground ,neutral_blue))
+                                                  (,t-class (:foreground ,t-neutral_blue))))
+     `(ivy-minibuffer-match-face-3               ((,class (:foreground ,neutral_blue))
+                                                  (,t-class (:foreground ,t-neutral_blue))))
+     `(ivy-minibuffer-match-face-4               ((,class (:foreground ,neutral_blue))
+                                                  (,t-class (:foreground ,t-neutral_blue))))
+     `(ivy-remote                                ((,class (:foreground ,neutral_yellow))
+                                                  (,t-class (:foreground ,t-neutral_yellow))))
+
      ;; Js2
      `(js2-warning                               ((,class (:underline (:color ,bright_yellow :style wave)))
                                                   (,t-class (:underline (:color ,t-bright_yellow :style wave)))))
