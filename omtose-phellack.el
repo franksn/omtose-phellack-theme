@@ -240,8 +240,8 @@
                                                   (,t-class (:foreground ,light0_soft))))
      `(font-lock-string-face                     ((,class (:foreground ,neutral_green))
                                                   (,t-class (:foreground ,t-neutral_green))))
-     `(font-lock-type-face                       ((,class (:foreground ,neutral_purple))
-                                                  (,t-class (:foreground ,t-neutral_purple))))
+     `(font-lock-type-face                       ((,class (:foreground ,neutral_purple :italic t))
+                                                  (,t-class (:foreground ,t-neutral_purple :italic t))))
      `(font-lock-variable-name-face              ((,class (:foreground ,neutral_yellow))
                                                   (,t-class (:foreground ,t-neutral_yellow))))
      `(font-lock-warning-face                    ((,class (:foreground ,dark_yellow :bold t))
@@ -489,8 +489,8 @@
                                                   (,t-class (:foreground ,t-bright_yellow :weight bold))))
      `(flycheck-info                             ((,class (:foreground ,light0 :background ,bright_purple :weight bold :underline t))
                                                   (,t-class (:foreground ,t-light0 :background ,t-bright_purple :weight bold :underline t))))
-     `(flycheck-warning                          ((,class (:foreground ,light0 :background ,bright_yellow :weight bold :underline t))
-                                                  (,t-class (:foreground ,t-light0 :background ,t-bright_yellow :weight bold :underline t))))
+     `(flycheck-warning                          ((,class (:foreground ,dark0_hard :background ,bright_yellow :weight bold :underline t))
+                                                  (,t-class (:foreground ,t-dark0_hard :background ,t-bright_yellow :weight bold :underline t))))
 
 
      ;; Haskell
@@ -614,12 +614,12 @@
                                                   (,t-class (:background ,t-dark1))))
 
      ;; Highlight-numbers
-     `(highlight-numbers-number                  ((,class (:foreground ,bright_purple :bold nil))
-                                                  (,t-class (:foreground ,t-bright_purple :bold nil))))
+     `(highlight-numbers-number                  ((,class (:background ,dark_purple :foreground ,light0_hard :bold nil))
+                                                  (,t-class (:background ,t-bright_purple :foreground ,t-light0_hard :bold nil))))
 
      ;; Highlight-symbol
-     `(highlight-symbol-face                     ((,class (:foreground ,neutral_purple))
-                                                  (,t-class (:foreground ,t-neutral_purple))))
+     `(highlight-symbol-face                     ((,class (:background ,dark4 :foreground ,bright_green))
+                                                  (,t-class (:background ,t-dark4 :foreground ,t-bright_green))))
 
      ;; Ido
      `(ido-first-match                           ((,class (:foreground ,delimiter-one :background ,dark0_hard))
