@@ -621,6 +621,18 @@
      `(highlight-symbol-face                     ((,class (:background ,dark4 :foreground ,bright_green))
                                                   (,t-class (:background ,t-dark4 :foreground ,t-bright_green))))
 
+     ;; hydra
+     `(hydra-face-red                            ((,class (:foreground ,neutral_red))
+                                                  (,t-class (:foreground ,t-neutral_red))))
+     `(hydra-face-blue                           ((,class (:foreground ,neutral_blue))
+                                                  (,t-class (:foreground ,t-neutral_blue))))
+     `(hydra-face-amaranth                       ((,class (:foreground ,bright_purple))
+                                                  (,t-class (:foreground ,t-bright_purple))))
+     `(hydra-face-pink                           ((,class (:foreground ,delimiter-one))
+                                                  (,t-class (:foreground ,t-delimiter-one))))
+     `(hydra-face-teal                           ((,class (:foreground ,neutral_green))
+                                                  (,t-class (:foreground ,t-neutral_green))))
+
      ;; Ido
      `(ido-first-match                           ((,class (:foreground ,delimiter-one :background ,dark0_hard))
                                                   (,t-class (:foreground ,t-delimiter-one :background ,t-dark0_hard))))
