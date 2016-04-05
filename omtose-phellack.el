@@ -256,8 +256,8 @@
                                                   (,t-class (:foreground ,t-neutral_yellow))))
      `(elixir-atom-face                          ((,class (:foreground ,light4 :weight bold))
                                                   (,t-class (:foreground ,t-light4 :weight bold))))
-     `(css-selector                              ((,class (:inherit font-lock-keyword-face))
-                                                  (,t-class (:inherit font-lock-keyword-face))))
+     `(css-selector                              ((,class (:inherit font-lock-function-name-face))
+                                                  (,t-class (:inherit font-lock-function-name-face))))
      `(css-property                              ((,class (:inherit font-lock-string-face))
                                                   (,t-class (:inherit font-lock-string-face))))
 
@@ -630,8 +630,8 @@
                                                   (,t-class (:background ,t-dark1))))
 
      ;; Highlight-numbers
-     `(highlight-numbers-number                  ((,class (:background ,dark_purple :foreground ,light0_hard :bold nil))
-                                                  (,t-class (:background ,t-bright_purple :foreground ,t-light0_hard :bold nil))))
+     `(highlight-numbers-number                  ((,class (:background ,dark0_hard :foreground ,light0_hard :bold nil))
+                                                  (,t-class (:background ,t-dark0_hard :foreground ,t-light0_hard :bold nil))))
 
      ;; Highlight-symbol
      `(highlight-symbol-face                     ((,class (:background ,dark4 :foreground ,bright_green))
@@ -936,8 +936,8 @@
                                                         (,t-class (:foreground ,t-neutral_purple))))
      `(mingus-album-face                               ((,class (:foreground ,neutral_yellow))
                                                         (,t-class (:foreground ,neutral_yellow))))
-     `(mingus-album-stale-face                         ((,class (:foreground ,neutral_blue))
-                                                        (,t-class (:foreground ,neutral_blue))))
+     `(mingus-album-stale-face                         ((,class (:foreground ,neutral_red))
+                                                        (,t-class (:foreground ,neutral_red))))
 
      ;; Neotree
      `(neo-dir-link-face                         ((,class (:foreground ,bright_purple :weight bold))
@@ -1008,8 +1008,8 @@
                                                   (,t-class (:foreground ,t-bright_blue))))
      `(org-todo                                  ((,class (:foreground ,bright_purple :weight bold :bold t))
                                                   (,t-class (:foreground ,t-bright_purple :weight bold :bold t))))
-     `(org-upcoming-deadline                     ((,class (:inherit font-lock-keyword-face))
-                                                  (,t-class (:inherit font-lock-keyword-face))))
+     `(org-upcoming-deadline                     ((,class (:inherit font-lock-function-name-face))
+                                                  (,t-class (:inherit font-lock-function-name-face))))
      `(org-warning                               ((,class (:foreground ,bright_red :weight bold :underline nil :bold t))
                                                   (,t-class (:foreground ,t-bright_red :weight bold :underline nil :bold t))))
      `(org-column                                ((,class (:background ,dark0))
