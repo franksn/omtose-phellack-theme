@@ -120,6 +120,7 @@
         (white           "#FFFFFF")
         (black           "#4D4D4D")
         (match           "#A1F0E3")
+        (mline           "#45485c")
 
         ;; Color definitions for terminals that doesn't support 256 colors.
         ;; Needs some more work, expect some heavy color-regression in the mean time.
@@ -190,12 +191,12 @@
      `(link-visited                              ((,class (:foreground ,bright_red :underline t))
                                                   (,t-class (:foreground ,t-bright_red :underline t))))
 
-     `(mode-line                                 ((,class (:foreground ,light0_soft :background ,dark0_hard :box (:color ,dark_blue :line-width 1)))
-                                                  (,t-class (:foreground ,t-light0_soft :background ,t-dark0_hard :box (:color ,dark_blue :line-width 1)))))
-     `(mode-line-inactive                        ((,class (:foreground ,light4 :background ,dark2 :box nil))
-                                                  (,t-class (:foreground ,t-light4 :background ,t-dark2 :box nil))))
-     `(mode-line-buffer-id                       ((,class (:bold t :foreground ,neutral_purple))
-                                                  (,t-class (:bold t :foreground ,t-neutral_purple))))
+     `(mode-line                                 ((,class (:foreground ,light0_soft :background ,mline :box nil))
+                                                  (,t-class (:foreground ,t-light0_soft :background ,t-dark_green :box nil))))
+     `(mode-line-inactive                        ((,class (:foreground ,neutral_cyan :background ,dark2 :box nil))
+                                                  (,t-class (:foreground ,t-neutral_cyan :background ,t-dark2 :box nil))))
+     `(mode-line-buffer-id                       ((,class (:bold t :foreground ,neutral_red))
+                                                  (,t-class (:bold t :foreground ,t-neutral_red))))
      `(fringe                                    ((,class (:background ,dark0_hard))
                                                   (,t-class (:background ,t-dark0_hard))))
      `(linum                                     ((,class (:foreground ,dark4 :background ,dark1))
