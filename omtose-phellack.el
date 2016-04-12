@@ -77,7 +77,7 @@
         (dark0_soft      "#2c2f33")
         (dark1           "#333438")
         (dark2           "#3f4045")
-        (dark3           "#595963")
+        (dark3           "#696973")
         (dark4           "#73767d")
 
         (medium          "#868691")
@@ -120,6 +120,7 @@
         (white           "#FFFFFF")
         (black           "#4D4D4D")
         (match           "#A1F0E3")
+        (mline           "#45485c")
 
         ;; Color definitions for terminals that doesn't support 256 colors.
         ;; Needs some more work, expect some heavy color-regression in the mean time.
@@ -190,12 +191,14 @@
      `(link-visited                              ((,class (:foreground ,bright_red :underline t))
                                                   (,t-class (:foreground ,t-bright_red :underline t))))
 
-     `(mode-line                                 ((,class (:foreground ,light0_soft :background ,dark0_soft :box (:color ,dark_blue :line-width 1)))
-                                                  (,t-class (:foreground ,t-light0_soft :background ,t-dark0_soft :box (:color ,dark_blue :line-width 1)))))
-     `(mode-line-inactive                        ((,class (:foreground ,light4 :background ,dark2 :box nil))
-                                                  (,t-class (:foreground ,t-light4 :background ,t-dark2 :box nil))))
-     `(fringe                                    ((,class (:background ,dark0_soft))
-                                                  (,t-class (:background ,t-dark0_soft))))
+     `(mode-line                                 ((,class (:foreground ,light0_soft :background ,mline :box nil))
+                                                  (,t-class (:foreground ,t-light0_soft :background ,t-dark_green :box nil))))
+     `(mode-line-inactive                        ((,class (:foreground ,neutral_cyan :background ,dark2 :box nil))
+                                                  (,t-class (:foreground ,t-neutral_cyan :background ,t-dark2 :box nil))))
+     `(mode-line-buffer-id                       ((,class (:bold t :foreground ,neutral_red))
+                                                  (,t-class (:bold t :foreground ,t-neutral_red))))
+     `(fringe                                    ((,class (:background ,mline))
+                                                  (,t-class (:background ,t-mline))))
      `(linum                                     ((,class (:foreground ,dark4 :background ,dark1))
                                                   (,t-class (:foreground ,t-dark4 :background ,t-dark1))))
      `(hl-line                                   ((,class (:background ,dark0_hard))
@@ -254,8 +257,8 @@
                                                   (,t-class (:foreground ,t-neutral_yellow))))
      `(elixir-atom-face                          ((,class (:foreground ,light4 :weight bold))
                                                   (,t-class (:foreground ,t-light4 :weight bold))))
-     `(css-selector                              ((,class (:inherit font-lock-keyword-face))
-                                                  (,t-class (:inherit font-lock-keyword-face))))
+     `(css-selector                              ((,class (:inherit font-lock-function-name-face))
+                                                  (,t-class (:inherit font-lock-function-name-face))))
      `(css-property                              ((,class (:inherit font-lock-string-face))
                                                   (,t-class (:inherit font-lock-string-face))))
 
@@ -354,6 +357,20 @@
                                                   (,t-class (:foreground ,t-bright_red :weight bold :underline t))))
      `(cider-test-success-face                   ((,class (:foreground ,neutral_green :weight bold :underline t))
                                                   (,t-class (:foreground ,t-neutral_green :weight bold :underline t))))
+
+     ;; circe
+     `(circe-prompt-face                         ((,class (:foreground ,neutral_red :weight bold :background nil))
+                                                  (,t-class (:foreground ,t-neutral_red :weight bold :background nil))))
+     `(circe-server-face                         ((,class (:foreground ,dark_purple))
+                                                  (,t-class (:foreground ,t-dark_purple))))
+     `(circe-highlight-nick-face                 ((,class (:foreground ,neutral_blue))
+                                                  (,t-class (:foreground ,t-neutral_blue))))
+     `(circe-topic-diff-new-face                 ((,class (:background ,dark_green :foreground ,bright_green))
+                                                  (,t-class (:background ,t-dark_green :foreground ,t-bright_green))))
+     `(circe-topic-diff-removed-face             ((,class (:background ,dark_red :foreground ,light0_soft))
+                                                  (,t-class (:background ,t-dark_red :foreground ,t-light0_soft))))
+     `(circe-fool-face                           ((,class (:foreground ,dark4))
+                                                  (,t-class (:foreground ,t-dark4))))
 
      ;; Company Mode
      `(company-echo                              ((,class (:inherit company-echo-common))
@@ -483,11 +500,11 @@
                                                   (,t-class (:foreground ,t-neutral_blue))))
      `(flycheck-fringe-error                     ((,class (:foreground ,bright_red :weight bold))
                                                   (,t-class (:foreground ,t-bright_red :weight bold))))
-     `(flycheck-fringe-info                      ((,class (:foreground ,dark_blue :weight bold))
+     `(flycheck-fringe-neutral_yellowo                      ((,class (:foreground ,dark_blue :weight bold))
                                                   (,t-class (:foreground ,t-dark_blue :weight bold))))
      `(flycheck-fringe-warning                   ((,class (:foreground ,bright_yellow :weight bold))
                                                   (,t-class (:foreground ,t-bright_yellow :weight bold))))
-     `(flycheck-info                             ((,class (:foreground ,light0 :background ,bright_purple :weight bold :underline t))
+     `(flycheck-neutral_yellowo                             ((,class (:foreground ,light0 :background ,bright_purple :weight bold :underline t))
                                                   (,t-class (:foreground ,t-light0 :background ,t-bright_purple :weight bold :underline t))))
      `(flycheck-warning                          ((,class (:foreground ,dark0_hard :background ,bright_yellow :weight bold :underline t))
                                                   (,t-class (:foreground ,t-dark0_hard :background ,t-bright_yellow :weight bold :underline t))))
@@ -524,7 +541,7 @@
                                                   (,t-class (:foreground ,t-neutral_blue))))
      `(helm-bookmark-gnus                        ((,class (:foreground ,neutral_purple))
                                                   (,t-class (:foreground ,t-neutral_purple))))
-     `(helm-bookmark-info                        ((,class (:foreground ,bright_purple))
+     `(helm-bookmark-neutral_yellowo                        ((,class (:foreground ,bright_purple))
                                                   (,t-class (:foreground ,t-bright_purple))))
      `(helm-bookmark-man                         ((,class (:foreground ,neutral_blue))
                                                   (,t-class (:foreground ,t-neutral_blue))))
@@ -578,7 +595,7 @@
                                                   (,t-class (:foreground ,t-black :background ,t-bright_red))))
      `(helm-history-remote                       ((,class (:foreground ,neutral_red))
                                                   (,t-class (:foreground ,t-neutral_red))))
-     `(helm-lisp-completion-info                 ((,class (:foreground ,neutral_blue))
+     `(helm-lisp-completion-neutral_yellowo                 ((,class (:foreground ,neutral_blue))
                                                   (,t-class (:foreground ,t-neutral_blue))))
      `(helm-lisp-show-completion                 ((,class (:foreground ,bright_red))
                                                   (,t-class (:foreground ,t-bright_red))))
@@ -614,8 +631,8 @@
                                                   (,t-class (:background ,t-dark1))))
 
      ;; Highlight-numbers
-     `(highlight-numbers-number                  ((,class (:background ,dark_purple :foreground ,light0_hard :bold nil))
-                                                  (,t-class (:background ,t-bright_purple :foreground ,t-light0_hard :bold nil))))
+     `(highlight-numbers-number                  ((,class (:background ,dark0_hard :foreground ,light0_hard :bold nil))
+                                                  (,t-class (:background ,t-dark0_hard :foreground ,t-light0_hard :bold nil))))
 
      ;; Highlight-symbol
      `(highlight-symbol-face                     ((,class (:background ,dark4 :foreground ,bright_green))
@@ -645,10 +662,10 @@
      `(ido-vertical-match-face                   ((,class (:foreground ,delimiter-one))
                                                   (,t-class (:foreground ,t-delimiter-one))))
 
-     ;; info
-     `(info-menu                                 ((,class (:foreground ,bright_green))
+     ;; neutral_yellowo
+     `(neutral_yellowo-menu                                 ((,class (:foreground ,bright_green))
                                                   (,t-class (:foreground ,t-bright_green))))
-     `(info-quoted-name                          ((,class (:foreground ,neutral_cyan))
+     `(neutral_yellowo-quoted-name                          ((,class (:foreground ,neutral_cyan))
                                                   (,t-class (:foreground ,t-neutral_cyan))))
 
      ;; ivy
@@ -700,6 +717,44 @@
      ;; linum-relative
      `(linum-relative-current-face               ((,class (:foreground ,light4 :background ,dark1))
                                                   (,t-class (:foreground ,t-light4 :background ,t-dark1))))
+
+     ;; lui
+     `(lui-irc-colors-fg-1-face                  ((,class (:foreground ,dark3))
+                                                  (,t-class (:foreground ,t-dark3))))
+     `(lui-irc-colors-fg-2-face                  ((,class (:foreground ,neutral_red))
+                                                  (,t-class (:foreground ,t-neutral_red))))
+     `(lui-irc-colors-fg-3-face                  ((,class (:foreground ,neutral_green))
+                                                  (,t-class (:foreground ,t-neutral_green))))
+     `(lui-irc-colors-fg-4-face                  ((,class (:foreground ,bright_blue))
+                                                  (,t-class (:foreground ,t-bright_blue))))
+     `(lui-irc-colors-fg-5-face                  ((,class (:foreground ,neutral_cyan))
+                                                  (,t-class (:foreground ,t-neutral_cyan))))
+     `(lui-irc-colors-fg-6-face                  ((,class (:foreground ,neutral_purple))
+                                                  (,t-class (:foreground ,t-neutral_purple))))
+     `(lui-irc-colors-fg-7-face                  ((,class (:foreground ,neutral_yellow))
+                                                  (,t-class (:foreground ,t-neutral_yellow))))
+     `(lui-irc-colors-fg-8-face                  ((,class (:foreground ,bright_yellow))
+                                                  (,t-class (:foreground ,t-bright_yellow))))
+     `(lui-irc-colors-fg-9-face                  ((,class (:foreground ,bright_green))
+                                                  (,t-class (:foreground ,t-bright_green))))
+     `(lui-irc-colors-fg-10-face                  ((,class (:foreground ,bright_cyan))
+                                                  (,t-class (:foreground ,t-bright_cyan))))
+     `(lui-irc-colors-fg-11-face                  ((,class (:foreground ,dark4))
+                                                  (,t-class (:foreground ,t-dark4))))
+     `(lui-irc-colors-fg-12-face                  ((,class (:foreground ,neutral_blue))
+                                                  (,t-class (:foreground ,t-neutral_blue))))
+     `(lui-irc-colors-fg-13-face                  ((,class (:foreground ,delimiter-one))
+                                                   (,t-class (:foreground ,t-delimiter-one))))
+     `(lui-irc-colors-fg-14-face                  ((,class (:foreground ,light3))
+                                                   (,t-class (:foreground ,t-light3))))
+     `(lui-irc-colors-fg-15-face                  ((,class (:foreground ,light0_hard))
+                                                   (,t-class (:foreground ,t-light0_hard))))
+     `(lui-button-face                            ((,class (:inherit link))
+                                                   (,t-class (:inherit link))))
+     `(lui-highlight-face                         ((,class (:foreground ,medium :weight bold))
+                                                   (,t-class (:foreground ,t-medium :weight bold))))
+     `(lui-time-stamp-face                        ((,class (:inherit font-lock-comment-face))
+                                                   (,t-class (:inherit font-lock-comment-face))))
 
      ;; Magit
      `(magit-blame-culprit                       ((,class (:foreground ,bright_yellow))
@@ -865,6 +920,26 @@
      `(anzu-mode-line                            ((,class (:foreground ,light0 :height 100 :background ,neutral_blue))
                                                   (,t-class (:foreground ,t-light0 :height 100 :background ,t-neutral_blue))))
 
+;;;;; mingus
+     `(mingus-directory-face                           ((,class (:foreground ,neutral_cyan))
+                                                        (,t-class (:foreground ,t-neutral_cyan))))
+     `(mingus-pausing-face                             ((,class (:foreground ,bright_yellow))
+                                                        (,t-class (:foreground ,t-bright_yellow))))
+     `(mingus-playing-face                             ((,class (:foreground ,bright_green))
+                                                        (,t-class (:foreground ,t-bright_green))))
+     `(mingus-playlist-face                            ((,class (:foreground ,neutral_green))
+                                                        (,t-class (:foreground ,t-neutral_green))))
+     `(mingus-song-file-face                           ((,class (:foreground ,neutral_blue))
+                                                        (,t-class (:foreground ,t-neutral_blue))))
+     `(mingus-stopped-face                             ((,class (:foreground ,bright_red))
+                                                        (,t-class (:foreground ,t-bright_red))))
+     `(mingus-artist-face                              ((,class (:foreground ,neutral_purple))
+                                                        (,t-class (:foreground ,t-neutral_purple))))
+     `(mingus-album-face                               ((,class (:foreground ,neutral_yellow))
+                                                        (,t-class (:foreground ,neutral_yellow))))
+     `(mingus-album-stale-face                         ((,class (:foreground ,neutral_red))
+                                                        (,t-class (:foreground ,neutral_red))))
+
      ;; Neotree
      `(neo-dir-link-face                         ((,class (:foreground ,bright_purple :weight bold))
                                                   (,t-class (:foreground ,t-bright_purple :weight bold))))
@@ -934,8 +1009,8 @@
                                                   (,t-class (:foreground ,t-bright_blue))))
      `(org-todo                                  ((,class (:foreground ,bright_purple :weight bold :bold t))
                                                   (,t-class (:foreground ,t-bright_purple :weight bold :bold t))))
-     `(org-upcoming-deadline                     ((,class (:inherit font-lock-keyword-face))
-                                                  (,t-class (:inherit font-lock-keyword-face))))
+     `(org-upcoming-deadline                     ((,class (:inherit font-lock-function-name-face))
+                                                  (,t-class (:inherit font-lock-function-name-face))))
      `(org-warning                               ((,class (:foreground ,bright_red :weight bold :underline nil :bold t))
                                                   (,t-class (:foreground ,t-bright_red :weight bold :underline nil :bold t))))
      `(org-column                                ((,class (:background ,dark0))
@@ -1067,8 +1142,8 @@
                                                   (,t-class (:foreground ,t-neutral_cyan))))
 
      ;; Smartparens
-     `(sp-pair-overlay-face                      ((,class (:background ,dark2))
-                                                  (,t-class (:background ,t-dark2))))
+     `(sp-pair-overlay-face                      ((,class (:background ,dark0_soft))
+                                                  (,t-class (:background ,t-dark0_soft))))
      `(sp-show-pair-match-face                   ((,class (:background ,dark2 :foreground ,bright_green))
                                                   (,t-class (:background ,t-dark2 :foreground ,t-bright_green)))) ;; Pair tags highlight
      `(sp-show-pair-mismatch-face                ((,class (:background ,bright_red))
@@ -1085,6 +1160,18 @@
                                                   (,t-class (:background ,t-dark_green))))
      `(smerge-refined-removed                    ((,class (:background ,dark_red))
                                                   (,t-class (:background ,t-dark_red))))
+
+     ;; swiper
+     `(swiper-line-face                          ((,class (:background ,dark1))
+                                                  (,t-class (:background ,t-dark1))))
+     `(swiper-match-face-1                       ((,class (:weight bold :foreground ,bright_blue))
+                                                  (,t-class (:weight bold :foreground ,t-bright_blue))))
+     `(swiper-match-face-2                       ((,class (:weight bold :foreground ,neutral_red))
+                                                  (,t-class (:weight bold :foreground ,t-neutral_red))))
+     `(swiper-match-face-3                       ((,class (:weight bold :foreground ,neutral_green))
+                                                  (,t-class (:weight bold :foreground ,neutral_green))))
+     `(swiper-match-face-4                       ((,class (:weight bold :foreground ,neutral_green))
+                                                  (,t-class (:weight bold :foreground ,neutral_green))))
 
      ;; Term
      `(term-color-black                          ((,class (:foreground ,dark1))
