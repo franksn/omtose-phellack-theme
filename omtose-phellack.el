@@ -198,7 +198,7 @@
      `(mode-line-buffer-id                       ((,class (:bold t :foreground ,neutral_red))
                                                   (,t-class (:bold t :foreground ,t-neutral_red))))
      `(fringe                                    ((,class (:background ,mline))
-                                                  (,t-class (:background ,t-mline))))
+                                                  (,t-class (:background ,t-dark_green))))
      `(linum                                     ((,class (:foreground ,dark4 :background ,dark1))
                                                   (,t-class (:foreground ,t-dark4 :background ,t-dark1))))
      `(hl-line                                   ((,class (:background ,dark0_hard))
