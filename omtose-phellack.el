@@ -197,8 +197,8 @@
                                                   (,t-class (:foreground ,t-neutral_cyan :background ,t-dark2 :box nil))))
      `(mode-line-buffer-id                       ((,class (:bold t :foreground ,neutral_red))
                                                   (,t-class (:bold t :foreground ,t-neutral_red))))
-     `(fringe                                    ((,class (:background ,dark0_hard))
-                                                  (,t-class (:background ,t-dark0_hard))))
+     `(fringe                                    ((,class (:background ,mline))
+                                                  (,t-class (:background ,t-mline))))
      `(linum                                     ((,class (:foreground ,dark4 :background ,dark1))
                                                   (,t-class (:foreground ,t-dark4 :background ,t-dark1))))
      `(hl-line                                   ((,class (:background ,dark0_hard))
@@ -1142,8 +1142,8 @@
                                                   (,t-class (:foreground ,t-neutral_cyan))))
 
      ;; Smartparens
-     `(sp-pair-overlay-face                      ((,class (:background ,dark2))
-                                                  (,t-class (:background ,t-dark2))))
+     `(sp-pair-overlay-face                      ((,class (:background ,dark0_soft))
+                                                  (,t-class (:background ,t-dark0_soft))))
      `(sp-show-pair-match-face                   ((,class (:background ,dark2 :foreground ,bright_green))
                                                   (,t-class (:background ,t-dark2 :foreground ,t-bright_green)))) ;; Pair tags highlight
      `(sp-show-pair-mismatch-face                ((,class (:background ,bright_red))
