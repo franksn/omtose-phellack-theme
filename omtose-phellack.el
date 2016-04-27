@@ -72,13 +72,13 @@
 (defun create-omtose-phellack-theme (theme-name)
   (let ((class '((class color) (min-colors 257)))
         ;; GUI color definition
-        (dark0_hard      "#232326")
-        (dark0           "#252629")
-        (dark0_soft      "#2c2f33")
-        (dark1           "#333438")
-        (dark2           "#3f4045")
-        (dark3           "#696973")
-        (dark4           "#73767d")
+        (dark0_hard      "#151924")
+        (dark0           "#1E2333")
+        (dark0_soft      "#292f45")
+        (dark1           "#313A54")
+        (dark2           "#3B4766")
+        (dark3           "#555B77")
+        (dark4           "#5a6c9c")
 
         (medium          "#868691")
 
@@ -120,7 +120,7 @@
         (white           "#FFFFFF")
         (black           "#4D4D4D")
         (match           "#A1F0E3")
-        (mline           "#45485c")
+        (mline           "#3B395C")
 
         ;; Color definitions for terminals that doesn't support 256 colors.
         ;; Needs some more work, expect some heavy color-regression in the mean time.
