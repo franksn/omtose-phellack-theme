@@ -72,13 +72,13 @@
 (defun create-omtose-phellack-theme (theme-name)
   (let ((class '((class color) (min-colors 257)))
         ;; GUI color definition
-        (dark0_hard      "#151924")
-        (dark0           "#1E2333")
-        (dark0_soft      "#292f45")
-        (dark1           "#313A54")
-        (dark2           "#3B4766")
-        (dark3           "#555B77")
-        (dark4           "#5a6c9c")
+        (dark0_hard      "#151B29")
+        (dark0           "#1A2233")
+        (dark0_soft      "#232E45")
+        (dark1           "#2C3A57")
+        (dark2           "#344466")
+        (dark3           "#3D5078")
+        (dark4           "#5A6C9C")
 
         (medium          "#868691")
 
@@ -120,7 +120,7 @@
         (white           "#FFFFFF")
         (black           "#4D4D4D")
         (match           "#A1F0E3")
-        (mline           "#3B395C")
+        (mline           "#393C5C")
 
         ;; Color definitions for terminals that doesn't support 256 colors.
         ;; Needs some more work, expect some heavy color-regression in the mean time.
@@ -205,8 +205,8 @@
                                                   (,t-class (:background ,t-dark0_hard))))
      `(region                                    ((,class (:background ,dark_blue :distant-foreground ,light0))
                                                   (,t-class (:background ,t-dark_blue :distant-foreground ,t-light0))))
-     `(secondary-selection                       ((,class (:background ,dark_cyan))
-                                                  (,t-class (:background ,t-dark_cyan))))
+     `(secondary-selection                       ((,class (:background ,mline :foreground ,light0_hard))
+                                                  (,t-class (:background ,t-dark2 :foreground ,t-light0_hard))))
      `(cua-rectangle                             ((,class (:background ,dark_blue))
                                                   (,t-class (:background ,t-dark_blue))))
      `(header-line                               ((,class (:foreground ,bright_purple :background ,dark0 :bold nil))
@@ -397,8 +397,8 @@
                                                   (,t-class (:foreground ,t-light0 :background ,t-dark1))))
      `(company-tooltip-annotation                ((,class (:foreground ,bright_blue :background ,dark1))
                                                   (,t-class (:foreground ,t-bright_blue :background ,t-dark1))))
-     `(company-tooltip-common-selection          ((,class (:foreground ,light0 :background ,dark_blue))
-                                                  (,t-class (:foreground ,t-light0 :background ,t-dark_blue))))
+     `(company-tooltip-common-selection          ((,class (:foreground ,light0 :background ,neutral_blue))
+                                                  (,t-class (:foreground ,t-light0 :background ,t-neutral_blue))))
      `(company-tooltip-mouse                     ((,class (:foreground ,dark0 :background ,bright_blue))
                                                   (,t-class (:foreground ,t-dark0 :background ,t-bright_blue))))
      `(company-tooltip-selection                 ((,class (:foreground ,light0 :background ,neutral_blue))
