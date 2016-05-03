@@ -191,9 +191,9 @@
      `(link-visited                              ((,class (:foreground ,bright_red :underline t))
                                                   (,t-class (:foreground ,t-bright_red :underline t))))
 
-     `(mode-line                                 ((,class (:foreground ,light0_soft :background ,mline :box nil))
-                                                  (,t-class (:foreground ,t-light0_soft :background ,t-dark_green :box nil))))
-     `(mode-line-inactive                        ((,class (:foreground ,neutral_cyan :background ,dark2 :box nil))
+     `(mode-line                                 ((,class (:foreground ,light0_soft :background ,dark0_soft :box nil))
+                                                  (,t-class (:foreground ,t-light0_soft :background ,t-dark0_soft :box nil))))
+     `(mode-line-inactive                        ((,class (:foreground ,neutral_cyan :background ,mline :box nil))
                                                   (,t-class (:foreground ,t-neutral_cyan :background ,t-dark2 :box nil))))
      `(mode-line-buffer-id                       ((,class (:bold t :foreground ,bright_red))
                                                   (,t-class (:bold t :foreground ,t-bright_red))))
@@ -1037,14 +1037,14 @@
                                                   (,t-class (:foreground ,t-light0_hard :background ,t-dark_cyan))))
 
      ;; Powerline
-     `(powerline-active1                         ((,class (:background ,dark0_soft :inherit mode-line))
-                                                  (,t-class (:background ,t-dark0_soft :inherit mode-line))))
-     `(powerline-active2                         ((,class (:background ,dark1 :inherit mode-line))
+     `(powerline-active1                         ((,class (:background ,dark1 :inherit mode-line))
                                                   (,t-class (:background ,t-dark1 :inherit mode-line))))
-     `(powerline-inactive1                       ((,class (:background ,medium :inherit mode-line-inactive))
-                                                  (,t-class (:background ,t-medium :inherit mode-line-inactive))))
-     `(powerline-inactive2                       ((,class (:background ,dark2 :inherit mode-line-inactive))
-                                                  (,t-class (:background ,t-dark2 :inherit mode-line-inactive))))
+     `(powerline-active2                         ((,class (:background ,dark2 :inherit mode-line))
+                                                  (,t-class (:background ,t-dark2 :inherit mode-line))))
+     `(powerline-inactive1                       ((,class (:background ,dark1 :inherit mode-line-inactive))
+                                                  (,t-class (:background ,t-dark1 :inherit mode-line-inactive))))
+     `(powerline-inactive2                       ((,class (:background ,dark3 :inherit mode-line-inactive))
+                                                  (,t-class (:background ,t-dark3 :inherit mode-line-inactive))))
 
      ;; Rainbow-Blocks
      `(rainbow-blocks-depth-1-face               ((,class (:foreground ,delimiter-one))
@@ -1160,6 +1160,20 @@
                                                   (,t-class (:background ,t-dark_green))))
      `(smerge-refined-removed                    ((,class (:background ,dark_red))
                                                   (,t-class (:background ,t-dark_red))))
+
+     ;; spaceline
+     `(spaceline-evil-emacs                      ((,class (:background ,neutral_blue :foreground ,light0 :inherit mode-line))
+                                                  (,t-class (:background ,t-neutral_blue :foreground ,t-light0_hard :inherit mode-line))))
+     `(spaceline-evil-insert                     ((,class (:background ,neutral_green :foreground ,light0 :inherit mode-line))
+                                                  (,t-class (:background ,t-neutral_green :foreground ,t-light0 :inherit mode-line))))
+     `(spaceline-evil-motion                     ((,class (:background ,neutral_red :foreground ,light0 :inherit mode-line))
+                                                  (,t-class (:background ,t-neutral_red :foreground ,t-light0 :inherit mode-line))))
+     `(spaceline-evil-normal                     ((,class (:background ,neutral_cyan :foreground ,light0 :inherit mode-line))
+                                                  (,t-class (:background ,t-neutral_cyan :foreground ,t-light0 :inherit mode-line))))
+     `(spaceline-evil-replace                    ((,class (:background ,neutral_yellow :foreground ,light0 :inherit mode-line))
+                                                  (,t-class (:background ,t-neutral_yellow :foreground ,t-light0 :inherit mode-line))))
+     `(spaceline-highlight-face                  ((,class (:background ,neutral_purple :foreground ,light0 :inherit mode-line))
+                                                  (,t-class (:background ,t-neutral_purple :foreground ,t-light0 :inherit mode-line))))
 
      ;; swiper
      `(swiper-line-face                          ((,class (:background ,dark1))
