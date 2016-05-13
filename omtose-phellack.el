@@ -72,13 +72,13 @@
 (defun create-omtose-phellack-theme (theme-name)
   (let ((class '((class color) (min-colors 257)))
         ;; GUI color definition
-        (dark0_hard      "#151B29")
-        (dark0           "#1A2233")
-        (dark0_soft      "#232E45")
-        (dark1           "#2C3A57")
-        (dark2           "#344466")
-        (dark3           "#3D5078")
-        (dark4           "#5A6C9C")
+        (dark0_hard      "#0C0E12")
+        (dark0           "#161A21")
+        (dark0_soft      "#212833")
+        (dark1           "#28303D")
+        (dark2           "#2d3645")
+        (dark3           "#394457")
+        (dark4           "#7D879C")
 
         (medium          "#868691")
 
