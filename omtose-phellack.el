@@ -405,12 +405,12 @@
                                                   (,t-class (:foreground ,t-light0 :background ,t-neutral_blue))))
 
      ;; Diffs
-     `(diff-changed                              ((,class (:foreground ,light1 :background nil))
-                                                  (,t-class (:foreground ,t-light1 :background nil))))
-     `(diff-added                                ((,class (:foreground ,neutral_green :background nil))
-                                                  (,t-class (:foreground ,t-neutral_green :background nil))))
-     `(diff-removed                              ((,class (:foreground ,neutral_red :background nil))
-                                                  (,t-class (:foreground ,t-neutral_red :background nil))))
+     `(diff-changed                              ((,class (:foreground ,light1 :background ,dark_purple))
+                                                  (,t-class (:foreground ,t-light1 :background ,t-dark_purple))))
+     `(diff-added                                ((,class (:foreground ,bright_green :background nil))
+                                                  (,t-class (:foreground ,t-bright_green :background nil))))
+     `(diff-removed                              ((,class (:foreground ,bright_red :background nil))
+                                                  (,t-class (:foreground ,t-bright_red :background nil))))
      `(diff-indicator-changed                    ((,class (:inherit diff-changed))
                                                   (,t-class (:inherit diff-changed))))
      `(diff-indicator-added                      ((,class (:inherit diff-added))
@@ -425,8 +425,8 @@
                                                   (,t-class (:inherit diff-removed))))
      `(diff-hl-insert                            ((,class (:inherit diff-added))
                                                   (,t-class (:inherit diff-added))))
-     `(diff-hl-unknown                           ((,class (:foreground ,dark_cyan))
-                                                  (,t-class (:foreground ,t-dark_cyan))))
+     `(diff-hl-unknown                           ((,class (:inherit highlight))
+                                                  (,t-class (:inherit highlight))))
 
      ;; Dired
      `(dired-directory                           ((,class (:foreground ,neutral_purple :weight bold))
