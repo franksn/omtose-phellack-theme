@@ -193,7 +193,7 @@
 
      `(mode-line                                 ((,class (:foreground ,light0_soft :background ,dark0_soft :box nil))
                                                   (,t-class (:foreground ,t-light0_soft :background ,t-dark0_soft :box nil))))
-     `(mode-line-inactive                        ((,class (:foreground ,neutral_cyan :background ,mline :box nil))
+     `(mode-line-inactive                        ((,class (:foreground ,neutral_cyan :background ,dark0 :box nil))
                                                   (,t-class (:foreground ,t-neutral_cyan :background ,t-dark2 :box nil))))
      `(mode-line-buffer-id                       ((,class (:bold t :foreground ,bright_red))
                                                   (,t-class (:bold t :foreground ,t-bright_red))))
