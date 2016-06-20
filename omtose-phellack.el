@@ -1148,6 +1148,10 @@
                                                   (,t-class (:background ,t-dark2 :foreground ,t-bright_green)))) ;; Pair tags highlight
      `(sp-show-pair-mismatch-face                ((,class (:background ,bright_red))
                                                   (,t-class (:background ,t-bright_red)))) ;; Highlight for bracket without pair
+     `(sp-wrap-overlay-closing-pair              ((,class (:foreground ,bright_red :bold t))
+                                                  (,t-class (:foreground ,t-bright_red :bold t))))
+     `(sp-wrap-overlay-opening-pair              ((,class (:foreground ,bright_yellow :bold t))
+                                                  (,t-class (:foreground ,t-bright_yellow :bold t))))
 
      ;;Smerge
      `(smerge-mine                               ((,class (:background ,dark_purple))
