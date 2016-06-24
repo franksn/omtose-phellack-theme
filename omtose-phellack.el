@@ -82,12 +82,12 @@
 
         (medium          "#868691")
 
-        (light0_hard     "#CFCFCF")
-        (light0          "#DBDBDB")
-        (light0_soft     "#D5D8DE")
-        (light1          "#D4D4D4")
-        (light2          "#CCCCCC")
-        (light3          "#BCC1C4")
+        (light0_hard     "#E1E1ED")
+        (light0          "#D3D3DE")
+        (light0_soft     "#D2D5DB")
+        (light1          "#C1C2C9")
+        (light2          "#BDBFC7")
+        (light3          "#C1C6C9")
         (light4          "#ADADAD")
 
         (bright_red      "#CC68C8")
@@ -98,12 +98,12 @@
         (bright_cyan     "#B2B2D4")
 
         ;; Needs some work
-        (neutral_red     "#B262AF")
-        (neutral_green   "#74B2A8")
-        (neutral_yellow  "#AFCCBC")
-        (neutral_blue    "#668EB0")
-        (neutral_purple  "#7F84BA")
-        (neutral_cyan    "#7F8FB2")
+        (neutral_red     "#BA5DB7")
+        (neutral_green   "#73BAAF")
+        (neutral_yellow  "#B6D6C4")
+        (neutral_blue    "#638CB8")
+        (neutral_purple  "#7E84C2")
+        (neutral_cyan    "#7F91BA")
 
         (dark_red        "#674470")
         (dark_green      "#6B9692")
