@@ -10,13 +10,35 @@ Before anyone ask, yes it is named after a kind of magical realm in Malazan Book
 ### Requirement
 Emacs (>= 24.0)
 
+### Installation
+install from melpa
+    M-x package-install omtose-phellack-theme
+
+then load 'omtose-phellack or 'omtose-softer in your .emacs / init.el / .spacemacs
+
 ### Screenshots
+#### Omtose darker variant
+![clojure](imgs/omtose-clojure.png)
 
-![](omtose-scrots.png)
+![golang](imgs/omtose-golang.png)
 
-Emacs GUI and emacsclient -t side by side scrot:
-![](side-by-side-colors.png)
+![html](imgs/omtose-html.png)
+
+![org](imgs/omtose-org.png)
+
+![shell-script](imgs/omtose-shell-script.png)
+
+#### Omtose softer variant
+![clojure](imgs/omtose-soft-clojure.png)
+
+![golang](imgs/omtose-soft-golang.png)
+
+![html](imgs/omtose-soft-html.png)
+
+![org](imgs/omtose-soft-org.png)
+
+![shell-script](imgs/omtose-soft-shell-script.png)
 
 ### TODO :
 1. Add a bunch of more modes ( ERC, gnus, etc )
-2. Need to cleanup the code.
+2. Terminal colorscheme looks like ass, need some work.
