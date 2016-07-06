@@ -1,9 +1,9 @@
-;;; omtose-phellack.el --- A dark, soothing theme with a cold bluish touch.
+;;; omtose-softer-theme.el --- A dark, soothing theme with a cold bluish touch.
 
 ;; Created 2016 by Alexander F. Adhyatma
 
 ;; Author: Alexander F. Adhyatma
-;; URL: http:/github.com/franksn/omtose-phellack-theme/
+;; URL: http:/github.com/franksn/omtose-softer/
 ;; Version: 0.0.1-alpha2
 ;; Package-Requires: ((emacs "24"))
 ;; This theme is like the illegitimate son of Gruvbox and Cyberpunk
@@ -25,9 +25,9 @@
 ;;
 ;;; Installation:
 ;;
-;;   M-x package-install -> omtose-phellack-theme
+;;   M-x package-install -> omtose-softer
 ;;
-;;   (load-theme 'omtose-phellack t)
+;;   (load-theme 'omtose-softer t)
 ;;
 ;;; Bugs
 ;;
@@ -35,92 +35,100 @@
 ;;
 ;;; Code:
 
-(defgroup omtose-phellack-theme nil
-  "omtose-phellack-theme options."
+(unless (>= emacs-major-version 24)
+  (error "omtose phellack requires Emacs 24 or later!"))
+
+(deftheme omtose-softer "Dark and soothing colorscheme, with cool bluish touch")
+
+(defgroup omtose-softer nil
+  "omtose-softer options."
   :group 'faces)
 
-(defcustom omtose-phellack-theme-variable-pitch t
+(defcustom omtose-softer-variable-pitch t
   "Use variable pitch for latex, markdown, or org-mode"
   :type 'boolean
-  :group 'omtose-phellack-theme)
+  :group 'omtose-softer)
 
-(defcustom omtose-phellack-theme-org-height t
+(defcustom omtose-softer-org-height t
   "Use varying text heights for org headings."
   :type 'boolean
-  :group 'omtose-phellack-theme)
+  :group 'omtose-softer)
 
-(defcustom omtose-phellack-theme-tex-height-90 0.9
+(defcustom omtose-softer-tex-height-90 0.9
   "Font size 90%"
   :type 'number
-  :group 'omtose-phellack-theme)
+  :group 'omtose-softer)
 
-(defcustom omtose-phellack-theme-tex-height-110 1.1
+(defcustom omtose-softer-tex-height-110 1.1
   "Font size 110%"
   :type 'number
-  :group 'omtose-phellack-theme)
+  :group 'omtose-softer)
 
-(defcustom omtose-phellack-theme-tex-height-120 1.2
+(defcustom omtose-softer-tex-height-120 1.2
   "Font size 120%"
   :type 'number
-  :group 'omtose-phellack-theme)
+  :group 'omtose-softer)
 
-(defcustom omtose-phellack-theme-tex-height-130 1.3
+(defcustom omtose-softer-tex-height-130 1.3
   "Font size 130%"
   :type 'number
-  :group 'omtose-phellack-theme)
+  :group 'omtose-softer)
 
-(defun create-omtose-phellack-theme (theme-name)
-  (let ((class '((class color) (min-colors 257)))
+(let* (;; variable pitch
+       (omtose-softer-pitch (if omtose-softer-variable-pitch
+                                  'variable-pitch
+                                'default))
+       (class '((class color) (min-colors 257)))
         ;; GUI color definition
-        (dark0_hard      "#232326")
-        (dark0           "#252629")
-        (dark0_soft      "#2c2f33")
-        (dark1           "#333438")
-        (dark2           "#3f4045")
-        (dark3           "#696973")
-        (dark4           "#73767d")
+        (dark0_hard      "#1F242E")
+        (dark0           "#2B3240")
+        (dark0_soft      "#303847")
+        (dark1           "#343C4D")
+        (dark2           "#374052")
+        (dark3           "#414C61")
+        (dark4           "#657696")
 
-        (medium          "#868691")
+        (medium          "#787882")
 
-        (light0_hard     "#CFCFCF")
-        (light0          "#DBDBDB")
-        (light0_soft     "#D5D8DE")
-        (light1          "#D4D4D4")
-        (light2          "#CCCCCC")
-        (light3          "#BCC1C4")
-        (light4          "#ADADAD")
+        (light0_hard     "#D0D0DB")
+        (light0          "#C2C2CC")
+        (light0_soft     "#BCBFC4")
+        (light1          "#AEB1B5")
+        (light2          "#A7A9B0")
+        (light3          "#9D9FA6")
+        (light4          "#919199")
 
-        (bright_red      "#CC68C8")
-        (bright_green    "#7CCFC1")
-        (bright_yellow   "#B4DEC7")
-        (bright_blue     "#6CA7D9")
-        (bright_purple   "#868DD9")
-        (bright_cyan     "#B2B2D4")
+        (bright_red      "#B86EB5")
+        (bright_green    "#7FBAB0")
+        (bright_yellow   "#ABC9B9")
+        (bright_blue     "#76A0C4")
+        (bright_purple   "#898EC4")
+        (bright_cyan     "#A4A4BD")
 
         ;; Needs some work
-        (neutral_red     "#B262AF")
-        (neutral_green   "#74B2A8")
-        (neutral_yellow  "#AFCCBC")
-        (neutral_blue    "#668EB0")
-        (neutral_purple  "#7F84BA")
-        (neutral_cyan    "#7F8FB2")
+        (neutral_red    "#AB67A9")
+        (neutral_green  "#76A8A0")
+        (neutral_yellow "#A4BAAE")
+        (neutral_blue   "#6886A6")
+        (neutral_purple "#7D81AD")
+        (neutral_cyan   "#7D8AA8")
 
-        (dark_red        "#674470")
-        (dark_green      "#6B9692")
-        (dark_yellow     "#708077")
-        (dark_blue       "#3A4D5E")
-        (dark_purple     "#676EA1")
-        (dark_cyan       "#5C6743")
+        (dark_red       "#604666")
+        (dark_green     "#698A87")
+        (dark_yellow    "#67736C")
+        (dark_blue      "#3A4854")
+        (dark_purple    "#676C91")
+        (dark_cyan      "#3D4E54")
 
-        (delimiter-one   "#BB4EB8")
-        (delimiter-two   "#9CD9d0")
-        (delimiter-three "#B6D4D4")
-        (delimiter-four  "#727AAD")
+        (delimiter-one  "#A84FA6")
+        (delimiter-two  "#95c7c0")
+        (delimiter-three "#ACC2C2")
+        (delimiter-four "#72789E")
 
-        (white           "#FFFFFF")
-        (black           "#4D4D4D")
-        (match           "#A1F0E3")
-        (mline           "#45485c")
+        (white          "#EEEEEE")
+        (black          "#555B77")
+        (match          "#98D9CE")
+        (mline          "#3B3D54")
 
         ;; Color definitions for terminals that doesn't support 256 colors.
         ;; Needs some more work, expect some heavy color-regression in the mean time.
@@ -174,12 +182,10 @@
         (t-white           "#FFFFFF")
         (t-black           "#4D4D4D")
         (t-match           "#AFD7FF")
-
-        (omp-variable-pitch (if omtose-phellack-theme-variable-pitch 'variable-pitch 'default))
         )
 
     (custom-theme-set-faces
-     theme-name
+     'omtose-softer
 
      ;; UI
      `(default                                   ((,class (:foreground ,light0 :background ,dark0))
@@ -191,8 +197,8 @@
      `(link-visited                              ((,class (:foreground ,bright_red :underline t))
                                                   (,t-class (:foreground ,t-bright_red :underline t))))
 
-     `(mode-line                                 ((,class (:foreground ,light0_soft :background ,mline :box nil))
-                                                  (,t-class (:foreground ,t-light0_soft :background ,t-dark_green :box nil))))
+     `(mode-line                                 ((,class (:foreground ,light0_soft :background ,dark0_soft :box nil))
+                                                  (,t-class (:foreground ,t-light0_soft :background ,t-dark0_soft :box nil))))
      `(mode-line-inactive                        ((,class (:foreground ,neutral_cyan :background ,dark2 :box nil))
                                                   (,t-class (:foreground ,t-neutral_cyan :background ,t-dark2 :box nil))))
      `(mode-line-buffer-id                       ((,class (:bold t :foreground ,bright_red))
@@ -205,8 +211,8 @@
                                                   (,t-class (:background ,t-dark0_hard))))
      `(region                                    ((,class (:background ,dark_blue :distant-foreground ,light0))
                                                   (,t-class (:background ,t-dark_blue :distant-foreground ,t-light0))))
-     `(secondary-selection                       ((,class (:background ,dark_cyan))
-                                                  (,t-class (:background ,t-dark_cyan))))
+     `(secondary-selection                       ((,class (:background ,mline :foreground ,light0_hard))
+                                                  (,t-class (:background ,t-dark2 :foreground ,t-light0_hard))))
      `(cua-rectangle                             ((,class (:background ,dark_blue))
                                                   (,t-class (:background ,t-dark_blue))))
      `(header-line                               ((,class (:foreground ,bright_purple :background ,dark0 :bold nil))
@@ -280,41 +286,41 @@
      `(font-latex-math-face                      ((,class (:foreground ,bright_green :weight bold))
                                                   (,t-class (:foreground ,t-bright_green :weight bold))))
      `(font-latex-sectioning-0-face              ((,class (:inherit font-latex-sectioning-1-face
-                                                                    :height ,omtose-phellack-theme-tex-height-120))
+                                                                    :height ,omtose-softer-tex-height-120))
                                                   (,t-class (:inherit font-latex-sectioning-1-face
-                                                                      :height ,omtose-phellack-theme-tex-height-120))))
+                                                                      :height ,omtose-softer-tex-height-120))))
      `(font-latex-sectioning-1-face              ((,class (:inherit font-latex-sectioning-2-face
-                                                                    :height ,omtose-phellack-theme-tex-height-110))
+                                                                    :height ,omtose-softer-tex-height-110))
                                                   (,t-class (:inherit font-latex-sectioning-2-face
-                                                                      :height ,omtose-phellack-theme-tex-height-110))))
+                                                                      :height ,omtose-softer-tex-height-110))))
      `(font-latex-sectioning-2-face              ((,class (:inherit font-latex-sectioning-3-face
-                                                                    :height ,omtose-phellack-theme-tex-height-110))
+                                                                    :height ,omtose-softer-tex-height-110))
                                                   (,t-class (:inherit font-latex-sectioning-3-face
-                                                                      :height ,omtose-phellack-theme-tex-height-110))))
+                                                                      :height ,omtose-softer-tex-height-110))))
      `(font-latex-sectioning-3-face              ((,class (:inherit font-latex-sectioning-4-face
-                                                                    :height ,omtose-phellack-theme-tex-height-110))
+                                                                    :height ,omtose-softer-tex-height-110))
                                                   (,t-class (:inherit font-latex-sectioning-4-face
-                                                                      :height ,omtose-phellack-theme-tex-height-110))))
+                                                                      :height ,omtose-softer-tex-height-110))))
      `(font-latex-sectioning-4-face              ((,class (:inherit font-latex-sectioning-5-face
-                                                                    :height ,omtose-phellack-theme-tex-height-110))
+                                                                    :height ,omtose-softer-tex-height-110))
                                                   (,t-class (:inherit font-latex-sectioning-5-face
-                                                                      :height ,omtose-phellack-theme-tex-height-110))))
-     `(font-latex-sectioning-5-face              ((,class (:inherit ,omp-variable-pitch :foreground ,bright_yellow
+                                                                      :height ,omtose-softer-tex-height-110))))
+     `(font-latex-sectioning-5-face              ((,class (:inherit ,omtose-softer-pitch :foreground ,bright_yellow
                                                                     :weight bold))
-                                                  (,t-class (:inherit ,omp-variable-pitch :foreground ,t-bright_yellow
+                                                  (,t-class (:inherit ,omtose-softer-pitch :foreground ,t-bright_yellow
                                                                       :weight bold))))
      `(font-latex-sedate-face                    ((,class (:foreground ,dark4))
                                                   (,t-class (:foreground ,t-dark4))))
-     `(font-latex-slide-title-face               ((,class (:inherit (,omp-variable-pitch font-lock-type-face)
-                                                                    :weight bold :height ,omtose-phellack-theme-tex-height-130))
-                                                  (,t-class (:inherit (,omp-variable-pitch font-lock-type-face)
-                                                                      :weight bold :height ,omtose-phellack-theme-tex-height-130))))
+     `(font-latex-slide-title-face               ((,class (:inherit (,omtose-softer-pitch font-lock-type-face)
+                                                                    :weight bold :height ,omtose-softer-tex-height-130))
+                                                  (,t-class (:inherit (,omtose-softer-pitch font-lock-type-face)
+                                                                      :weight bold :height ,omtose-softer-tex-height-130))))
      `(font-latex-string-face                    ((,class (:foreground ,bright_green))
                                                   (,t-class (:foreground ,t-bright_green))))
-     `(font-latex-subscript-face                 ((,class (:height ,omtose-phellack-theme-tex-height-90))
-                                                  (,t-class (:height ,omtose-phellack-theme-tex-height-90))))
-     `(font-latex-superscript-face               ((,class (:height ,omtose-phellack-theme-tex-height-90))
-                                                  (,t-class (:height ,omtose-phellack-theme-tex-height-90))))
+     `(font-latex-subscript-face                 ((,class (:height ,omtose-softer-tex-height-90))
+                                                  (,t-class (:height ,omtose-softer-tex-height-90))))
+     `(font-latex-superscript-face               ((,class (:height ,omtose-softer-tex-height-90))
+                                                  (,t-class (:height ,omtose-softer-tex-height-90))))
      `(font-latex-warning-face                   ((,class (:inherit bold :foreground ,bright_yellow :underline t))
                                                   (,t-class (:inherit bold :foreground ,t-bright_yellow :underline t))))
 
@@ -397,20 +403,20 @@
                                                   (,t-class (:foreground ,t-light0 :background ,t-dark1))))
      `(company-tooltip-annotation                ((,class (:foreground ,bright_blue :background ,dark1))
                                                   (,t-class (:foreground ,t-bright_blue :background ,t-dark1))))
-     `(company-tooltip-common-selection          ((,class (:foreground ,light0 :background ,dark_blue))
-                                                  (,t-class (:foreground ,t-light0 :background ,t-dark_blue))))
+     `(company-tooltip-common-selection          ((,class (:foreground ,light0 :background ,neutral_blue))
+                                                  (,t-class (:foreground ,t-light0 :background ,t-neutral_blue))))
      `(company-tooltip-mouse                     ((,class (:foreground ,dark0 :background ,bright_blue))
                                                   (,t-class (:foreground ,t-dark0 :background ,t-bright_blue))))
      `(company-tooltip-selection                 ((,class (:foreground ,light0 :background ,neutral_blue))
                                                   (,t-class (:foreground ,t-light0 :background ,t-neutral_blue))))
 
      ;; Diffs
-     `(diff-changed                              ((,class (:foreground ,light1 :background nil))
-                                                  (,t-class (:foreground ,t-light1 :background nil))))
-     `(diff-added                                ((,class (:foreground ,neutral_green :background nil))
-                                                  (,t-class (:foreground ,t-neutral_green :background nil))))
-     `(diff-removed                              ((,class (:foreground ,neutral_red :background nil))
-                                                  (,t-class (:foreground ,t-neutral_red :background nil))))
+     `(diff-changed                              ((,class (:foreground ,light1 :background ,dark_purple))
+                                                  (,t-class (:foreground ,t-light1 :background ,t-dark_purple))))
+     `(diff-added                                ((,class (:foreground ,bright_green :background nil))
+                                                  (,t-class (:foreground ,t-bright_green :background nil))))
+     `(diff-removed                              ((,class (:foreground ,bright_red :background nil))
+                                                  (,t-class (:foreground ,t-bright_red :background nil))))
      `(diff-indicator-changed                    ((,class (:inherit diff-changed))
                                                   (,t-class (:inherit diff-changed))))
      `(diff-indicator-added                      ((,class (:inherit diff-added))
@@ -425,8 +431,8 @@
                                                   (,t-class (:inherit diff-removed))))
      `(diff-hl-insert                            ((,class (:inherit diff-added))
                                                   (,t-class (:inherit diff-added))))
-     `(diff-hl-unknown                           ((,class (:foreground ,dark_cyan))
-                                                  (,t-class (:foreground ,t-dark_cyan))))
+     `(diff-hl-unknown                           ((,class (:inherit highlight))
+                                                  (,t-class (:inherit highlight))))
 
      ;; Dired
      `(dired-directory                           ((,class (:foreground ,neutral_purple :weight bold))
@@ -951,8 +957,8 @@
                                                   (,t-class (:foreground ,t-neutral_red :weight bold))))
 
      ;; Org-mode
-     `(org-agenda-date-today                     ((,class (:foreground ,light2 :slant italic :weight bold :height ,(if omtose-phellack-theme-org-height 1.2 1.0)))
-                                                  (,t-class (:foreground ,t-light2 :slant italic :weight bold :height ,(if omtose-phellack-theme-org-height 1.2 1.0)))))
+     `(org-agenda-date-today                     ((,class (:foreground ,light2 :slant italic :weight bold :height ,(if omtose-softer-org-height 1.2 1.0)))
+                                                  (,t-class (:foreground ,t-light2 :slant italic :weight bold :height ,(if omtose-softer-org-height 1.2 1.0)))))
      `(org-agenda-structure                      ((,class (:inherit font-lock-comment-face))
                                                   (,t-class (:inherit font-lock-comment-face))))
      `(org-archived                              ((,class (:foreground ,light0 :weight bold))
@@ -963,20 +969,21 @@
                                                   (,t-class (:foreground ,t-neutral_blue :underline t))))
      `(org-deadline-announce                     ((,class (:foreground ,neutral_red))
                                                   (,t-class (:foreground ,t-neutral_red))))
-     `(org-document-title                        ((,class (:foreground ,neutral_green :weight bold :height ,(if omtose-phellack-theme-org-height 1.3 1.0) :underline t))
-                                                  (,t-class (:foreground ,t-neutral_green :weight bold :height ,(if omtose-phellack-theme-org-height 1.3 1.0) :underline t))))
-     `(org-done                                  ((,class (:foreground ,bright_green :bold t :weight bold))
-                                                  (,t-class (:foreground ,t-bright_green :bold t :weight bold))))
+     `(org-document-title                        ((,class (:background ,dark0_hard :foreground ,neutral_green :weight bold :height ,(if omtose-phellack-org-height 1.3 1.0) :underline t))
+                                                  (,t-class (:background ,t-dark0_hard :foreground ,t-neutral_green :weight bold :height ,(if omtose-phellack-org-height 1.3 1.0) :underline t))))
+     `(org-done                                  ((,class (:background ,dark_green :foreground ,bright_green :bold t :weight bold))
+                                                  (,t-class (:background ,t-dark_green :foreground ,t-bright_green :bold t :weight bold))))
+
      `(org-formula                               ((,class (:foreground ,bright_yellow))
                                                   (,t-class (:foreground ,t-bright_yellow))))
      `(org-headline-done                         ((,class (:foreground ,bright_green))
                                                   (,t-class (:foreground ,t-bright_green))))
      `(org-hide                                  ((,class (:foreground ,dark0))
                                                   (,t-class (:foreground ,t-dark0))))
-     `(org-level-1                               ((,class (:foreground ,bright_blue :height ,(if omtose-phellack-theme-org-height 1.2 1.0)))
-                                                  (,t-class (:foreground ,t-bright_blue :height ,(if omtose-phellack-theme-org-height 1.2 1.0)))))
-     `(org-level-2                               ((,class (:foreground ,bright_green :height ,(if omtose-phellack-theme-org-height 1.1 1.0)))
-                                                  (,t-class (:foreground ,t-bright_green :height ,(if omtose-phellack-theme-org-height 1.1 1.0)))))
+     `(org-level-1                               ((,class (:background ,dark_blue :foreground ,bright_blue :height ,(if omtose-phellack-org-height 1.2 1.0)))
+                                                  (,t-class (:background ,t-dark_blue :foreground ,t-bright_blue :height ,(if omtose-phellack-org-height 1.2 1.0)))))
+     `(org-level-2                               ((,class (:background ,dark_green :foreground ,bright_green :height ,(if omtose-phellack-org-height 1.1 1.0)))
+                                                  (,t-class (:background ,t-dark_green :foreground ,t-bright_green :height ,(if omtose-phellack-org-height 1.1 1.0)))))
      `(org-level-3                               ((,class (:foreground ,bright_blue))
                                                   (,t-class (:foreground ,t-bright_blue))))
      `(org-level-4                               ((,class (:foreground ,bright_yellow))
@@ -995,8 +1002,8 @@
                                                   (,t-class (:foreground ,t-bright_green))))
      `(org-scheduled-previously                  ((,class (:foreground ,bright_red))
                                                   (,t-class (:foreground ,t-bright_red))))
-     `(org-scheduled-today                       ((,class (:foreground ,bright_blue :height ,(if omtose-phellack-theme-org-height 1.1 1.0)))
-                                                  (,t-class (:foreground ,t-bright_blue :height ,(if omtose-phellack-theme-org-height 1.1 1.0)))))
+     `(org-scheduled-today                       ((,class (:foreground ,bright_blue :height ,(if omtose-softer-org-height 1.1 1.0)))
+                                                  (,t-class (:foreground ,t-bright_blue :height ,(if omtose-softer-org-height 1.1 1.0)))))
      `(org-sexp-date                             ((,class (:foreground ,bright_blue :underline t))
                                                   (,t-class (:foreground ,t-bright_blue :underline t))))
      `(org-special-keyword                       ((,class (:inherit font-lock-comment-face))
@@ -1037,14 +1044,14 @@
                                                   (,t-class (:foreground ,t-light0_hard :background ,t-dark_cyan))))
 
      ;; Powerline
-     `(powerline-active1                         ((,class (:background ,dark0_soft :inherit mode-line))
-                                                  (,t-class (:background ,t-dark0_soft :inherit mode-line))))
-     `(powerline-active2                         ((,class (:background ,dark1 :inherit mode-line))
+     `(powerline-active1                         ((,class (:background ,dark1 :inherit mode-line))
                                                   (,t-class (:background ,t-dark1 :inherit mode-line))))
-     `(powerline-inactive1                       ((,class (:background ,medium :inherit mode-line-inactive))
-                                                  (,t-class (:background ,t-medium :inherit mode-line-inactive))))
-     `(powerline-inactive2                       ((,class (:background ,dark2 :inherit mode-line-inactive))
-                                                  (,t-class (:background ,t-dark2 :inherit mode-line-inactive))))
+     `(powerline-active2                         ((,class (:background ,dark2 :inherit mode-line))
+                                                  (,t-class (:background ,t-dark2 :inherit mode-line))))
+     `(powerline-inactive1                       ((,class (:background ,dark1 :inherit mode-line-inactive))
+                                                  (,t-class (:background ,t-dark1 :inherit mode-line-inactive))))
+     `(powerline-inactive2                       ((,class (:background ,dark3 :inherit mode-line-inactive))
+                                                  (,t-class (:background ,t-dark3 :inherit mode-line-inactive))))
 
      ;; Rainbow-Blocks
      `(rainbow-blocks-depth-1-face               ((,class (:foreground ,delimiter-one))
@@ -1107,7 +1114,7 @@
                                                   (,t-class (:background ,t-dark_blue))))
 
      ;; Smart-mode-line
-     ;; use (setq sml/theme nil) to enable Omtose-Phellack for sml
+     ;; use (setq sml/theme nil) to enable Omtose-Softer for sml
      `(sml/modes                                 ((,class (:foreground ,light0_hard :weight bold :bold t))
                                                   (,t-class (:foreground ,t-light0_hard :weight bold :bold t))))
      `(sml/minor-modes                           ((,class (:foreground ,neutral_blue))
@@ -1148,6 +1155,10 @@
                                                   (,t-class (:background ,t-dark2 :foreground ,t-bright_green)))) ;; Pair tags highlight
      `(sp-show-pair-mismatch-face                ((,class (:background ,bright_red))
                                                   (,t-class (:background ,t-bright_red)))) ;; Highlight for bracket without pair
+     `(sp-wrap-overlay-closing-pair              ((,class (:foreground ,bright_red :bold t))
+                                                  (,t-class (:foreground ,t-bright_red :bold t))))
+     `(sp-wrap-overlay-opening-pair              ((,class (:foreground ,bright_yellow :bold t))
+                                                  (,t-class (:foreground ,t-bright_yellow :bold t))))
 
      ;;Smerge
      `(smerge-mine                               ((,class (:background ,dark_purple))
@@ -1160,6 +1171,20 @@
                                                   (,t-class (:background ,t-dark_green))))
      `(smerge-refined-removed                    ((,class (:background ,dark_red))
                                                   (,t-class (:background ,t-dark_red))))
+
+     ;; spaceline
+     `(spaceline-evil-emacs                      ((,class (:background ,neutral_blue :foreground ,light0 :inherit mode-line))
+                                                  (,t-class (:background ,t-neutral_blue :foreground ,t-light0_hard :inherit mode-line))))
+     `(spaceline-evil-insert                     ((,class (:background ,neutral_green :foreground ,light0 :inherit mode-line))
+                                                  (,t-class (:background ,t-neutral_green :foreground ,t-light0 :inherit mode-line))))
+     `(spaceline-evil-motion                     ((,class (:background ,neutral_red :foreground ,light0 :inherit mode-line))
+                                                  (,t-class (:background ,t-neutral_red :foreground ,t-light0 :inherit mode-line))))
+     `(spaceline-evil-normal                     ((,class (:background ,neutral_cyan :foreground ,light0 :inherit mode-line))
+                                                  (,t-class (:background ,t-neutral_cyan :foreground ,t-light0 :inherit mode-line))))
+     `(spaceline-evil-replace                    ((,class (:background ,neutral_yellow :foreground ,light0 :inherit mode-line))
+                                                  (,t-class (:background ,t-neutral_yellow :foreground ,t-light0 :inherit mode-line))))
+     `(spaceline-highlight-face                  ((,class (:background ,neutral_purple :foreground ,light0 :inherit mode-line))
+                                                  (,t-class (:background ,t-neutral_purple :foreground ,t-light0 :inherit mode-line))))
 
      ;; swiper
      `(swiper-line-face                          ((,class (:background ,dark1))
@@ -1272,7 +1297,7 @@
     ;; cscope, ERC, evil (perhaps), Gnus, etc.
 
     (custom-theme-set-variables
-     'omtose-phellack
+     'omtose-softer
 
      `(pos-tip-foreground-color ,light0_hard)
      `(pos-tip-background-color ,dark_cyan)
@@ -1289,14 +1314,18 @@
      `(xterm-color-names-bright
        [,dark4 ,bright_red ,bright_green ,bright_yellow ,bright_blue ,bright_purple ,bright_cyan ,light4])
      )
-    ))
+    )
 
 ;;;###autoload
-(when load-file-name
-     (add-to-list 'custom-theme-load-path
-                  (file-name-as-directory
-                   (file-name-directory load-file-name))))
+(when (and (boundp 'custom-theme-load-path) load-file-name)
+  (add-to-list 'custom-theme-load-path
+               (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide 'omtose-phellack)
+(provide-theme 'omtose-softer)
 
-;;; omtose-phellack.el ends here
+;; Local Variables:
+;; no-byte-compile: t
+;; fill-column: 95
+;; End:
+
+;;; omtose-softer-theme.el ends here
