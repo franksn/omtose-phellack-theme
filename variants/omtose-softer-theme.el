@@ -4,7 +4,7 @@
 
 ;; Author: Alexander F. Adhyatma
 ;; URL: http:/github.com/franksn/omtose-softer/
-;; Version: 0.0.1-alpha2
+;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24"))
 ;; This theme is like the illegitimate son of Gruvbox and Cyberpunk
 ;;
@@ -25,7 +25,7 @@
 ;;
 ;;; Installation:
 ;;
-;;   M-x package-install -> omtose-softer
+;;   M-x package-install -> omtose-phellack
 ;;
 ;;   (load-theme 'omtose-softer t)
 ;;
@@ -969,8 +969,8 @@
                                                   (,t-class (:foreground ,t-neutral_blue :underline t))))
      `(org-deadline-announce                     ((,class (:foreground ,neutral_red))
                                                   (,t-class (:foreground ,t-neutral_red))))
-     `(org-document-title                        ((,class (:background ,dark0_hard :foreground ,neutral_green :weight bold :height ,(if omtose-phellack-org-height 1.3 1.0) :underline t))
-                                                  (,t-class (:background ,t-dark0_hard :foreground ,t-neutral_green :weight bold :height ,(if omtose-phellack-org-height 1.3 1.0) :underline t))))
+     `(org-document-title                        ((,class (:background ,dark0_hard :foreground ,neutral_green :weight bold :height ,(if omtose-softer-org-height 1.3 1.0) :underline t))
+                                                  (,t-class (:background ,t-dark0_hard :foreground ,t-neutral_green :weight bold :height ,(if omtose-softer-org-height 1.3 1.0) :underline t))))
      `(org-done                                  ((,class (:background ,dark_green :foreground ,bright_green :bold t :weight bold))
                                                   (,t-class (:background ,t-dark_green :foreground ,t-bright_green :bold t :weight bold))))
 
@@ -980,10 +980,10 @@
                                                   (,t-class (:foreground ,t-bright_green))))
      `(org-hide                                  ((,class (:foreground ,dark0))
                                                   (,t-class (:foreground ,t-dark0))))
-     `(org-level-1                               ((,class (:background ,dark_blue :foreground ,bright_blue :height ,(if omtose-phellack-org-height 1.2 1.0)))
-                                                  (,t-class (:background ,t-dark_blue :foreground ,t-bright_blue :height ,(if omtose-phellack-org-height 1.2 1.0)))))
-     `(org-level-2                               ((,class (:background ,dark_green :foreground ,bright_green :height ,(if omtose-phellack-org-height 1.1 1.0)))
-                                                  (,t-class (:background ,t-dark_green :foreground ,t-bright_green :height ,(if omtose-phellack-org-height 1.1 1.0)))))
+     `(org-level-1                               ((,class (:background ,dark_blue :foreground ,bright_blue :height ,(if omtose-softer-org-height 1.2 1.0)))
+                                                  (,t-class (:background ,t-dark_blue :foreground ,t-bright_blue :height ,(if omtose-softer-org-height 1.2 1.0)))))
+     `(org-level-2                               ((,class (:background ,dark_green :foreground ,bright_green :height ,(if omtose-softer-org-height 1.1 1.0)))
+                                                  (,t-class (:background ,t-dark_green :foreground ,t-bright_green :height ,(if omtose-softer-org-height 1.1 1.0)))))
      `(org-level-3                               ((,class (:foreground ,bright_blue))
                                                   (,t-class (:foreground ,t-bright_blue))))
      `(org-level-4                               ((,class (:foreground ,bright_yellow))
