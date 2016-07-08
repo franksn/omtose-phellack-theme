@@ -12,7 +12,17 @@ Emacs (>= 24.0)
 
 ### Installation
 install from melpa
+    
     M-x package-install omtose-phellack-theme
+    
+then do the usual:
+    
+    M-x load-theme omtose-darker
+
+or 
+
+    M-x load-theme omtose-softer
+    
 
 then load 'omtose-phellack or 'omtose-softer in your .emacs / init.el / .spacemacs
 
