@@ -82,10 +82,10 @@
         ;; GUI color definition
         (dark0_hard     "#161A21")
         (dark0          "#1F242E")
-        (dark0_soft     "#212833")
-        (dark1          "#28303D")
-        (dark2          "#2d3645")
-        (dark3          "#394457")
+        (dark0_soft     "#222833")
+        (dark1          "#2A3240")
+        (dark2          "#2F3847")
+        (dark3          "#414E63")
         (dark4          "#7D879C")
 
         (medium         "#868691")
@@ -106,19 +106,19 @@
         (bright_cyan    "#B2B2D4")
 
         ;; Needs some work
-        (neutral_red    "#BA5DB7")
-        (neutral_green  "#73BAAF")
+        (neutral_red    "#B05DAD")
+        (neutral_green  "#72B3AA")
         (neutral_yellow "#B6D6C4")
-        (neutral_blue   "#638CB8")
-        (neutral_purple "#7E84C2")
-        (neutral_cyan   "#7F91BA")
+        (neutral_blue   "#6388B0")
+        (neutral_purple "#7B80B8")
+        (neutral_cyan   "#7D8DB3")
 
-        (dark_red       "#674470")
-        (dark_green     "#6B9692")
-        (dark_yellow    "#708077")
-        (dark_blue      "#3A4D5E")
-        (dark_purple    "#676EA1")
-        (dark_cyan      "#5C6743")
+        (dark_red       "#694767")
+        (dark_green     "#506B67")
+        (dark_yellow    "#9BB3A5")
+        (dark_blue      "#3A425E")
+        (dark_purple    "#5A5D82")
+        (dark_cyan      "#606778")
 
         (delimiter-one  "#BB4EB8")
         (delimiter-two  "#9CD9d0")
@@ -141,7 +141,7 @@
         (t-dark1         "#444444")
         (t-dark2         "#585858")
         (t-dark3         "#5F5F5F")
-        (t-dark4         "#6c6c6c")
+        (t-dark4         "#6C6C6C")
 
         (t-medium          "#878787")
 
@@ -257,10 +257,10 @@
                                                   (,t-class (:foreground ,t-dark_yellow :bold t))))
 
      ;; Font lock extras
-     `(clojure-keyword-face                      ((,class (:foreground ,bright_green))
-                                                  (,t-class (:foreground ,t-bright_green))))
-     `(clojure-interop-method-face               ((,class (:foreground ,neutral_yellow))
-                                                  (,t-class (:foreground ,t-neutral_yellow))))
+     `(clojure-keyword-face                      ((,class (:foreground ,light4))
+                                                  (,t-class (:foreground ,t-light4))))
+     `(clojure-interop-method-face               ((,class (:foreground ,dark4))
+                                                  (,t-class (:foreground ,t-dark4))))
      `(elixir-atom-face                          ((,class (:foreground ,light4 :weight bold))
                                                   (,t-class (:foreground ,t-light4 :weight bold))))
      `(css-selector                              ((,class (:inherit font-lock-function-name-face))
@@ -399,16 +399,18 @@
                                                   (,t-class (:foreground ,t-light0_hard :background ,t-dark1))))
      `(company-preview-common                    ((,class (:inherit font-lock-comment-face))
                                                   (,t-class (:inherit font-lock-comment-face))))
-     `(company-tooltip-common                    ((,class (:foreground ,light0 :background ,dark1))
-                                                  (,t-class (:foreground ,t-light0 :background ,t-dark1))))
-     `(company-tooltip-annotation                ((,class (:foreground ,bright_blue :background ,dark1))
-                                                  (,t-class (:foreground ,t-bright_blue :background ,t-dark1))))
-     `(company-tooltip-common-selection          ((,class (:foreground ,light0 :background ,neutral_blue))
-                                                  (,t-class (:foreground ,t-light0 :background ,t-neutral_blue))))
-     `(company-tooltip-mouse                     ((,class (:foreground ,dark0 :background ,bright_blue))
+     `(company-tooltip-common                    ((,class (:foreground ,light2 :background ,dark1))
+                                                  (,t-class (:foreground ,t-light2 :background ,t-dark1))))
+     `(company-tooltip-annotation                ((,class (:foreground ,dark4 :background ,dark1))
+                                                  (,t-class (:foreground ,t-dark4 :background ,t-dark1))))
+     `(company-tooltip-annotation-selection      ((,class (:foreground ,dark1 :background ,bright_blue))
+                                                  (,t-class (:foreground ,t-dark1 :background ,t-bright_blue))))
+     `(company-tooltip-common-selection          ((,class (:foreground ,dark0 :background ,bright_blue))
                                                   (,t-class (:foreground ,t-dark0 :background ,t-bright_blue))))
-     `(company-tooltip-selection                 ((,class (:foreground ,light0 :background ,neutral_blue))
-                                                  (,t-class (:foreground ,t-light0 :background ,t-neutral_blue))))
+     `(company-tooltip-mouse                     ((,class (:foreground ,dark0 :background ,dark_blue))
+                                                  (,t-class (:foreground ,t-dark0 :background ,t-dark_blue))))
+     `(company-tooltip-selection                 ((,class (:foreground ,dark0 :background ,bright_blue))
+                                                  (,t-class (:foreground ,t-dark0 :background ,t-bright_blue))))
 
      ;; Diffs
      `(diff-changed                              ((,class (:foreground ,light1 :background ,dark_purple))
@@ -911,20 +913,20 @@
      ;; Matches and Isearch
      `(lazy-highlight                            ((,class (:foreground ,light0 :background ,dark1))
                                                   (,t-class (:foreground ,t-light0 :background ,t-dark1))))
-     `(highlight                                 ((,class (:foreground ,light0_hard :background ,neutral_blue))
-                                                  (,t-class (:foreground ,t-light0_hard :background ,t-neutral_blue))))
+     `(highlight                                 ((,class (:foreground ,light0_hard :background ,dark_blue))
+                                                  (,t-class (:foreground ,t-light0_hard :background ,t-dark_blue))))
      `(match                                     ((,class (:foreground ,light0 :background ,dark2))
                                                   (,t-class (:foreground ,t-light0 :background ,t-dark2))))
      `(isearch                                   ((,class (:foreground ,light0 :background ,dark_green))
                                                   (,t-class (:foreground ,t-light0 :background ,t-dark_green))))
      `(isearch-fail                              ((,class (:foreground ,light0_hard :background ,dark_red))
                                                   (,t-class (:foreground ,t-light0_hard :background ,t-dark_red))))
-     `(show-paren-match                          ((,class (:foreground ,light0 :background ,neutral_blue))
-                                                  (,t-class (:foreground ,t-light0 :background ,t-neutral_blue))))
+     `(show-paren-match                          ((,class (:foreground ,light0 :background ,dark_green))
+                                                  (,t-class (:foreground ,t-light0 :background ,t-dark_green))))
      `(show-paren-mismatch                       ((,class (:foreground ,light0_hard :background ,neutral_red))
                                                   (,t-class (:foreground ,t-light0_hard :background ,t-neutral_red))))
-     `(anzu-mode-line                            ((,class (:foreground ,light0 :height 100 :background ,neutral_blue))
-                                                  (,t-class (:foreground ,t-light0 :height 100 :background ,t-neutral_blue))))
+     `(anzu-mode-line                            ((,class (:foreground ,light0 :height 100 :background ,dark_blue))
+                                                  (,t-class (:foreground ,t-light0 :height 100 :background ,t-dark_blue))))
 
 ;;;;; mingus
      `(mingus-directory-face                           ((,class (:foreground ,neutral_cyan))
@@ -1035,10 +1037,10 @@
      ;; Popup
      `(popup-face                                ((,class (:foreground ,light0 :background ,dark1))
                                                   (,t-class (:foreground ,t-light0 :background ,t-dark1))))
-     `(popup-menu-mouse-face                     ((,class (:foreground ,light0 :background ,neutral_blue))
-                                                  (,t-class (:foreground ,t-light0 :background ,t-neutral_blue))))
-     `(popup-menu-selection-face                 ((,class (:foreground ,light0 :background ,neutral_blue))
-                                                  (,t-class (:foreground ,t-light0 :background ,t-neutral_blue))))
+     `(popup-menu-mouse-face                     ((,class (:foreground ,light0 :background ,dark_blue))
+                                                  (,t-class (:foreground ,t-light0 :background ,t-dark_blue))))
+     `(popup-menu-selection-face                 ((,class (:foreground ,light0 :background ,dark_blue))
+                                                  (,t-class (:foreground ,t-light0 :background ,t-dark_blue))))
      `(popup-tip-face                            ((,class (:foreground ,light0_hard :background ,dark_cyan))
                                                   (,t-class (:foreground ,t-light0_hard :background ,t-dark_cyan))))
 
@@ -1299,7 +1301,7 @@
      'omtose-darker
 
      `(pos-tip-foreground-color ,light0_hard)
-     `(pos-tip-background-color ,dark_cyan)
+     `(pos-tip-background-color ,dark3)
 
      `(ansi-color-names-vector [,dark3
                                 ,neutral_red
