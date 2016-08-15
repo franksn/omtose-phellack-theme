@@ -86,21 +86,19 @@
         (dark1           "#343C4D")
         (dark2           "#374052")
         (dark3           "#414C61")
-        (dark4           "#657696")
+        (dark4           "#666B88")
 
-        (medium          "#787882")
-
-        (light0_hard     "#D0D0DB")
-        (light0          "#C2C2CC")
-        (light0_soft     "#BCBFC4")
-        (light1          "#AEB1B5")
-        (light2          "#A7A9B0")
-        (light3          "#9D9FA6")
-        (light4          "#919199")
+        (light0_hard     "#C1CADE")
+        (light0          "#B8C1D4")
+        (light0_soft     "#B1BACC")
+        (light1          "#ABB3C4")
+        (light2          "#A6ACBA")
+        (light3          "#9AA0AD")
+        (light4          "#9197A3")
 
         (bright_red      "#B86EB5")
         (bright_green    "#7FBAB0")
-        (bright_yellow   "#ABC9B9")
+        (bright_yellow   "#D19D7D")
         (bright_blue     "#76A0C4")
         (bright_purple   "#898EC4")
         (bright_cyan     "#A4A4BD")
@@ -108,16 +106,16 @@
         ;; Needs some work
         (neutral_red    "#AB67A9")
         (neutral_green  "#76A8A0")
-        (neutral_yellow "#A4BAAE")
+        (neutral_yellow "#C79474")
         (neutral_blue   "#6886A6")
         (neutral_purple "#7D81AD")
         (neutral_cyan   "#7D8AA8")
 
-        (dark_red       "#604666")
-        (dark_green     "#698A87")
-        (dark_yellow    "#67736C")
-        (dark_blue      "#3A4154")
-        (dark_purple    "#676C91")
+        (dark_red       "#5C4358")
+        (dark_green     "#4D5E5C")
+        (dark_yellow    "#B6D6C4")
+        (dark_blue      "#424B6B")
+        (dark_purple    "#515275")
         (dark_cyan      "#3D4E54")
 
         (delimiter-one  "#A84FA6")
@@ -125,7 +123,7 @@
         (delimiter-three "#ACC2C2")
         (delimiter-four "#72789E")
 
-        (white          "#EEEEEE")
+        (white          "#CCCCCC")
         (black          "#555B77")
         (match          "#98D9CE")
         (mline          "#3B3D54")
@@ -143,26 +141,24 @@
         (t-dark3         "#5F5F5F")
         (t-dark4         "#6c6c6c")
 
-        (t-medium          "#878787")
-
-        (t-light0_hard     "#EEEEEE")
-        (t-light0          "#DBDBDB")
-        (t-light0_soft     "#D7D7D7")
-        (t-light1          "#D4D4D4")
-        (t-light2          "#CCCCCC")
-        (t-light3          "#BCC1C4")
-        (t-light4          "#ADADAD")
+        (t-light0_hard     "#D0D0D0")
+        (t-light0          "#B2B2B2")
+        (t-light0_soft     "#A8A8A8")
+        (t-light1          "#9E9E9E")
+        (t-light2          "#949494")
+        (t-light3          "#8A8A8A")
+        (t-light4          "#878787")
 
         (t-bright_red      "#D75FD7")
         (t-bright_green    "#87D7AF")
-        (t-bright_yellow   "#AFD7D7")
+        (t-bright_yellow   "#FF8700")
         (t-bright_blue     "#5FAFD7")
         (t-bright_purple   "#8787D7")
         (t-bright_cyan     "#AFAFD7")
 
         (t-neutral_red     "#AF5FAF")
         (t-neutral_green   "#87AFAF")
-        (t-neutral_yellow  "#AFD7AF")
+        (t-neutral_yellow  "#D78700")
         (t-neutral_blue    "#5F87AF")
         (t-neutral_purple  "#8787AF")
         (t-neutral_cyan    "#888888")
@@ -197,10 +193,14 @@
      `(link-visited                              ((,class (:foreground ,bright_red :underline t))
                                                   (,t-class (:foreground ,t-bright_red :underline t))))
 
-     `(mode-line                                 ((,class (:foreground ,light0_soft :background ,dark0_soft :box nil))
-                                                  (,t-class (:foreground ,t-light0_soft :background ,t-dark0_soft :box nil))))
-     `(mode-line-inactive                        ((,class (:foreground ,neutral_cyan :background ,dark2 :box nil))
-                                                  (,t-class (:foreground ,t-neutral_cyan :background ,t-dark2 :box nil))))
+     `(mode-line                                 ((,class (:foreground ,light0_soft :background ,dark_blue :height 0.9
+                                                                       :box (:line-width 3 :color ,dark_blue))))
+                                                  (,t-class (:foreground ,t-light0_soft :background ,t-dark_blue :height 0.9
+                                                                         :box (:line-width 3 :color ,dark_blue))))
+     `(mode-line-inactive                        ((,class (:foreground ,light3 :height 0.9 :background ,dark0_soft :height 0.9
+                                                                       :box (:line-width 3 :color ,dark0_hard))))
+                                                  (,t-class (:foreground ,t-light3 :background ,t-dark0_soft :height 0.9
+                                                                         :box (:line-width 3 :color ,dark0_soft))))
      `(mode-line-buffer-id                       ((,class (:bold t :foreground ,bright_red))
                                                   (,t-class (:bold t :foreground ,t-bright_red))))
      `(fringe                                    ((,class (:background ,dark0))
@@ -227,16 +227,16 @@
                                                   (,t-class (:foreground ,t-light0_hard :background ,t-dark_red))))
 
      ;; Built-in syntax
-     `(font-lock-builtin-face                    ((,class (:foreground ,bright_cyan))
-                                                  (,t-class (:foreground ,t-bright_cyan))))
-     `(font-lock-constant-face                   ((,class (:foreground ,bright_red))
-                                                  (,t-class (:foreground ,t-bright_red))))
-     `(font-lock-comment-face                    ((,class (:foreground ,dark4 :background ,dark0))
-                                                  (,t-class (:foreground ,t-dark4 :background ,t-dark0))))
+     `(font-lock-builtin-face                    ((,class (:foreground ,bright_cyan :weight bold))
+                                                  (,t-class (:foreground ,t-bright_cyan :weight bold))))
+     `(font-lock-constant-face                   ((,class (:foreground ,neutral_red))
+                                                  (,t-class (:foreground ,t-neutral_red))))
+     `(font-lock-comment-face                    ((,class (:foreground ,dark4 :background ,dark0 :slant italic))
+                                                  (,t-class (:foreground ,t-dark4 :background ,t-dark0 :slant italic))))
      `(font-lock-doc-face                        ((,class (:inherit font-lock-comment-face))
                                                   (,t-class (:inherit font-lock-comment-face))))
-     `(font-lock-doc-string-face                 ((,class (:inherit font-lock-comment-face))
-                                                  (,t-class (:inherit font-lock-comment-face))))
+     `(font-lock-doc-string-face                 ((,class (:inherit font-lock-string-face :slant italic))
+                                                  (,t-class (:inherit font-lock-string-face :slant italic))))
      `(font-lock-function-name-face              ((,class (:foreground ,neutral_red))
                                                   (,t-class (:foreground ,t-neutral_red))))
      `(font-lock-keyword-face                    ((,class (:foreground ,neutral_blue :weight bold))
@@ -245,23 +245,23 @@
                                                   (,t-class (:foreground ,t-dark4))))
      `(font-lock-preprocessor-face               ((,class (:foreground ,neutral_red))
                                                   (,t-class (:foreground ,t-neutral_red))))
-     `(font-lock-reference-face                  ((,class (:foreground ,light0_soft))
-                                                  (,t-class (:foreground ,light0_soft))))
+     `(font-lock-reference-face                  ((,class (:foreground ,light1))
+                                                  (,t-class (:foreground ,light1))))
      `(font-lock-string-face                     ((,class (:foreground ,neutral_green))
                                                   (,t-class (:foreground ,t-neutral_green))))
      `(font-lock-type-face                       ((,class (:foreground ,neutral_purple :italic t))
                                                   (,t-class (:foreground ,t-neutral_purple :italic t))))
      `(font-lock-variable-name-face              ((,class (:foreground ,neutral_yellow))
                                                   (,t-class (:foreground ,t-neutral_yellow))))
-     `(font-lock-warning-face                    ((,class (:foreground ,dark_yellow :bold t))
-                                                  (,t-class (:foreground ,t-dark_yellow :bold t))))
+     `(font-lock-warning-face                    ((,class (:foreground ,bright_yellow :bold t))
+                                                  (,t-class (:foreground ,t-bright_yellow :bold t))))
 
      ;; Font lock extras
-     `(clojure-keyword-face                      ((,class (:foreground ,bright_green))
-                                                  (,t-class (:foreground ,t-bright_green))))
+     `(clojure-keyword-face                      ((,class (:foreground ,neutral_blue))
+                                                  (,t-class (:foreground ,t-neutral_blue))))
      `(clojure-interop-method-face               ((,class (:foreground ,neutral_yellow))
                                                   (,t-class (:foreground ,t-neutral_yellow))))
-     `(elixir-atom-face                          ((,class (:foreground ,light4 :weight bold))
+     `(elixir-atom-face                          ((,class (:foreground ,dark4 :weight bold))
                                                   (,t-class (:foreground ,t-light4 :weight bold))))
      `(css-selector                              ((,class (:inherit font-lock-function-name-face))
                                                   (,t-class (:inherit font-lock-function-name-face))))
@@ -345,8 +345,8 @@
                                                   (,t-class (:inherit    highlight))))
 
      ;;Clojure-test-mode
-     `(clojure-test-failure-face                 ((,class (:foreground ,dark_yellow :weight bold :underline t))
-                                                  (,t-class (:foreground ,t-dark_yellow :weight bold :underline t))))
+     `(clojure-test-failure-face                 ((,class (:foreground ,bright_yellow :weight bold :underline t))
+                                                  (,t-class (:foreground ,t-bright_yellow :weight bold :underline t))))
      `(clojure-test-error-face                   ((,class (:foreground ,bright_red :weight bold :underline t))
                                                   (,t-class (:foreground ,t-bright_red :weight bold :underline t))))
      `(clojure-test-success-face                 ((,class (:foreground ,neutral_green :weight bold :underline t))
@@ -413,12 +413,12 @@
                                                   (,t-class (:foreground ,t-light0 :background ,t-neutral_blue))))
 
      ;; Diffs
-     `(diff-changed                              ((,class (:foreground ,light1 :background ,dark_purple))
-                                                  (,t-class (:foreground ,t-light1 :background ,t-dark_purple))))
-     `(diff-added                                ((,class (:foreground ,bright_green :background nil))
-                                                  (,t-class (:foreground ,t-bright_green :background nil))))
-     `(diff-removed                              ((,class (:foreground ,bright_red :background nil))
-                                                  (,t-class (:foreground ,t-bright_red :background nil))))
+     `(diff-changed                              ((,class (:foreground ,bright_purple))
+                                                  (,t-class (:foreground ,t-bright_purple))))
+     `(diff-added                                ((,class (:foreground ,light0 :background ,dark_green))
+                                                  (,t-class (:foreground ,t-light0 :background ,t-dark_green))))
+     `(diff-removed                              ((,class (:foreground ,light0 :background ,dark_red))
+                                                  (,t-class (:foreground ,t-light0 :background ,t-dark_red))))
      `(diff-indicator-changed                    ((,class (:inherit diff-changed))
                                                   (,t-class (:inherit diff-changed))))
      `(diff-indicator-added                      ((,class (:inherit diff-added))
@@ -455,7 +455,6 @@
                                                   (,t-class (:foreground ,t-dark3 :weight bold))))
      `(dired-warning                             ((,class (:foreground ,bright_yellow :weight bold))
                                                   (,t-class (:foreground ,t-bright_yellow :weight bold))))
-
 
      ;; Elfeed
      `(elfeed-search-date-face                   ((,class (:foreground ,dark1))
@@ -508,11 +507,11 @@
                                                   (,t-class (:foreground ,t-neutral_blue))))
      `(flycheck-fringe-error                     ((,class (:foreground ,bright_red :weight bold))
                                                   (,t-class (:foreground ,t-bright_red :weight bold))))
-     `(flycheck-fringe-neutral_yellowo                      ((,class (:foreground ,dark_blue :weight bold))
+     `(flycheck-fringe-info                      ((,class (:foreground ,dark_blue :weight bold))
                                                   (,t-class (:foreground ,t-dark_blue :weight bold))))
      `(flycheck-fringe-warning                   ((,class (:foreground ,bright_yellow :weight bold))
                                                   (,t-class (:foreground ,t-bright_yellow :weight bold))))
-     `(flycheck-neutral_yellowo                             ((,class (:foreground ,light0 :background ,bright_purple :weight bold :underline t))
+     `(flycheck-info                             ((,class (:foreground ,light0 :background ,bright_purple :weight bold :underline t))
                                                   (,t-class (:foreground ,t-light0 :background ,t-bright_purple :weight bold :underline t))))
      `(flycheck-warning                          ((,class (:foreground ,dark0_hard :background ,bright_yellow :weight bold :underline t))
                                                   (,t-class (:foreground ,t-dark0_hard :background ,t-bright_yellow :weight bold :underline t))))
@@ -531,8 +530,8 @@
                                                   (,t-class (:foreground ,t-light3 :background nil))))
      `(haskell-literate-comment-face             ((,class (:foreground ,light0 :background nil))
                                                   (,t-class (:foreground ,t-light0 :background nil))))
-     `(haskell-pragma-face                       ((,class (:foreground ,medium :background nil))
-                                                  (,t-class (:foreground ,t-medium :background nil))))
+     `(haskell-pragma-face                       ((,class (:foreground ,light4 :background nil))
+                                                  (,t-class (:foreground ,t-light4 :background nil))))
      `(haskell-constructor-face                  ((,class (:foreground ,neutral_cyan :background nil))
                                                   (,t-class (:foreground ,t-neutral_cyan :background nil))))
 
@@ -549,7 +548,7 @@
                                                   (,t-class (:foreground ,t-neutral_blue))))
      `(helm-bookmark-gnus                        ((,class (:foreground ,neutral_purple))
                                                   (,t-class (:foreground ,t-neutral_purple))))
-     `(helm-bookmark-neutral_yellowo                        ((,class (:foreground ,bright_purple))
+     `(helm-bookmark-info                        ((,class (:foreground ,bright_purple))
                                                   (,t-class (:foreground ,t-bright_purple))))
      `(helm-bookmark-man                         ((,class (:foreground ,neutral_blue))
                                                   (,t-class (:foreground ,t-neutral_blue))))
@@ -569,6 +568,8 @@
                                                   (,t-class (:foreground ,t-bright_purple))))
      `(helm-candidate-number                     ((,class (:foreground ,neutral_green))
                                                   (,t-class (:foreground ,t-neutral_green))))
+     `(helm-ff-dotted-directory                  ((,class (:foreground ,bright_red :background ,dark1))
+                                                  (,t-class (:foreground ,t-bright_red :background ,t-dark1))))
      `(helm-ff-directory                         ((,class (:foreground ,neutral_red))
                                                   (,t-class (:foreground ,t-neutral_red))))
      `(helm-ff-executable                        ((,class (:foreground ,bright_purple))
@@ -603,7 +604,7 @@
                                                   (,t-class (:foreground ,t-black :background ,t-bright_red))))
      `(helm-history-remote                       ((,class (:foreground ,neutral_red))
                                                   (,t-class (:foreground ,t-neutral_red))))
-     `(helm-lisp-completion-neutral_yellowo                 ((,class (:foreground ,neutral_blue))
+     `(helm-lisp-completion-info                 ((,class (:foreground ,neutral_blue))
                                                   (,t-class (:foreground ,t-neutral_blue))))
      `(helm-lisp-show-completion                 ((,class (:foreground ,bright_red))
                                                   (,t-class (:foreground ,t-bright_red))))
@@ -670,10 +671,10 @@
      `(ido-vertical-match-face                   ((,class (:foreground ,delimiter-one))
                                                   (,t-class (:foreground ,t-delimiter-one))))
 
-     ;; neutral_yellowo
-     `(neutral_yellowo-menu                                 ((,class (:foreground ,bright_green))
+     ;; info
+     `(info-menu                                 ((,class (:foreground ,bright_green))
                                                   (,t-class (:foreground ,t-bright_green))))
-     `(neutral_yellowo-quoted-name                          ((,class (:foreground ,neutral_cyan))
+     `(info-quoted-name                          ((,class (:foreground ,neutral_cyan))
                                                   (,t-class (:foreground ,t-neutral_cyan))))
 
      ;; ivy
@@ -701,8 +702,8 @@
                                                   (,t-class (:underline (:color ,t-bright_red :style wave)))))
      `(js2-external-variable                     ((,class (:underline (:color ,bright_cyan :style wave)))
                                                   (,t-class (:underline (:color ,t-bright_cyan :style wave)))))
-     `(js2-jsdoc-tag                             ((,class (:foreground ,medium :background nil))
-                                                  (,t-class (:foreground ,t-medium :background nil))))
+     `(js2-jsdoc-tag                             ((,class (:foreground ,light4 :background nil))
+                                                  (,t-class (:foreground ,t-light4 :background nil))))
      `(js2-jsdoc-type                            ((,class (:foreground ,light4 :background nil))
                                                   (,t-class (:foreground ,t-light4 :background nil))))
      `(js2-jsdoc-value                           ((,class (:foreground ,light3 :background nil))
@@ -759,8 +760,8 @@
                                                    (,t-class (:foreground ,t-light0_hard))))
      `(lui-button-face                            ((,class (:inherit link))
                                                    (,t-class (:inherit link))))
-     `(lui-highlight-face                         ((,class (:foreground ,medium :weight bold))
-                                                   (,t-class (:foreground ,t-medium :weight bold))))
+     `(lui-highlight-face                         ((,class (:foreground ,light4 :weight bold))
+                                                   (,t-class (:foreground ,t-light4 :weight bold))))
      `(lui-time-stamp-face                        ((,class (:inherit font-lock-comment-face))
                                                    (,t-class (:inherit font-lock-comment-face))))
 
@@ -823,8 +824,8 @@
                                                   (,t-class (:background ,t-dark_green))))
      `(magit-diff-merge-separator                ((,class (:foreground ,neutral_blue))
                                                   (,t-class (:foreground ,t-neutral_blue))))
-     `(magit-diff-none                           ((,class (:foreground ,medium))
-                                                  (,t-class (:foreground ,t-medium))))
+     `(magit-diff-none                           ((,class (:foreground ,light4))
+                                                  (,t-class (:foreground ,t-light4))))
      `(magit-item-highlight                      ((,class (:background ,dark1 :weight normal))
                                                   (,t-class (:background ,t-dark1 :weight normal))))
      `(magit-item-mark                           ((,class (:background ,dark0))
@@ -927,6 +928,21 @@
                                                   (,t-class (:foreground ,t-light0_hard :background ,t-neutral_red))))
      `(anzu-mode-line                            ((,class (:foreground ,light0 :height 100 :background ,neutral_blue))
                                                   (,t-class (:foreground ,t-light0 :height 100 :background ,t-neutral_blue))))
+     ;; Message faces
+     `(message-header-name                       ((,class (:foreground ,bright_green))
+                                                  (,t-class (:foreground ,t-bright_green))))
+     `(message-header-cc                         ((,class (:foreground ,neutral_yellow))
+                                                  (,t-class (:foreground ,t-neutral_yellow))))
+     `(message-header-other                      ((,class (:foreground ,neutral_red))
+                                                  (,t-class (:foreground ,t-neutral_red))))
+     `(message-header-subject                    ((,class (:foreground ,neutral_blue))
+                                                  (,t-class (:foreground ,t-neutral_blue))))
+     `(message-header-to                         ((,class (:foreground ,neutral_purple))
+                                                  (,t-class (:foreground ,neutral_purple))))
+     `(message-cited-text                        ((,class (:inherit font-lock-comment-face))
+                                                  (,t-class (:inherit font-lock-comment-face))))
+     `(message-separator                         ((,class (:foreground ,light4))
+                                                  (,t-class (:foreground ,t-light4))))
 
 ;;;;; mingus
      `(mingus-directory-face                           ((,class (:foreground ,neutral_cyan))
@@ -946,7 +962,7 @@
      `(mingus-album-face                               ((,class (:foreground ,neutral_yellow))
                                                         (,t-class (:foreground ,neutral_yellow))))
      `(mingus-album-stale-face                         ((,class (:foreground ,neutral_red))
-                                                        (,t-class (:foreground ,neutral_red))))
+                                                        (,t-class (:foreground ,t-neutral_red))))
 
      ;; Neotree
      `(neo-dir-link-face                         ((,class (:foreground ,bright_purple :weight bold))
@@ -1046,14 +1062,14 @@
                                                   (,t-class (:foreground ,t-light0_hard :background ,t-dark_cyan))))
 
      ;; Powerline
-     `(powerline-active1                         ((,class (:background ,dark1 :inherit mode-line))
-                                                  (,t-class (:background ,t-dark1 :inherit mode-line))))
-     `(powerline-active2                         ((,class (:background ,dark2 :inherit mode-line))
-                                                  (,t-class (:background ,t-dark2 :inherit mode-line))))
-     `(powerline-inactive1                       ((,class (:background ,dark1 :inherit mode-line-inactive))
-                                                  (,t-class (:background ,t-dark1 :inherit mode-line-inactive))))
-     `(powerline-inactive2                       ((,class (:background ,dark3 :inherit mode-line-inactive))
-                                                  (,t-class (:background ,t-dark3 :inherit mode-line-inactive))))
+     `(powerline-active1                         ((,class (:background ,dark1 :height 0.9 :inherit mode-line))
+                                                  (,t-class (:background ,t-dark1 :height 0.9 :inherit mode-line))))
+     `(powerline-active2                         ((,class (:background ,dark2 :height 0.9 :inherit mode-line))
+                                                  (,t-class (:background ,t-dark2 :height 0.9 :inherit mode-line))))
+     `(powerline-inactive1                       ((,class (:background ,dark0_hard :height 0.9 :inherit mode-line-inactive))
+                                                  (,t-class (:background ,t-dark0_hard :height 0.9 :inherit mode-line-inactive))))
+     `(powerline-inactive2                       ((,class (:background ,dark0_hard :height 0.9 :inherit mode-line-inactive))
+                                                  (,t-class (:background ,t-dark0_hard :height 0.9 :inherit mode-line-inactive))))
 
      ;; Rainbow-Blocks
      `(rainbow-blocks-depth-1-face               ((,class (:foreground ,delimiter-one))
@@ -1251,8 +1267,8 @@
      ;; Which-key
      `(which-key-command-description-face         ((,class (:foreground ,light2))
                                                    (,t-class (:foreground ,t-light2))))
-     `(which-key-group-description-face           ((,class (:foreground ,medium))
-                                                   (,t-class (:foreground ,t-medium))))
+     `(which-key-group-description-face           ((,class (:foreground ,light4))
+                                                   (,t-class (:foreground ,t-light4))))
      `(which-key-key-face                         ((,class (:foreground ,neutral_purple :weight bold))
                                                    (,t-class (:foreground ,t-neutral_purple :weight bold))))
      `(which-key-separator-face                   ((,class (:background nil :foreground ,dark_green))
@@ -1292,7 +1308,7 @@
                      ,neutral_purple ,bright_purple
                      ,neutral_cyan ,bright_cyan
                      ,light0_soft ,light3
-                     )))
+                     ))
 
     ;; TODO:
     ;; Add these modes:
@@ -1315,7 +1331,7 @@
      `(xterm-color-names [,dark3 ,neutral_red ,neutral_green ,neutral_yellow ,neutral_blue ,dark_purple ,neutral_cyan ,light3])
      `(xterm-color-names-bright
        [,dark4 ,bright_red ,bright_green ,bright_yellow ,bright_blue ,bright_purple ,bright_cyan ,light4])
-     )
+     ))
     )
 
 ;;;###autoload
