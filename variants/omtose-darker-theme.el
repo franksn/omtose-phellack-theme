@@ -4,7 +4,7 @@
 
 ;; Author: Alexander F. Adhyatma
 ;; URL: http:/github.com/franksn/omtose-darker/
-;; Version: 0.1.0
+;; Version: 0.2.0
 ;; Package-Requires: ((emacs "24"))
 ;; This theme is like the illegitimate son of Gruvbox and Cyberpunk
 ;;
@@ -31,7 +31,7 @@
 ;;
 ;;; Bugs
 ;;
-;; report any bugs to lexadhy@gmx.com
+;; report any bugs to franksn@openmailbox.org
 ;;
 ;;; Code:
 
@@ -940,7 +940,7 @@
      `(message-header-subject                    ((,class (:foreground ,neutral_blue))
                                                   (,t-class (:foreground ,t-neutral_blue))))
      `(message-header-to                         ((,class (:foreground ,neutral_purple))
-                                                  (,t-class (:foreground ,neutral_purple))))
+                                                  (,t-class (:foreground ,t-neutral_purple))))
      `(message-cited-text                        ((,class (:inherit font-lock-comment-face))
                                                   (,t-class (:inherit font-lock-comment-face))))
      `(message-separator                         ((,class (:foreground ,light4))
@@ -1199,9 +1199,9 @@
      `(swiper-match-face-2                       ((,class (:weight bold :foreground ,neutral_red))
                                                   (,t-class (:weight bold :foreground ,t-neutral_red))))
      `(swiper-match-face-3                       ((,class (:weight bold :foreground ,neutral_green))
-                                                  (,t-class (:weight bold :foreground ,neutral_green))))
+                                                  (,t-class (:weight bold :foreground ,t-neutral_green))))
      `(swiper-match-face-4                       ((,class (:weight bold :foreground ,neutral_green))
-                                                  (,t-class (:weight bold :foreground ,neutral_green))))
+                                                  (,t-class (:weight bold :foreground ,t-neutral_green))))
 
      ;; Term
      `(term-color-black                          ((,class (:foreground ,dark1))
@@ -1296,10 +1296,6 @@
                      ,neutral_cyan ,bright_cyan
                      ,light0_soft ,light3
                      )))
-
-    ;; TODO:
-    ;; Add these modes:
-    ;; cscope, ERC, evil (perhaps), Gnus, etc.
 
     (custom-theme-set-variables
      'omtose-darker
