@@ -89,11 +89,11 @@
         (dark4          "#555B77")
 
         (light0_hard    "#C1C9D9")
-        (light0         "#B5BDCC")
-        (light0_soft    "#B1B8C7")
-        (light1         "#ACB4C2")
-        (light2         "#A1A8B5")
-        (light3         "#969CA8")
+        (light0         "#B1B8C7")
+        (light0_soft    "#ACB4C2")
+        (light1         "#A1A8B5")
+        (light2         "#969CA8")
+        (light3         "#8D939E")
         (light4         "#838791")
 
         (bright_red     "#E072DC")

@@ -89,7 +89,7 @@
         (dark4           "#666B88")
 
         (light0_hard     "#C1CADE")
-        (light0          "#B8C1D4")
+        (light0          "#ADB5C7")
         (light0_soft     "#B1BACC")
         (light1          "#ABB3C4")
         (light2          "#A6ACBA")
