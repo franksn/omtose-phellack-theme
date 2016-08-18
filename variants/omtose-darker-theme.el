@@ -98,7 +98,7 @@
 
         (bright_red     "#E072DC")
         (bright_green   "#8BE8D8")
-        (bright_yellow  "#EDB08A")
+        (bright_yellow  "#B2DEC1")
         (bright_blue    "#75B5EB")
         (bright_purple  "#9198EB")
         (bright_cyan    "#C3C3E8")
@@ -106,7 +106,7 @@
         ;; Needs some work
         (neutral_red    "#D16ECE")
         (neutral_green  "#88D6CB")
-        (neutral_yellow "#DEA581")
+        (neutral_yellow "#C48788")
         (neutral_blue   "#76A2D1")
         (neutral_purple "#8F95D6")
         (neutral_cyan   "#96A9D6")

@@ -98,7 +98,7 @@
 
         (bright_red      "#B86EB5")
         (bright_green    "#7FBAB0")
-        (bright_yellow   "#D19D7D")
+        (bright_yellow   "#9FC7AD")
         (bright_blue     "#76A0C4")
         (bright_purple   "#898EC4")
         (bright_cyan     "#A4A4BD")
@@ -106,7 +106,7 @@
         ;; Needs some work
         (neutral_red    "#AB67A9")
         (neutral_green  "#76A8A0")
-        (neutral_yellow "#C79474")
+        (neutral_yellow "#B58181")
         (neutral_blue   "#6886A6")
         (neutral_purple "#7D81AD")
         (neutral_cyan   "#7D8AA8")
@@ -1189,20 +1189,6 @@
                                                   (,t-class (:background ,t-dark_green))))
      `(smerge-refined-removed                    ((,class (:background ,dark_red))
                                                   (,t-class (:background ,t-dark_red))))
-
-     ;; spaceline
-     `(spaceline-evil-emacs                      ((,class (:background ,neutral_blue :foreground ,light0 :inherit mode-line))
-                                                  (,t-class (:background ,t-neutral_blue :foreground ,t-light0_hard :inherit mode-line))))
-     `(spaceline-evil-insert                     ((,class (:background ,neutral_green :foreground ,light0 :inherit mode-line))
-                                                  (,t-class (:background ,t-neutral_green :foreground ,t-light0 :inherit mode-line))))
-     `(spaceline-evil-motion                     ((,class (:background ,neutral_red :foreground ,light0 :inherit mode-line))
-                                                  (,t-class (:background ,t-neutral_red :foreground ,t-light0 :inherit mode-line))))
-     `(spaceline-evil-normal                     ((,class (:background ,neutral_cyan :foreground ,light0 :inherit mode-line))
-                                                  (,t-class (:background ,t-neutral_cyan :foreground ,t-light0 :inherit mode-line))))
-     `(spaceline-evil-replace                    ((,class (:background ,neutral_yellow :foreground ,light0 :inherit mode-line))
-                                                  (,t-class (:background ,t-neutral_yellow :foreground ,t-light0 :inherit mode-line))))
-     `(spaceline-highlight-face                  ((,class (:background ,neutral_purple :foreground ,light0 :inherit mode-line))
-                                                  (,t-class (:background ,t-neutral_purple :foreground ,t-light0 :inherit mode-line))))
 
      ;; swiper
      `(swiper-line-face                          ((,class (:background ,dark1))
