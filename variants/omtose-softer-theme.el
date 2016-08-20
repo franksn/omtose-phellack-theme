@@ -106,7 +106,7 @@
         ;; Needs some work
         (neutral_red    "#AB67A9")
         (neutral_green  "#76A8A0")
-        (neutral_yellow "#B58181")
+        (neutral_yellow "#C79474")
         (neutral_blue   "#6886A6")
         (neutral_purple "#7D81AD")
         (neutral_cyan   "#7D8AA8")
@@ -329,6 +329,24 @@
                                                   (,t-class (:inherit popup-face))))
      `(ac-dabbrev-selection-face                 ((,class (:inherit popup-menu-selection-face))
                                                   (,t-class (:inherit popup-menu-selection-face))))
+
+     ;; AHS
+     `(ahs-definition-face                       ((,class (:foreground ,bright_purple :background unspecified
+                                                                       :slant normal))
+                                                  (,t-class (:foreground ,t-bright_purple :background unspecified
+                                                                         :slant normal))))
+     `(ahs-edit-mode-face                        ((,class (:foreground ,dark0 :background ,bright_purple))
+                                                  (,t-class (:foreground ,t-dark0 :background ,t-bright_purple))))
+     `(ahs-face                                  ((,class (:foreground ,neutral_yellow :background unspecified))
+                                                  (,t-class (:foreground ,t-neutral_yellow :background unspecified))))
+     `(ahs-plugin-bod-face                       ((,class (:foreground ,dark0 :background ,bright_blue))
+                                                  (,t-class (:foreground ,t-dark0 :background ,t-bright_blue))))
+     `(ahs-plugin-defalt-face                    ((,class (:foreground ,dark0 :background ,bright_green))
+                                                  (,t-class (:foreground ,t-dark0 :background ,t-bright_green))))
+     `(ahs-plugin-whole-buffer-face              ((,class (:foreground ,light0  :background ,dark_cyan))
+                                                  (,t-class (:foreground ,t-light0 :background ,t-dark_cyan))))
+     `(ahs-warning-face                          ((,class (:foreground ,dark0 :background ,bright_yellow :weight bold))
+                                                  (,t-class (:foreground ,t-dark0 :background ,t-bright_yellow :weight bold))))
 
      ;; Avy
      `(avy-lead-face-0                           ((,class (:foreground ,bright_blue))
@@ -554,8 +572,8 @@
                                                   (,t-class (:foreground ,t-neutral_blue))))
      `(helm-bookmark-w3m                         ((,class (:foreground ,neutral_yellow))
                                                   (,t-class (:foreground ,t-neutral_yellow))))
-     `(helm-buffer-directory                     ((,class (:foreground ,white :background ,bright_blue))
-                                                  (,t-class (:foreground ,t-white :background ,t-bright_blue))))
+     `(helm-buffer-directory                     ((,class (:foreground ,dark0 :background ,bright_blue))
+                                                  (,t-class (:foreground ,t-dark0 :background ,t-bright_blue))))
      `(helm-buffer-file                          ((,class (:foreground ,light0_soft :background ,dark_blue))
                                                   (,t-class (:foreground ,t-light0_soft :background ,t-dark_blue))))
      `(helm-buffer-not-saved                     ((,class (:foreground ,neutral_red))
