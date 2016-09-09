@@ -431,8 +431,8 @@
                                                   (,t-class (:foreground ,t-dark0 :background ,t-bright_blue))))
 
      ;; Diffs
-     `(diff-changed                              ((,class (:foreground ,bright_purple))
-                                                  (,t-class (:foreground ,t-bright_purple))))
+     `(diff-changed                              ((,class (:foreground ,neutral_yellow))
+                                                  (,t-class (:foreground ,t-neutral_yellow))))
      `(diff-added                                ((,class (:foreground ,bright_green))
                                                   (,t-class (:foreground ,t-bright_green))))
      `(diff-removed                              ((,class (:foreground ,bright_red))
@@ -443,6 +443,14 @@
                                                   (,t-class (:inherit diff-added))))
      `(diff-indicator-removed                    ((,class (:inherit diff-removed))
                                                   (,t-class (:inherit diff-removed))))
+     `(diff-file-header                          ((,class (:background ,dark2 :foreground ,bright_cyan))
+                                                  (,t-class (:background ,t-dark2 :foreground ,t-bright_cyan))))
+     `(diff-header                               ((,class (:background ,dark0_hard :foreground ,light1))
+                                                  (,t-class (:background ,t-dark0_hard :foreground ,t-light1))))
+     `(diff-hunk-header                          ((,class (:inherit diff-header))
+                                                  (,t-class (:inherit diff-header))))
+     `(diff-index                                ((,class (:background ,dark0_hard :foreground ,light4))
+                                                  (,t-class (:background ,dark0_hard :foreground ,light4))))
 
      ;; Diff-hl
      `(diff-hl-change                            ((,class (:inherit diff-changed))
@@ -474,16 +482,15 @@
      `(dired-warning                             ((,class (:foreground ,bright_yellow :weight bold))
                                                   (,t-class (:foreground ,t-bright_yellow :weight bold))))
 
-
      ;; Elfeed
-     `(elfeed-search-date-face                   ((,class (:foreground ,dark1))
-                                                  (,t-class (:foreground ,t-dark1))))
-     `(elfeed-search-feed-face                   ((,class (:foreground ,dark1))
-                                                  (,t-class (:foreground ,t-dark1))))
-     `(elfeed-search-tag-face                    ((,class (:foreground ,dark0))
-                                                  (,t-class (:foreground ,t-dark0))))
-     `(elfeed-search-title-face                  ((,class (:foreground ,dark0))
-                                                  (,t-class (:foreground ,t-dark0))))
+     `(elfeed-search-date-face                   ((,class (:foreground ,neutral_red))
+                                                  (,t-class (:foreground ,t-neutral_red))))
+     `(elfeed-search-feed-face                   ((,class (:foreground ,neutral_blue))
+                                                  (,t-class (:foreground ,t-neutral_blue))))
+     `(elfeed-search-tag-face                    ((,class (:foreground ,neutral_green))
+                                                  (,t-class (:foreground ,t-neutral_green))))
+     `(elfeed-search-title-face                  ((,class (:foreground ,neutral_purple))
+                                                  (,t-class (:foreground ,t-neutral_purple))))
 
      ;; elscreen
      `(elscreen-tab-background-face              ((,class (:background ,dark0 :box nil))
@@ -520,21 +527,20 @@
                                                   (,t-class (:foreground ,t-neutral_blue :weight bold))))
 
      ;; Flycheck
-     `(flycheck-error                            ((,class (:foreground ,light0_hard :background ,bright_red :weight bold :underline t))
-                                                  (,t-class (:foreground ,t-light0_hard :background ,t-bright_red :weight bold :underline t))))
      `(flycheck-error-list-checker-name          ((,class (:foreground ,neutral_blue))
                                                   (,t-class (:foreground ,t-neutral_blue))))
-     `(flycheck-fringe-error                     ((,class (:foreground ,bright_red :weight bold))
-                                                  (,t-class (:foreground ,t-bright_red :weight bold))))
-     `(flycheck-fringe-info                      ((,class (:foreground ,dark_blue :weight bold))
-                                                  (,t-class (:foreground ,t-dark_blue :weight bold))))
-     `(flycheck-fringe-warning                   ((,class (:foreground ,bright_yellow :weight bold))
-                                                  (,t-class (:foreground ,t-bright_yellow :weight bold))))
-     `(flycheck-info                             ((,class (:foreground ,light0 :background ,bright_purple :weight bold :underline t))
-                                                  (,t-class (:foreground ,t-light0 :background ,t-bright_purple :weight bold :underline t))))
-     `(flycheck-warning                          ((,class (:foreground ,dark0_hard :background ,bright_yellow :weight bold :underline t))
-                                                  (,t-class (:foreground ,t-dark0_hard :background ,t-bright_yellow :weight bold :underline t))))
-
+     `(flycheck-fringe-error                     ((,class (:foreground ,bright_red :background ,dark_red :weight bold :inverse-video t))
+                                                  (,t-class (:foreground ,t-bright_red :background ,t-dark_red :weight bold :inverse-video t))))
+     `(flycheck-fringe-info                      ((,class (:foreground ,bright_blue :background ,dark_blue :weight bold :inverse-video t))
+                                                  (,t-class (:foreground ,t-bright_blue :background ,t-dark_blue :weight bold :inverse-video t))))
+     `(flycheck-fringe-warning                   ((,class (:foreground ,dark3 :background ,dark_yellow :weight bold :inverse-video t))
+                                                  (,t-class (:foreground ,t-dark1 :background ,t-bright_yellow :weight bold :inverse-video t))))
+     `(flycheck-info                             ((,class (:foreground ,dark2 :background ,bright_purple :weight bold :underline t))
+                                                  (,t-class (:foreground ,t-dark2 :background ,t-bright_purple :weight bold :underline t))))
+     `(flycheck-warning                          ((,class (:underline (:color ,bright_yellow :style wave)))
+                                                  (,t-class (:underline (:color ,t-bright_yellow :style wave)))))
+     `(flycheck-error                            ((,class (:underline (:color ,bright_red :style wave)))
+                                                  (,t-class (:underline (:color ,t-bright_red :style wave)))))
 
      ;; Haskell
      `(haskell-interactive-face-compile-warning  ((,class (:underline (:color ,bright_yellow :style wave)))

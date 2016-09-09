@@ -89,12 +89,12 @@
         (dark4           "#666B88")
 
         (light0_hard     "#C1CADE")
-        (light0          "#ADB5C7")
-        (light0_soft     "#B1BACC")
-        (light1          "#ABB3C4")
-        (light2          "#A6ACBA")
-        (light3          "#9AA0AD")
-        (light4          "#9197A3")
+        (light0          "#A4ACBD")
+        (light0_soft     "#9DA5B5")
+        (light1          "#99A0B0")
+        (light2          "#9299A8")
+        (light3          "#8C92A1")
+        (light4          "#858B99")
 
         (bright_red      "#B86EB5")
         (bright_green    "#7FBAB0")
@@ -114,7 +114,7 @@
         (dark_red       "#5C4358")
         (dark_green     "#4D5E5C")
         (dark_yellow    "#B6D6C4")
-        (dark_blue      "#424B6B")
+        (dark_blue      "#3C4961")
         (dark_purple    "#515275")
         (dark_cyan      "#3D4E54")
 
@@ -194,13 +194,13 @@
                                                   (,t-class (:foreground ,t-bright_red :underline t))))
 
      `(mode-line                                 ((,class (:foreground ,light0_soft :background ,dark_blue :height 0.9
-                                                                       :box (:line-width 3 :color ,dark_blue))))
+                                                                       :box (:line-width 4 :color ,dark_blue))))
                                                   (,t-class (:foreground ,t-light0_soft :background ,t-dark_blue :height 0.9
-                                                                         :box (:line-width 3 :color ,dark_blue))))
+                                                                         :box (:line-width 4 :color ,dark_blue))))
      `(mode-line-inactive                        ((,class (:foreground ,light3 :height 0.9 :background ,dark0_soft :height 0.9
-                                                                       :box (:line-width 3 :color ,dark0_hard))))
+                                                                       :box (:line-width 4 :color ,dark0_hard))))
                                                   (,t-class (:foreground ,t-light3 :background ,t-dark0_soft :height 0.9
-                                                                         :box (:line-width 3 :color ,dark0_soft))))
+                                                                         :box (:line-width 4 :color ,dark0_soft))))
      `(mode-line-buffer-id                       ((,class (:bold t :foreground ,bright_red))
                                                   (,t-class (:bold t :foreground ,t-bright_red))))
      `(fringe                                    ((,class (:background ,dark0))
@@ -431,8 +431,8 @@
                                                   (,t-class (:foreground ,t-light0 :background ,t-neutral_blue))))
 
      ;; Diffs
-     `(diff-changed                              ((,class (:foreground ,bright_purple))
-                                                  (,t-class (:foreground ,t-bright_purple))))
+     `(diff-changed                              ((,class (:foreground ,neutral_yellow))
+                                                  (,t-class (:foreground ,t-neutral_yellow))))
      `(diff-added                                ((,class (:foreground ,bright_green))
                                                   (,t-class (:foreground ,t-bright_green))))
      `(diff-removed                              ((,class (:foreground ,bright_red))
@@ -443,6 +443,14 @@
                                                   (,t-class (:inherit diff-added))))
      `(diff-indicator-removed                    ((,class (:inherit diff-removed))
                                                   (,t-class (:inherit diff-removed))))
+     `(diff-file-header                          ((,class (:background ,dark2 :foreground ,bright_cyan))
+                                                  (,t-class (:background ,t-dark2 :foreground ,t-bright_cyan))))
+     `(diff-header                               ((,class (:background ,dark0_hard :foreground ,light1))
+                                                  (,t-class (:background ,t-dark0_hard :foreground ,t-light1))))
+     `(diff-hunk-header                          ((,class (:inherit diff-header))
+                                                  (,t-class (:inherit diff-header))))
+     `(diff-index                                ((,class (:background ,dark0_hard :foreground ,dark4))
+                                                  (,t-class (:background ,dark0_hard :foreground ,dark4))))
 
      ;; Diff-hl
      `(diff-hl-change                            ((,class (:inherit diff-changed))
@@ -475,14 +483,14 @@
                                                   (,t-class (:foreground ,t-bright_yellow :weight bold))))
 
      ;; Elfeed
-     `(elfeed-search-date-face                   ((,class (:foreground ,dark1))
-                                                  (,t-class (:foreground ,t-dark1))))
-     `(elfeed-search-feed-face                   ((,class (:foreground ,dark1))
-                                                  (,t-class (:foreground ,t-dark1))))
-     `(elfeed-search-tag-face                    ((,class (:foreground ,dark0))
-                                                  (,t-class (:foreground ,t-dark0))))
-     `(elfeed-search-title-face                  ((,class (:foreground ,dark0))
-                                                  (,t-class (:foreground ,t-dark0))))
+     `(elfeed-search-date-face                   ((,class (:foreground ,neutral_red))
+                                                  (,t-class (:foreground ,t-neutral_red))))
+     `(elfeed-search-feed-face                   ((,class (:foreground ,neutral_blue))
+                                                  (,t-class (:foreground ,t-neutral_blue))))
+     `(elfeed-search-tag-face                    ((,class (:foreground ,neutral_green))
+                                                  (,t-class (:foreground ,t-neutral_green))))
+     `(elfeed-search-title-face                  ((,class (:foreground ,neutral_purple))
+                                                  (,t-class (:foreground ,t-neutral_purple))))
 
      ;; elscreen
      `(elscreen-tab-background-face              ((,class (:background ,dark0 :box nil))
@@ -519,20 +527,20 @@
                                                   (,t-class (:foreground ,t-neutral_blue :weight bold))))
 
      ;; Flycheck
-     `(flycheck-error                            ((,class (:foreground ,light0_hard :background ,bright_red :weight bold :underline t))
-                                                  (,t-class (:foreground ,t-light0_hard :background ,t-bright_red :weight bold :underline t))))
      `(flycheck-error-list-checker-name          ((,class (:foreground ,neutral_blue))
                                                   (,t-class (:foreground ,t-neutral_blue))))
-     `(flycheck-fringe-error                     ((,class (:foreground ,bright_red :weight bold))
-                                                  (,t-class (:foreground ,t-bright_red :weight bold))))
-     `(flycheck-fringe-info                      ((,class (:foreground ,dark_blue :weight bold))
-                                                  (,t-class (:foreground ,t-dark_blue :weight bold))))
-     `(flycheck-fringe-warning                   ((,class (:foreground ,bright_yellow :weight bold))
-                                                  (,t-class (:foreground ,t-bright_yellow :weight bold))))
-     `(flycheck-info                             ((,class (:foreground ,light0 :background ,bright_purple :weight bold :underline t))
-                                                  (,t-class (:foreground ,t-light0 :background ,t-bright_purple :weight bold :underline t))))
-     `(flycheck-warning                          ((,class (:foreground ,dark0_hard :background ,bright_yellow :weight bold :underline t))
-                                                  (,t-class (:foreground ,t-dark0_hard :background ,t-bright_yellow :weight bold :underline t))))
+     `(flycheck-fringe-error                     ((,class (:foreground ,bright_red :background ,dark_red :weight bold :inverse-video t))
+                                                  (,t-class (:foreground ,t-bright_red :background ,t-dark_red :weight bold :inverse-video t))))
+     `(flycheck-fringe-info                      ((,class (:foreground ,bright_blue :background ,dark_blue :weight bold :inverse-video t))
+                                                  (,t-class (:foreground ,t-bright_blue :background ,t-dark_blue :weight bold :inverse-video t))))
+     `(flycheck-fringe-warning                   ((,class (:foreground ,dark3 :background ,dark_yellow :weight bold :inverse-video t))
+                                                  (,t-class (:foreground ,t-dark1 :background ,t-bright_yellow :weight bold :inverse-video t))))
+     `(flycheck-info                             ((,class (:foreground ,dark2 :background ,bright_purple :weight bold :underline t))
+                                                  (,t-class (:foreground ,t-dark2 :background ,t-bright_purple :weight bold :underline t))))
+     `(flycheck-warning                          ((,class (:underline (:color ,bright_yellow :style wave)))
+                                                  (,t-class (:underline (:color ,t-bright_yellow :style wave)))))
+     `(flycheck-error                            ((,class (:underline (:color ,bright_red :style wave)))
+                                                  (,t-class (:underline (:color ,t-bright_red :style wave)))))
 
 
      ;; Haskell
@@ -992,7 +1000,7 @@
      `(neo-root-dir-face                         ((,class (:foreground ,neutral_red :weight bold))
                                                   (,t-class (:foreground ,t-neutral_red :weight bold))))
 
-     ;; Org-mode
+      ;; Org-mode
      `(org-agenda-date-today                     ((,class (:foreground ,light2 :slant italic :weight bold :height ,(if omtose-softer-org-height 1.2 1.0)))
                                                   (,t-class (:foreground ,t-light2 :slant italic :weight bold :height ,(if omtose-softer-org-height 1.2 1.0)))))
      `(org-agenda-structure                      ((,class (:inherit font-lock-comment-face))
