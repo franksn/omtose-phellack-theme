@@ -80,105 +80,105 @@
                                 'default))
        (class '((class color) (min-colors 257)))
         ;; GUI color definition
-        (dark0_hard      "#1F242E")
-        (dark0           "#2B3240")
-        (dark0_soft      "#303847")
-        (dark1           "#343C4D")
-        (dark2           "#374052")
-        (dark3           "#414C61")
-        (dark4           "#666B88")
+       (dark0_hard      "#1F242E")
+       (dark0           "#2B3240")
+       (dark0_soft      "#303847")
+       (dark1           "#343C4D")
+       (dark2           "#374052")
+       (dark3           "#414C61")
+       (dark4           "#666B88")
 
-        (light0_hard     "#C1CADE")
-        (light0          "#A4ACBD")
-        (light0_soft     "#9DA5B5")
-        (light1          "#99A0B0")
-        (light2          "#9299A8")
-        (light3          "#8C92A1")
-        (light4          "#858B99")
+       (light0_hard     "#C1CADE")
+       (light0          "#A4ACBD")
+       (light0_soft     "#9DA5B5")
+       (light1          "#99A0B0")
+       (light2          "#9299A8")
+       (light3          "#8C92A1")
+       (light4          "#858B99")
 
-        (bright_red      "#B86EB5")
-        (bright_green    "#7FBAB0")
-        (bright_yellow   "#9FC7AD")
-        (bright_blue     "#76A0C4")
-        (bright_purple   "#898EC4")
-        (bright_cyan     "#A4A4BD")
+       (bright_red      "#C27CBE")
+       (bright_green    "#7FBAB0")
+       (bright_yellow   "#9FC7AD")
+       (bright_blue     "#76A0C4")
+       (bright_purple   "#898EC4")
+       (bright_cyan     "#A4A4BD")
 
         ;; Needs some work
-        (neutral_red    "#AB67A9")
-        (neutral_green  "#76A8A0")
-        (neutral_yellow "#C79474")
-        (neutral_blue   "#6886A6")
-        (neutral_purple "#7D81AD")
-        (neutral_cyan   "#7D8AA8")
+       (neutral_red    "#B26BB8")
+       (neutral_green  "#76A8A0")
+       (neutral_yellow "#C79474")
+       (neutral_blue   "#6886A6")
+       (neutral_purple "#7D81AD")
+       (neutral_cyan   "#7D8AA8")
 
-        (dark_red       "#5C4358")
-        (dark_green     "#4D5E5C")
-        (dark_yellow    "#B6D6C4")
-        (dark_blue      "#3C4961")
-        (dark_purple    "#515275")
-        (dark_cyan      "#3D4E54")
+       (dark_red       "#5C4358")
+       (dark_green     "#4D5E5C")
+       (dark_yellow    "#B6D6C4")
+       (dark_blue      "#3C4961")
+       (dark_purple    "#515275")
+       (dark_cyan      "#3D4E54")
 
-        (delimiter-one  "#A84FA6")
-        (delimiter-two  "#95c7c0")
-        (delimiter-three "#ACC2C2")
-        (delimiter-four "#72789E")
+       (delimiter-one  "#A84FA6")
+       (delimiter-two  "#95c7c0")
+       (delimiter-three "#ACC2C2")
+       (delimiter-four "#72789E")
 
-        (white          "#CCCCCC")
-        (black          "#555B77")
-        (match          "#98D9CE")
-        (mline          "#3B3D54")
+       (white          "#CCCCCC")
+       (black          "#555B77")
+       (match          "#98D9CE")
+       (mline          "#3B3D54")
 
         ;; Color definitions for terminals that doesn't support 256 colors.
         ;; Needs some more work, expect some heavy color-regression in the mean time.
         ;; Proposed solution: re-work gui colorscheme to reflect its term colors (WIP)
-        (t-class         '((class color) (min-colors 89)))
+       (t-class         '((class color) (min-colors 89)))
 
-        (t-dark0_hard    "#222225")
-        (t-dark0         "#262628")
-        (t-dark0_soft    "#303030")
-        (t-dark1         "#444444")
-        (t-dark2         "#585858")
-        (t-dark3         "#5F5F5F")
-        (t-dark4         "#6c6c6c")
+       (t-dark0_hard    "#222225")
+       (t-dark0         "#262628")
+       (t-dark0_soft    "#303030")
+       (t-dark1         "#444444")
+       (t-dark2         "#585858")
+       (t-dark3         "#5F5F5F")
+       (t-dark4         "#6c6c6c")
 
-        (t-light0_hard     "#D0D0D0")
-        (t-light0          "#B2B2B2")
-        (t-light0_soft     "#A8A8A8")
-        (t-light1          "#9E9E9E")
-        (t-light2          "#949494")
-        (t-light3          "#8A8A8A")
-        (t-light4          "#878787")
+       (t-light0_hard     "#D0D0D0")
+       (t-light0          "#B2B2B2")
+       (t-light0_soft     "#A8A8A8")
+       (t-light1          "#9E9E9E")
+       (t-light2          "#949494")
+       (t-light3          "#8A8A8A")
+       (t-light4          "#878787")
 
-        (t-bright_red      "#D75FD7")
-        (t-bright_green    "#87D7AF")
-        (t-bright_yellow   "#FF8700")
-        (t-bright_blue     "#5FAFD7")
-        (t-bright_purple   "#8787D7")
-        (t-bright_cyan     "#AFAFD7")
+       (t-bright_red      "#D75FD7")
+       (t-bright_green    "#87D7AF")
+       (t-bright_yellow   "#FF8700")
+       (t-bright_blue     "#5FAFD7")
+       (t-bright_purple   "#8787D7")
+       (t-bright_cyan     "#AFAFD7")
 
-        (t-neutral_red     "#AF5FAF")
-        (t-neutral_green   "#87AFAF")
-        (t-neutral_yellow  "#D78700")
-        (t-neutral_blue    "#5F87AF")
-        (t-neutral_purple  "#8787AF")
-        (t-neutral_cyan    "#888888")
+       (t-neutral_red     "#AF5FAF")
+       (t-neutral_green   "#87AFAF")
+       (t-neutral_yellow  "#D78700")
+       (t-neutral_blue    "#5F87AF")
+       (t-neutral_purple  "#8787AF")
+       (t-neutral_cyan    "#888888")
 
-        (t-dark_red        "#8700D7")
-        (t-dark_green      "#5F5F5F")
-        (t-dark_yellow     "#87AF87")
-        (t-dark_blue       "#5F5F87")
-        (t-dark_purple     "#5F5FAF")
-        (t-dark_cyan       "#0087AF")
+       (t-dark_red        "#8700D7")
+       (t-dark_green      "#5F5F5F")
+       (t-dark_yellow     "#87AF87")
+       (t-dark_blue       "#5F5F87")
+       (t-dark_purple     "#5F5FAF")
+       (t-dark_cyan       "#0087AF")
 
-        (t-delimiter-one   "#AF5F5F")
-        (t-delimiter-two   "#AFD7D7")
-        (t-delimiter-three "#D7FF87")
-        (t-delimiter-four  "#D7D7FF")
+       (t-delimiter-one   "#AF5F5F")
+       (t-delimiter-two   "#AFD7D7")
+       (t-delimiter-three "#D7FF87")
+       (t-delimiter-four  "#D7D7FF")
 
-        (t-white           "#FFFFFF")
-        (t-black           "#4D4D4D")
-        (t-match           "#AFD7FF")
-        )
+       (t-white           "#FFFFFF")
+       (t-black           "#4D4D4D")
+       (t-match           "#AFD7FF"))
+        
 
     (custom-theme-set-faces
      'omtose-softer
@@ -195,12 +195,12 @@
 
      `(mode-line                                 ((,class (:foreground ,light0_soft :background ,dark_blue :height 0.9
                                                                        :box (:line-width 4 :color ,dark_blue))))
-                                                  (,t-class (:foreground ,t-light0_soft :background ,t-dark_blue :height 0.9
-                                                                         :box (:line-width 4 :color ,dark_blue))))
+                                                 (,t-class (:foreground ,t-light0_soft :background ,t-dark_blue :height 0.9
+                                                                        :box (:line-width 4 :color ,dark_blue))))
      `(mode-line-inactive                        ((,class (:foreground ,light3 :height 0.9 :background ,dark0_soft :height 0.9
                                                                        :box (:line-width 4 :color ,dark0_hard))))
-                                                  (,t-class (:foreground ,t-light3 :background ,t-dark0_soft :height 0.9
-                                                                         :box (:line-width 4 :color ,dark0_soft))))
+                                                 (,t-class (:foreground ,t-light3 :background ,t-dark0_soft :height 0.9
+                                                                        :box (:line-width 4 :color ,dark0_soft))))
      `(mode-line-buffer-id                       ((,class (:bold t :foreground ,bright_red))
                                                   (,t-class (:bold t :foreground ,t-bright_red))))
      `(fringe                                    ((,class (:background ,dark0))
@@ -421,14 +421,28 @@
                                                   (,t-class (:foreground ,t-light1 :background ,t-dark1))))
      `(company-tooltip-annotation                ((,class (:foreground ,light4 :background ,dark1))
                                                   (,t-class (:foreground ,t-light4 :background ,t-dark1))))
-     `(company-tooltip-annotation-selection      ((,class (:foreground ,light0 :background ,neutral_blue))
-                                                  (,t-class (:foreground ,t-light0 :background ,t-neutral_blue))))
-     `(company-tooltip-common-selection          ((,class (:foreground ,light0 :background ,neutral_blue))
-                                                  (,t-class (:foreground ,t-light0 :background ,t-neutral_blue))))
+     `(company-tooltip-annotation-selection      ((,class (:foreground ,bright_blue :background ,dark_blue))
+                                                  (,t-class (:foreground ,t-bright_blue :background ,t-dark_blue))))
+     `(company-tooltip-common-selection          ((,class (:foreground ,neutral_red :background ,dark_blue))
+                                                  (,t-class (:foreground ,t-neutral_red :background ,t-dark_blue))))
      `(company-tooltip-mouse                     ((,class (:foreground ,dark0 :background ,bright_blue))
                                                   (,t-class (:foreground ,t-dark0 :background ,t-bright_blue))))
-     `(company-tooltip-selection                 ((,class (:foreground ,light0 :background ,neutral_blue))
-                                                  (,t-class (:foreground ,t-light0 :background ,t-neutral_blue))))
+     `(company-tooltip-selection                 ((,class (:foreground ,neutral_red :background ,dark_blue))
+                                                  (,t-class (:foreground ,t-neutral_red :background ,t-dark_blue))))
+
+     ;; widget faces
+     `(widget-field                              ((,class (:background ,dark_blue :box (:line-width 1 :color ,light4)))
+                                                  (,t-class (:background ,t-dark_blue :box (:line-width 1 :color ,t-light4)))))
+     `(widget-button                             ((,class (:inherit link))
+                                                  (,t-class (:inherit link))))
+
+     ;; custom gui only for the moment.
+     `(custom-button                             ((,class (:background ,dark2 :box (:line-width 2 :style released-button)))))
+     `(custom-button-mouse                       ((,class (:background ,dark_blue :box (:line-width 2 :style released-button)))))
+     `(custom-button-pressed                     ((,class (:background ,dark_blue :box (:line-width 2 :style pressed-button)))))
+     `(custom-group-tag                          ((,class (:foreground ,neutral_red :weight bold :height 1.4))))
+     `(custom-variable-tag                       ((,class (:foreground ,neutral_red :weight bold))))
+     `(custom-state                              ((,class (:foreground ,neutral_green))))
 
      ;; Diffs
      `(diff-changed                              ((,class (:foreground ,neutral_yellow))
@@ -773,11 +787,11 @@
      `(lui-irc-colors-fg-9-face                  ((,class (:foreground ,bright_green))
                                                   (,t-class (:foreground ,t-bright_green))))
      `(lui-irc-colors-fg-10-face                  ((,class (:foreground ,bright_cyan))
-                                                  (,t-class (:foreground ,t-bright_cyan))))
+                                                   (,t-class (:foreground ,t-bright_cyan))))
      `(lui-irc-colors-fg-11-face                  ((,class (:foreground ,dark4))
-                                                  (,t-class (:foreground ,t-dark4))))
+                                                   (,t-class (:foreground ,t-dark4))))
      `(lui-irc-colors-fg-12-face                  ((,class (:foreground ,neutral_blue))
-                                                  (,t-class (:foreground ,t-neutral_blue))))
+                                                   (,t-class (:foreground ,t-neutral_blue))))
      `(lui-irc-colors-fg-13-face                  ((,class (:foreground ,delimiter-one))
                                                    (,t-class (:foreground ,t-delimiter-one))))
      `(lui-irc-colors-fg-14-face                  ((,class (:foreground ,light3))
@@ -948,12 +962,15 @@
                                                   (,t-class (:foreground ,t-light0 :background ,t-dark_purple))))
      `(isearch-fail                              ((,class (:foreground ,light0_hard :background ,dark_red))
                                                   (,t-class (:foreground ,t-light0_hard :background ,t-dark_red))))
-     `(show-paren-match                          ((,class (:foreground ,light0 :background ,neutral_blue))
-                                                  (,t-class (:foreground ,t-light0 :background ,t-neutral_blue))))
-     `(show-paren-mismatch                       ((,class (:foreground ,light0_hard :background ,neutral_red))
-                                                  (,t-class (:foreground ,t-light0_hard :background ,t-neutral_red))))
+     `(show-paren-match                          ((,class (:background ,dark_blue))
+                                                  (,t-class (:background ,t-dark_blue))))
+     `(show-paren-mismatch                       ((,class (:foreground ,light0_hard :background ,bright_red))
+                                                  (,t-class (:foreground ,t-light0_hard :background ,t-bright_red))))
      `(anzu-mode-line                            ((,class (:foreground ,light0 :height 100 :background ,neutral_blue))
                                                   (,t-class (:foreground ,t-light0 :height 100 :background ,t-neutral_blue))))
+     `(visible-mark-face1                        ((,class (:foreground ,delimiter-two :inverse-video t))
+                                                  (,t-class (:foreground ,t-delimiter-two :inverse-video t))))
+
      ;; Message faces
      `(message-header-name                       ((,class (:foreground ,bright_green))
                                                   (,t-class (:foreground ,t-bright_green))))
@@ -1000,13 +1017,19 @@
      `(neo-root-dir-face                         ((,class (:foreground ,neutral_red :weight bold))
                                                   (,t-class (:foreground ,t-neutral_red :weight bold))))
 
-      ;; Org-mode
-     `(org-agenda-date-today                     ((,class (:foreground ,light2 :slant italic :weight bold :height ,(if omtose-softer-org-height 1.2 1.0)))
-                                                  (,t-class (:foreground ,t-light2 :slant italic :weight bold :height ,(if omtose-softer-org-height 1.2 1.0)))))
+     ;; Org-mode
+     `(org-agenda-date                           ((,class (:foreground ,dark4 :weight bold :background ,dark1 :box 1))
+                                                  (,t-class (:foreground ,t-dark4 :weight bold :background ,t-dark1 :box 1))))
+     `(org-agenda-date-today                     ((,class (:foreground ,bright_blue :weight bold :background ,dark_blue :box 1))
+                                                  (,t-class (:foreground ,t-bright_blue :weight bold :background ,t-dark_blue :box 1))))
      `(org-agenda-structure                      ((,class (:inherit font-lock-comment-face))
                                                   (,t-class (:inherit font-lock-comment-face))))
-     `(org-archived                              ((,class (:foreground ,light0 :weight bold))
-                                                  (,t-class (:foreground ,t-light0 :weight bold))))
+     `(org-archived                              ((,class (:foreground ,light3 :weight bold))
+                                                  (,t-class (:foreground ,t-light3 :weight bold))))
+     `(org-block-begin-line                      ((,class (:background ,dark1 :foreground ,bright_green :height 0.9))
+                                                  (,t-class (:background ,t-dark1 :foreground ,t-bright_green :height 0.9))))
+     `(org-block-end-line                        ((,class (:background ,dark1 :foreground ,bright_green :height 0.9))
+                                                  (,t-class (:background ,t-dark1 :foreground ,t-bright_green :height 0.9))))
      `(org-checkbox                              ((,class (:foreground ,light2 :background ,dark0 :box (:line-width 1 :style released-button)))
                                                   (,t-class (:foreground ,t-light2 :background ,t-dark0 :box (:line-width 1 :style released-button)))))
      `(org-date                                  ((,class (:foreground ,neutral_blue :underline t))
@@ -1017,7 +1040,6 @@
                                                   (,t-class (:background ,t-dark0_hard :foreground ,t-neutral_green :weight bold :height ,(if omtose-softer-org-height 1.3 1.0) :underline t))))
      `(org-done                                  ((,class (:background ,dark_green :foreground ,bright_green :bold t :weight bold))
                                                   (,t-class (:background ,t-dark_green :foreground ,t-bright_green :bold t :weight bold))))
-
      `(org-formula                               ((,class (:foreground ,bright_yellow))
                                                   (,t-class (:foreground ,t-bright_yellow))))
      `(org-headline-done                         ((,class (:foreground ,bright_green))
@@ -1028,8 +1050,8 @@
                                                   (,t-class (:background ,t-dark_blue :foreground ,t-bright_blue :height ,(if omtose-softer-org-height 1.2 1.0)))))
      `(org-level-2                               ((,class (:background ,dark_green :foreground ,bright_green :height ,(if omtose-softer-org-height 1.1 1.0)))
                                                   (,t-class (:background ,t-dark_green :foreground ,t-bright_green :height ,(if omtose-softer-org-height 1.1 1.0)))))
-     `(org-level-3                               ((,class (:foreground ,bright_blue))
-                                                  (,t-class (:foreground ,t-bright_blue))))
+     `(org-level-3                               ((,class (:foreground ,bright_red))
+                                                  (,t-class (:foreground ,t-bright_red))))
      `(org-level-4                               ((,class (:foreground ,bright_yellow))
                                                   (,t-class (:foreground ,t-bright_yellow))))
      `(org-level-5                               ((,class (:foreground ,neutral_cyan))
@@ -1040,14 +1062,14 @@
                                                   (,t-class (:foreground ,t-bright_red))))
      `(org-level-8                               ((,class (:foreground ,bright_blue))
                                                   (,t-class (:foreground ,t-bright_blue))))
-     `(org-link                                  ((,class (:foreground ,bright_yellow :underline t))
-                                                  (,t-class (:foreground ,t-bright_yellow :underline t))))
-     `(org-scheduled                             ((,class (:foreground ,bright_green))
-                                                  (,t-class (:foreground ,t-bright_green))))
+     `(org-link                                  ((,class (:foreground ,bright_blue :underline t))
+                                                  (,t-class (:foreground ,t-bright_blue :underline t))))
+     `(org-scheduled                             ((,class (:foreground ,light1))
+                                                  (,t-class (:foreground ,t-light1))))
      `(org-scheduled-previously                  ((,class (:foreground ,bright_red))
                                                   (,t-class (:foreground ,t-bright_red))))
-     `(org-scheduled-today                       ((,class (:foreground ,bright_blue :height ,(if omtose-softer-org-height 1.1 1.0)))
-                                                  (,t-class (:foreground ,t-bright_blue :height ,(if omtose-softer-org-height 1.1 1.0)))))
+     `(org-scheduled-today                       ((,class (:foreground ,light0_hard :height ,(if omtose-softer-org-height 1.1 1.0)))
+                                                  (,t-class (:foreground ,t-light0_hard :height ,(if omtose-softer-org-height 1.1 1.0)))))
      `(org-sexp-date                             ((,class (:foreground ,bright_blue :underline t))
                                                   (,t-class (:foreground ,t-bright_blue :underline t))))
      `(org-special-keyword                       ((,class (:inherit font-lock-comment-face))
@@ -1058,8 +1080,8 @@
                                                   (,t-class (:bold t :weight bold))))
      `(org-time-grid                             ((,class (:foreground ,bright_blue))
                                                   (,t-class (:foreground ,t-bright_blue))))
-     `(org-todo                                  ((,class (:foreground ,bright_purple :weight bold :bold t))
-                                                  (,t-class (:foreground ,t-bright_purple :weight bold :bold t))))
+     `(org-todo                                  ((,class (:foreground ,bright_red :weight bold :bold t :background ,dark_red))
+                                                  (,t-class (:foreground ,t-bright_red :weight bold :bold t :background ,t-dark_red))))
      `(org-upcoming-deadline                     ((,class (:inherit font-lock-function-name-face))
                                                   (,t-class (:inherit font-lock-function-name-face))))
      `(org-warning                               ((,class (:foreground ,bright_red :weight bold :underline nil :bold t))
@@ -1276,6 +1298,10 @@
      `(web-mode-warning-face ((,class (:inherit ,font-lock-warning-face))
                               (,t-class (:inherit ,font-lock-warning-face))))
 
+     ;; which-func
+     `(which-func                                 ((,class (:foreground ,bright_purple))
+                                                   (,t-class (:foreground ,t-bright_purple))))
+
      ;; Which-key
      `(which-key-command-description-face         ((,class (:foreground ,light2))
                                                    (,t-class (:foreground ,t-light2))))
@@ -1319,32 +1345,32 @@
                      ,neutral_blue ,bright_blue
                      ,neutral_purple ,bright_purple
                      ,neutral_cyan ,bright_cyan
-                     ,light0_soft ,light3
-                     ))
+                     ,light0_soft ,light3))
+                     
 
     ;; TODO:
     ;; Add these modes:
     ;; cscope, ERC, evil (perhaps), Gnus, etc.
 
-    (custom-theme-set-variables
-     'omtose-softer
+     (custom-theme-set-variables
+      'omtose-softer
 
-     `(pos-tip-foreground-color ,light0_hard)
-     `(pos-tip-background-color ,dark_cyan)
+      `(pos-tip-foreground-color ,light0_hard)
+      `(pos-tip-background-color ,dark_cyan)
 
-     `(ansi-color-names-vector [,dark3
-                                ,neutral_red
-                                ,neutral_green
-                                ,neutral_yellow
-                                ,neutral_blue
-                                ,dark_purple
-                                ,neutral_cyan
-                                ,light3])
-     `(xterm-color-names [,dark3 ,neutral_red ,neutral_green ,neutral_yellow ,neutral_blue ,dark_purple ,neutral_cyan ,light3])
-     `(xterm-color-names-bright
-       [,dark4 ,bright_red ,bright_green ,bright_yellow ,bright_blue ,bright_purple ,bright_cyan ,light4])
-     ))
-    )
+      `(ansi-color-names-vector [,dark3
+                                 ,neutral_red
+                                 ,neutral_green
+                                 ,neutral_yellow
+                                 ,neutral_blue
+                                 ,dark_purple
+                                 ,neutral_cyan
+                                 ,light3])
+      `(xterm-color-names [,dark3 ,neutral_red ,neutral_green ,neutral_yellow ,neutral_blue ,dark_purple ,neutral_cyan ,light3])
+      `(xterm-color-names-bright
+        [,dark4 ,bright_red ,bright_green ,bright_yellow ,bright_blue ,bright_purple ,bright_cyan ,light4]))))
+     
+    
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
