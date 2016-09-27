@@ -178,7 +178,7 @@
        (t-white           "#FFFFFF")
        (t-black           "#4D4D4D")
        (t-match           "#AFD7FF"))
-        
+
 
     (custom-theme-set-faces
      'omtose-softer
@@ -539,6 +539,18 @@
                                                   (,t-class (:foreground ,t-dark4))))
      `(eshell-prompt                             ((,class (:foreground ,neutral_blue :weight bold))
                                                   (,t-class (:foreground ,t-neutral_blue :weight bold))))
+
+     ;; ERT
+     `(ert-test-result-expected                  ((,class (:foreground ,light1 :background ,dark_green))
+                                                  (,t-class (:foreground ,t-light1 :background ,t-dark_green))))
+     `(ert-test-result-unexpected                ((,class (:foreground ,light1 :background ,dark_red))
+                                                  (,t-class (:foreground ,t-light1 :background ,t-dark_red))))
+
+     ;; Evil
+     `(evil-search-highlight-persist-highlight-face ((,class (:foreground ,dark3 :background ,bright_yellow))
+                                                     (,t-class (:foreground ,t-dark3 :background ,t-bright_yellow))))
+     `(evil-ex-substitute-replacement             ((,class (:foreground ,delimiter-one))
+                                                   (,t-class (:foreground ,t-delimiter-one))))
 
      ;; Flycheck
      `(flycheck-error-list-checker-name          ((,class (:foreground ,neutral_blue))
@@ -1346,7 +1358,7 @@
                      ,neutral_purple ,bright_purple
                      ,neutral_cyan ,bright_cyan
                      ,light0_soft ,light3))
-                     
+
 
     ;; TODO:
     ;; Add these modes:
@@ -1369,8 +1381,8 @@
       `(xterm-color-names [,dark3 ,neutral_red ,neutral_green ,neutral_yellow ,neutral_blue ,dark_purple ,neutral_cyan ,light3])
       `(xterm-color-names-bright
         [,dark4 ,bright_red ,bright_green ,bright_yellow ,bright_blue ,bright_purple ,bright_cyan ,light4]))))
-     
-    
+
+
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)

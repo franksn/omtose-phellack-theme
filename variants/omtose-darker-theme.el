@@ -540,6 +540,12 @@
      `(eshell-prompt                             ((,class (:foreground ,neutral_blue :weight bold))
                                                   (,t-class (:foreground ,t-neutral_blue :weight bold))))
 
+     ;; Evil
+     `(evil-search-highlight-persist-highlight-face ((,class (:foreground ,dark3 :background ,bright_yellow))
+                                                     (,t-class (:foreground ,t-dark3 :background ,t-bright_yellow))))
+     `(evil-ex-substitute-replacement             ((,class (:foreground ,delimiter-one))
+                                                   (,t-class (:foreground ,t-delimiter-one))))
+
      ;; Flycheck
      `(flycheck-error-list-checker-name          ((,class (:foreground ,neutral_blue))
                                                   (,t-class (:foreground ,t-neutral_blue))))
