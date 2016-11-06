@@ -80,12 +80,12 @@
                                 'default))
        (class '((class color) (min-colors 257)))
         ;; GUI color definition
-       (dark0_hard      "#1F242E")
-       (dark0           "#2B3240")
-       (dark0_soft      "#303847")
+       (dark0_hard      "#1E232B")
+       (dark0           "#272D38")
+       (dark0_soft      "#2C3440")
        (dark1           "#343C4D")
        (dark2           "#374052")
-       (dark3           "#414C61")
+       (dark3           "#404B5C")
        (dark4           "#666B88")
 
        (light0_hard     "#C1CADE")
