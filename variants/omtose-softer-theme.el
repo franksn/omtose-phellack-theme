@@ -227,8 +227,8 @@
                                                   (,t-class (:foreground ,t-light0_hard :background ,t-dark_red))))
 
      ;; Built-in syntax
-     `(font-lock-builtin-face                    ((,class (:foreground ,bright_cyan :weight bold))
-                                                  (,t-class (:foreground ,t-bright_cyan :weight bold))))
+     `(font-lock-builtin-face                    ((,class (:foreground ,bright_cyan))
+                                                  (,t-class (:foreground ,t-bright_cyan))))
      `(font-lock-constant-face                   ((,class (:foreground ,neutral_red))
                                                   (,t-class (:foreground ,t-neutral_red))))
      `(font-lock-comment-face                    ((,class (:foreground ,dark4 :background ,dark0 :slant italic))
@@ -237,8 +237,8 @@
                                                   (,t-class (:inherit font-lock-comment-face))))
      `(font-lock-doc-string-face                 ((,class (:inherit font-lock-string-face :slant italic))
                                                   (,t-class (:inherit font-lock-string-face :slant italic))))
-     `(font-lock-function-name-face              ((,class (:foreground ,neutral_red))
-                                                  (,t-class (:foreground ,t-neutral_red))))
+     `(font-lock-function-name-face              ((,class (:foreground ,light1 :weight bold))
+                                                  (,t-class (:foreground ,t-light1 :weight bold))))
      `(font-lock-keyword-face                    ((,class (:foreground ,neutral_blue :weight bold))
                                                   (,t-class (:foreground ,t-neutral_blue :weight bold))))
      `(font-lock-negation-char-face              ((,class (:foreground ,dark4))
@@ -251,8 +251,8 @@
                                                   (,t-class (:foreground ,t-neutral_green))))
      `(font-lock-type-face                       ((,class (:foreground ,neutral_purple :italic t))
                                                   (,t-class (:foreground ,t-neutral_purple :italic t))))
-     `(font-lock-variable-name-face              ((,class (:foreground ,bright_yellow))
-                                                  (,t-class (:foreground ,t-bright_yellow))))
+     `(font-lock-variable-name-face              ((,class (:foreground ,light3))
+                                                  (,t-class (:foreground ,t-light3))))
      `(font-lock-warning-face                    ((,class (:foreground ,neutral_yellow :bold t))
                                                   (,t-class (:foreground ,t-neutral_yellow :bold t))))
 
