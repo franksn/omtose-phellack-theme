@@ -178,7 +178,7 @@
        (t-white           "#EEEEEE")
        (t-black           "#4D4D4D")
        (t-match           "#AFD7FF"))
-        
+
 
     (custom-theme-set-faces
      'omtose-darker
@@ -228,8 +228,8 @@
 
      ;; Built-in syntax
 ;; Built-in syntax
-     `(font-lock-builtin-face                    ((,class (:foreground ,bright_cyan))
-                                                  (,t-class (:foreground ,t-bright_cyan))))
+     `(font-lock-builtin-face                    ((,class (:foreground ,neutral_red))
+                                                  (,t-class (:foreground ,t-neutral_red))))
      `(font-lock-constant-face                   ((,class (:foreground ,neutral_red))
                                                   (,t-class (:foreground ,t-neutral_red))))
      `(font-lock-comment-face                    ((,class (:foreground ,dark4 :background ,dark0 :slant italic))
@@ -246,21 +246,21 @@
                                                   (,t-class (:foreground ,t-dark4))))
      `(font-lock-preprocessor-face               ((,class (:foreground ,neutral_red))
                                                   (,t-class (:foreground ,t-neutral_red))))
-     `(font-lock-reference-face                  ((,class (:foreground ,light1))
-                                                  (,t-class (:foreground ,light1))))
+     `(font-lock-reference-face                  ((,class (:foreground ,light3))
+                                                  (,t-class (:foreground ,light3))))
      `(font-lock-string-face                     ((,class (:foreground ,neutral_green))
                                                   (,t-class (:foreground ,t-neutral_green))))
      `(font-lock-type-face                       ((,class (:foreground ,neutral_purple :italic t))
                                                   (,t-class (:foreground ,t-neutral_purple :italic t))))
-     `(font-lock-variable-name-face              ((,class (:foreground ,light3))
-                                                  (,t-class (:foreground ,t-light3))))
+     `(font-lock-variable-name-face              ((,class (:foreground ,neutral_cyan))
+                                                  (,t-class (:foreground ,t-neutral_cyan))))
      `(font-lock-warning-face                    ((,class (:foreground ,neutral_yellow :bold t))
                                                   (,t-class (:foreground ,t-neutral_yellow :bold t))))
      ;; Font lock extras
      `(clojure-keyword-face                      ((,class (:foreground ,neutral_blue))
                                                   (,t-class (:foreground ,t-neutral_blue))))
-     `(clojure-interop-method-face               ((,class (:foreground ,dark4))
-                                                  (,t-class (:foreground ,t-dark4))))
+     `(clojure-interop-method-face               ((,class (:foreground ,neutral_cyan))
+                                                  (,t-class (:foreground ,t-neutral_cyan))))
      `(elixir-atom-face                          ((,class (:foreground ,dark4 :weight bold))
                                                   (,t-class (:foreground ,t-dark4 :weight bold))))
      `(css-selector                              ((,class (:inherit font-lock-function-name-face))
@@ -1351,7 +1351,7 @@
                      ,neutral_purple ,bright_purple
                      ,neutral_cyan ,bright_cyan
                      ,light0_soft ,light3)))
-                     
+
 
     (custom-theme-set-variables
      'omtose-darker
@@ -1370,8 +1370,8 @@
      `(xterm-color-names [,dark3 ,neutral_red ,neutral_green ,neutral_yellow ,neutral_blue ,dark_purple ,neutral_cyan ,light3])
      `(xterm-color-names-bright
        [,dark4 ,bright_red ,bright_green ,bright_yellow ,bright_blue ,bright_purple ,bright_cyan ,light4])))
-     
-    
+
+
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
