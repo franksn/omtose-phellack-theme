@@ -4,7 +4,7 @@
 
 ;; Author: Alexander F. Adhyatma
 ;; URL: http:/github.com/franksn/omtose-darker/
-;; Version: 0.2.0
+;; Version: 0.3.0
 ;; Package-Requires: ((emacs "24"))
 ;; This theme is like the illegitimate son of Gruvbox and Cyberpunk
 ;;
@@ -80,51 +80,51 @@
                                 'default))
        (class '((class color) (min-colors 257)))
         ;; GUI color definition
-       (dark0_hard     "#1B2029")
+       (dark0_hard     "#15181F")
        (dark0          "#222833")
-       (dark0_soft     "#252C38")
+       (dark0_soft     "#272C38")
        (dark1          "#2B3240")
-       (dark2          "#2F3847")
-       (dark3          "#414E63")
+       (dark2          "#374052")
+       (dark3          "#4B5970")
        (dark4          "#555B77")
 
-       (light0_hard    "#BEC8DB")
-       (light0         "#ADB5C7")
-       (light0_soft    "#A3ACBF")
-       (light1         "#9CA6B8")
-       (light2         "#979EAD")
-       (light3         "#8E95A3")
-       (light4         "#838791")
+       (light0_hard    "#B6C3DB")
+       (light0         "#A5B0C7")
+       (light0_soft    "#9DA8BF")
+       (light1         "#91A2BF")
+       (light2         "#8E98AD")
+       (light3         "#8A93A6")
+       (light4         "#818BA1")
 
        (bright_red     "#E074DB")
        (bright_green   "#8BE8D8")
-       (bright_yellow  "#B2DEC1")
-       (bright_blue    "#75B5EB")
-       (bright_purple  "#9198EB")
+       (bright_yellow  "#ADE0BE")
+       (bright_blue    "#71B6F0")
+       (bright_purple  "#8991F0")
        (bright_cyan    "#C3C3E8")
 
         ;; Needs some work
-       (neutral_red    "#CC71D1")
-       (neutral_green  "#88D6CB")
-       (neutral_yellow "#C79474")
-       (neutral_blue   "#76A2D1")
-       (neutral_purple "#8F95D6")
-       (neutral_cyan   "#96A9D6")
+       (neutral_red    "#D569DB")
+       (neutral_green  "#85DED1")
+       (neutral_yellow "#D48C8C")
+       (neutral_blue   "#6BA2DB")
+       (neutral_purple "#8990E0")
+       (neutral_cyan   "#90A7DE")
 
        (dark_red       "#523C4F")
        (dark_green     "#435250")
        (dark_yellow    "#B6D6C4")
-       (dark_blue      "#384254")
+       (dark_blue      "#283142")
        (dark_purple    "#4A4B6B")
        (dark_cyan      "#545A69")
 
        (delimiter-one  "#BB4EB8")
        (delimiter-two  "#9CD9d0")
        (delimiter-three "#B6D4D4")
-       (delimiter-four "#727AAD")
+       (delimiter-four "#6E78BA")
 
        (white          "#C1CADE")
-       (black          "#4D4D4D")
+       (med_dark       "#666B88")
        (match          "#A1F0E3")
        (mline          "#393C5C")
 
@@ -177,6 +177,7 @@
 
        (t-white           "#EEEEEE")
        (t-black           "#4D4D4D")
+       (t-med_dark        "#666666")
        (t-match           "#AFD7FF"))
 
 
@@ -193,24 +194,24 @@
      `(link-visited                              ((,class (:foreground ,bright_red :underline t))
                                                   (,t-class (:foreground ,t-bright_red :underline t))))
 
-     `(mode-line                                 ((,class (:foreground ,light0_soft :background ,dark_blue :height 0.9
+     `(mode-line                                 ((,class (:foreground ,light1 :background ,dark_blue :height 0.9
                                                                        :box (:line-width 3 :color ,dark_blue))))
-                                                 (,t-class (:foreground ,t-light0_soft :background ,t-dark_blue :height 0.9
+                                                 (,t-class (:foreground ,t-light1 :background ,t-dark_blue :height 0.9
                                                                         :box (:line-width 3 :color ,dark_blue))))
      `(mode-line-inactive                        ((,class (:foreground ,light3 :height 0.9 :background ,dark0_soft :height 0.9
                                                                        :box (:line-width 3 :color ,dark0_hard))))
                                                  (,t-class (:foreground ,t-light3 :background ,t-dark0_soft :height 0.9
                                                                         :box (:line-width 3 :color ,dark0_soft))))
-     `(mode-line-buffer-id                       ((,class (:bold t :foreground ,bright_red))
-                                                  (,t-class (:bold t :foreground ,t-bright_red))))
+     `(mode-line-buffer-id                       ((,class (:bold t :foreground ,light1))
+                                                  (,t-class (:bold t :foreground ,t-light1))))
      `(fringe                                    ((,class (:background ,dark0))
                                                   (,t-class (:background ,t-dark0))))
      `(linum                                     ((,class (:foreground ,dark4 :background ,dark0))
                                                   (,t-class (:foreground ,t-dark4 :background ,t-dark0))))
      `(hl-line                                   ((,class (:background ,dark0_hard))
                                                   (,t-class (:background ,t-dark0_hard))))
-     `(region                                    ((,class (:background ,dark_blue :distant-foreground ,light0))
-                                                  (,t-class (:background ,t-dark_blue :distant-foreground ,t-light0))))
+     `(region                                    ((,class (:background ,dark1 :distant-foreground ,bright_blue))
+                                                  (,t-class (:background ,t-dark1 :distant-foreground ,t-bright_blue))))
      `(secondary-selection                       ((,class (:background ,mline :foreground ,light0_hard))
                                                   (,t-class (:background ,t-dark2 :foreground ,t-light0_hard))))
      `(cua-rectangle                             ((,class (:background ,dark_blue))
@@ -227,33 +228,32 @@
                                                   (,t-class (:foreground ,t-light0_hard :background ,t-dark_red))))
 
      ;; Built-in syntax
-;; Built-in syntax
      `(font-lock-builtin-face                    ((,class (:foreground ,neutral_red))
                                                   (,t-class (:foreground ,t-neutral_red))))
-     `(font-lock-constant-face                   ((,class (:foreground ,neutral_red))
-                                                  (,t-class (:foreground ,t-neutral_red))))
+     `(font-lock-constant-face                   ((,class (:foreground ,neutral_green))
+                                                  (,t-class (:foreground ,t-neutral_green))))
      `(font-lock-comment-face                    ((,class (:foreground ,dark4 :background ,dark0 :slant italic))
                                                   (,t-class (:foreground ,t-dark4 :background ,t-dark0 :slant italic))))
-     `(font-lock-doc-face                        ((,class (:inherit font-lock-comment-face))
-                                                  (,t-class (:inherit font-lock-comment-face))))
+     `(font-lock-doc-face                        ((,class (:foreground ,med_dark :slant italic))
+                                                  (,t-class (:foreground ,t-med_dark :slant italic))))
      `(font-lock-doc-string-face                 ((,class (:inherit font-lock-string-face :slant italic))
                                                   (,t-class (:inherit font-lock-string-face :slant italic))))
-     `(font-lock-function-name-face              ((,class (:foreground ,light1 :weight bold))
-                                                  (,t-class (:foreground ,t-light1 :weight bold))))
+     `(font-lock-function-name-face              ((,class (:foreground ,light0_soft))
+                                                  (,t-class (:foreground ,t-light0_soft))))
      `(font-lock-keyword-face                    ((,class (:foreground ,neutral_blue :weight bold))
                                                   (,t-class (:foreground ,t-neutral_blue :weight bold))))
      `(font-lock-negation-char-face              ((,class (:foreground ,dark4))
                                                   (,t-class (:foreground ,t-dark4))))
-     `(font-lock-preprocessor-face               ((,class (:foreground ,neutral_red))
-                                                  (,t-class (:foreground ,t-neutral_red))))
-     `(font-lock-reference-face                  ((,class (:foreground ,light3))
-                                                  (,t-class (:foreground ,light3))))
-     `(font-lock-string-face                     ((,class (:foreground ,neutral_green))
-                                                  (,t-class (:foreground ,t-neutral_green))))
-     `(font-lock-type-face                       ((,class (:foreground ,neutral_purple :italic t))
-                                                  (,t-class (:foreground ,t-neutral_purple :italic t))))
-     `(font-lock-variable-name-face              ((,class (:foreground ,neutral_cyan))
-                                                  (,t-class (:foreground ,t-neutral_cyan))))
+     `(font-lock-preprocessor-face               ((,class (:foreground ,neutral_purple))
+                                                  (,t-class (:foreground ,t-neutral_purple))))
+     `(font-lock-reference-face                  ((,class (:foreground ,light4))
+                                                  (,t-class (:foreground ,light4))))
+     `(font-lock-string-face                     ((,class (:foreground ,light1))
+                                                  (,t-class (:foreground ,t-light1))))
+     `(font-lock-type-face                       ((,class (:foreground ,bright_blue :italic t))
+                                                  (,t-class (:foreground ,t-bright_blue :italic t))))
+     `(font-lock-variable-name-face              ((,class (:foreground ,light0_soft))
+                                                  (,t-class (:foreground ,t-light0_soft))))
      `(font-lock-warning-face                    ((,class (:foreground ,neutral_yellow :bold t))
                                                   (,t-class (:foreground ,t-neutral_yellow :bold t))))
      ;; Font lock extras
@@ -362,6 +362,10 @@
      `(avy-goto-char-timer-face                  ((,class (:inherit    highlight))
                                                   (,t-class (:inherit    highlight))))
 
+     ;; C
+     `(c-nonbreakable-space-face                 ((,class (:background ,neutral_yellow :foreground ,dark0))
+                                                  (,t-class (:background ,t-neutral_yellow :foreground ,t-dark0))))
+
      ;;Clojure-test-mode
      `(clojure-test-failure-face                 ((,class (:foreground ,dark_yellow :weight bold :underline t))
                                                   (,t-class (:foreground ,t-dark_yellow :weight bold :underline t))))
@@ -413,14 +417,14 @@
                                                   (,t-class (:foreground nil :background ,t-dark2))))
      `(company-scrollbar-bg                      ((,class (:foreground nil :background ,dark0_hard))
                                                   (,t-class (:foreground nil :background ,t-dark0_hard))))
-     `(company-tooltip                           ((,class (:foreground ,light0_hard :background ,dark1))
-                                                  (,t-class (:foreground ,t-light0_hard :background ,t-dark1))))
+     `(company-tooltip                           ((,class (:foreground ,light0_hard :background ,dark0_soft))
+                                                  (,t-class (:foreground ,t-light0_hard :background ,t-dark0_soft))))
      `(company-preview-common                    ((,class (:inherit font-lock-comment-face))
                                                   (,t-class (:inherit font-lock-comment-face))))
-     `(company-tooltip-common                    ((,class (:foreground ,light2 :background ,dark1))
-                                                  (,t-class (:foreground ,t-light2 :background ,t-dark1))))
-     `(company-tooltip-annotation                ((,class (:foreground ,dark4 :background ,dark1))
-                                                  (,t-class (:foreground ,t-dark4 :background ,t-dark1))))
+     `(company-tooltip-common                    ((,class (:foreground ,light2 :background ,dark0_soft))
+                                                  (,t-class (:foreground ,t-light2 :background ,t-dark0_soft))))
+     `(company-tooltip-annotation                ((,class (:foreground ,dark4 :background ,dark0_soft))
+                                                  (,t-class (:foreground ,t-dark4 :background ,t-dark0_soft))))
      `(company-tooltip-annotation-selection      ((,class (:foreground ,bright_blue :background ,dark_blue))
                                                   (,t-class (:foreground ,t-bright_blue :background ,t-dark_blue))))
      `(company-tooltip-common-selection          ((,class (:foreground ,neutral_red :background ,dark_blue))
@@ -499,12 +503,12 @@
      ;; Elfeed
      `(elfeed-search-date-face                   ((,class (:foreground ,light2))
                                                   (,t-class (:foreground ,t-light2))))
-     `(elfeed-search-feed-face                   ((,class (:foreground ,neutral_blue))
-                                                  (,t-class (:foreground ,t-neutral_blue))))
+     `(elfeed-search-feed-face                   ((,class (:foreground ,neutral_red))
+                                                  (,t-class (:foreground ,t-neutral_red))))
      `(elfeed-search-tag-face                    ((,class (:foreground ,light4))
                                                   (,t-class (:foreground ,t-light4))))
-     `(elfeed-search-title-face                  ((,class (:foreground ,neutral_red))
-                                                  (,t-class (:foreground ,t-neutral_red))))
+     `(elfeed-search-title-face                  ((,class (:foreground ,light1))
+                                                  (,t-class (:foreground ,t-light1))))
 
      ;; elscreen
      `(elscreen-tab-background-face              ((,class (:background ,dark0 :box nil))
@@ -623,7 +627,7 @@
                                                   (,t-class (:foreground ,t-neutral_blue))))
      `(helm-ff-invalid-symlink                   ((,class (:foreground ,white :background ,bright_red))
                                                   (,t-class (:foreground ,t-white :background ,t-bright_red))))
-     `(helm-ff-prefix                            ((,class (:foreground ,black :background ,neutral_yellow))
+     `(helm-ff-prefix                            ((,class (:foreground ,med_dark :background ,neutral_yellow))
                                                   (,t-class (:foreground ,t-black :background ,t-neutral_yellow))))
      `(helm-ff-symlink                           ((,class (:foreground ,neutral_yellow))
                                                   (,t-class (:foreground ,t-neutral_yellow))))
@@ -645,7 +649,7 @@
                                                   (,t-class (:foreground ,t-dark_blue))))
      `(helm-helper                               ((,class (:foreground ,neutral_yellow))
                                                   (,t-class (:foreground ,t-neutral_yellow))))
-     `(helm-history-deleted                      ((,class (:foreground ,black :background ,bright_red))
+     `(helm-history-deleted                      ((,class (:foreground ,med_dark :background ,bright_red))
                                                   (,t-class (:foreground ,t-black :background ,t-bright_red))))
      `(helm-history-remote                       ((,class (:foreground ,neutral_red))
                                                   (,t-class (:foreground ,t-neutral_red))))
@@ -675,7 +679,7 @@
                                                   ((,t-class (:foreground ,t-light1 :background ,t-dark_blue)))))
      `(helm-swoop-target-word-face               ((,class (:foreground ,light0_hard :background ,dark_green))
                                                   (,t-class (:foreground ,t-light0_hard :background ,t-dark_green))))
-     `(helm-visible-mark                         ((,class (:foreground ,black :background ,light3))
+     `(helm-visible-mark                         ((,class (:foreground ,med_dark :background ,light3))
                                                   (,t-class (:foreground ,t-black :background ,t-light3))))
 
      ;; Highlight indentation mode
@@ -685,8 +689,8 @@
                                                   (,t-class (:background ,t-dark1))))
 
      ;; Highlight-numbers
-     `(highlight-numbers-number                  ((,class (:background ,dark0_hard :foreground ,bright_purple :bold nil))
-                                                  (,t-class (:background ,t-dark0_hard :foreground ,t-light0_hard :bold nil))))
+     `(highlight-numbers-number                  ((,class (:background ,dark0 :foreground ,neutral_yellow :bold nil))
+                                                  (,t-class (:background ,t-dark0 :foreground ,t-neutral_yellow :bold nil))))
 
      ;; Highlight-symbol
      `(highlight-symbol-face                     ((,class (:background ,dark4 :foreground ,bright_green))
@@ -705,10 +709,10 @@
                                                   (,t-class (:foreground ,t-neutral_green))))
 
      ;; Ido
-     `(ido-first-match                           ((,class (:foreground ,delimiter-one :background ,dark0_hard))
-                                                  (,t-class (:foreground ,t-delimiter-one :background ,t-dark0_hard))))
-     `(ido-incomplete-regexp                     ((,class (:foreground ,neutral_red :weight bold))
-                                                  (,t-class (:foreground ,t-bright_red :weight bold))))
+     `(ido-first-match                           ((,class (:foreground ,neutral_red :background ,dark0_hard))
+                                                  (,t-class (:foreground ,t-neutral_red :background ,t-dark0_hard))))
+     `(ido-incomplete-regexp                     ((,class (:foreground ,neutral_yellow :weight bold))
+                                                  (,t-class (:foreground ,t-neutral_yellow :weight bold))))
      `(ido-only-match                            ((,class (:foreground ,bright_blue))
                                                   (,t-class (:foreground ,t-bright_blue))))
      `(ido-subdir                                ((,class (:foreground ,dark4))
@@ -723,22 +727,26 @@
                                                   (,t-class (:foreground ,t-neutral_cyan))))
 
      ;; ivy
-     `(ivy-confirm-face                          ((,class (:foreground ,delimiter-one))
-                                                  (,t-class (:foreground ,t-delimiter-one))))
+     `(ivy-action                                ((,class (:foreground ,dark4))
+                                                  (,t-class (:foreground ,t-dark4))))
+     `(ivy-confirm-face                          ((,class (:foreground ,bright_green))
+                                                  (,t-class (:foreground ,t-bright_green))))
      `(ivy-current-match                         ((,class (:foreground ,light0_hard :background ,dark_blue))
                                                   (,t-class (:foreground ,t-light0_hard :background ,t-dark_blue))))
-     `(ivy-match-required-face                   ((,class (:foreground ,neutral_green))
-                                                  (,t-class (:foreground ,neutral_green))))
+     `(ivy-match-required-face                   ((,class (:foreground ,neutral_yellow))
+                                                  (,t-class (:foreground ,neutral_yellow))))
      `(ivy-minibuffer-match-face-1               ((,class (:foreground ,light3))
                                                   (,t-class (:foreground ,t-light3))))
-     `(ivy-minibuffer-match-face-2               ((,class (:foreground ,delimiter-one))
-                                                  (,t-class (:foreground ,t-delimiter-one))))
+     `(ivy-minibuffer-match-face-2               ((,class (:foreground ,bright_green))
+                                                  (,t-class (:foreground ,t-bright_green))))
      `(ivy-minibuffer-match-face-3               ((,class (:foreground ,neutral_red))
                                                   (,t-class (:foreground ,t-neutral_red))))
      `(ivy-minibuffer-match-face-4               ((,class (:foreground ,neutral_blue))
                                                   (,t-class (:foreground ,t-neutral_blue))))
      `(ivy-remote                                ((,class (:foreground ,neutral_yellow))
                                                   (,t-class (:foreground ,t-neutral_yellow))))
+     `(ivy-virtual                               ((,class (:foreground ,dark4))
+                                                  (,t-class (:foreground ,t-dark4))))
 
      ;; Js2
      `(js2-warning                               ((,class (:underline (:color ,bright_yellow :style wave)))
@@ -753,14 +761,14 @@
                                                   (,t-class (:foreground ,t-light4 :background nil))))
      `(js2-jsdoc-value                           ((,class (:foreground ,dark4 :background nil))
                                                   (,t-class (:foreground ,t-dark4 :background nil))))
-     `(js2-function-param                        ((,class (:foreground ,bright_cyan :background nil))
-                                                  (,t-class (:foreground ,t-bright_cyan :background nil))))
+     `(js2-function-param                        ((,class (:foreground ,neutral_cyan :background nil))
+                                                  (,t-class (:foreground ,t-neutral_cyan :background nil))))
      `(js2-function-call                         ((,class (:foreground ,bright_blue :background nil))
                                                   (,t-class (:foreground ,t-bright_blue :background nil))))
      `(js2-instance-member                       ((,class (:foreground ,bright_blue :background nil))
                                                   (,t-class (:foreground ,t-bright_blue :background nil))))
-     `(js2-private-member                        ((,class (:foreground ,neutral_yellow :background nil))
-                                                  (,t-class (:foreground ,t-neutral_yellow :background nil))))
+     `(js2-private-member                        ((,class (:foreground ,neutral_cyan :background nil))
+                                                  (,t-class (:foreground ,t-neutral_cyan :background nil))))
      `(js2-private-function-call                 ((,class (:foreground ,neutral_red :background nil))
                                                   (,t-class (:foreground ,t-neutral_red :background nil))))
      `(js2-jsdoc-html-tag-name                   ((,class (:foreground ,neutral_blue :background nil))
@@ -959,7 +967,7 @@
      ;; Matches and Isearch
      `(lazy-highlight                            ((,class (:foreground ,light0 :background ,dark1))
                                                   (,t-class (:foreground ,t-light0 :background ,t-dark1))))
-     `(highlight                                 ((,class (:foreground ,light0_hard :background ,dark_blue))
+     `(highlight                                 ((,class (:foreground ,bright_blue :background ,dark1))
                                                   (,t-class (:foreground ,t-light0_hard :background ,t-dark_blue))))
      `(match                                     ((,class (:foreground ,light0 :background ,dark2))
                                                   (,t-class (:foreground ,t-light0 :background ,t-dark2))))
@@ -1097,7 +1105,7 @@
                                                   (,t-class (:background ,t-dark0_hard :underline t :weight bold))))
      `(org-mode-line-clock                       ((,class (:foreground ,light2 :background ,dark0))
                                                   (,t-class (:foreground ,t-light2 :background ,t-dark0))))
-     `(org-mode-line-clock-overrun               ((,class (:foreground ,black :background ,bright_red))
+     `(org-mode-line-clock-overrun               ((,class (:foreground ,med_dark :background ,bright_red))
                                                   (,t-class (:foreground ,t-black :background ,t-bright_red))))
      `(org-ellipsis                              ((,class (:foreground ,bright_yellow :underline t))
                                                   (,t-class (:foreground ,t-bright_yellow :underline t))))
@@ -1248,12 +1256,12 @@
                                                   (,t-class (:background ,t-dark1))))
      `(swiper-match-face-1                       ((,class (:weight bold :foreground ,bright_blue))
                                                   (,t-class (:weight bold :foreground ,t-bright_blue))))
-     `(swiper-match-face-2                       ((,class (:weight bold :foreground ,neutral_red))
+     `(swiper-match-face-2                       ((,class (:weight bold :foreground ,bright_green))
+                                                  (,t-class (:weight bold :foreground ,t-bright_green))))
+     `(swiper-match-face-3                       ((,class (:weight bold :foreground ,neutral_red))
                                                   (,t-class (:weight bold :foreground ,t-neutral_red))))
-     `(swiper-match-face-3                       ((,class (:weight bold :foreground ,neutral_green))
-                                                  (,t-class (:weight bold :foreground ,t-neutral_green))))
-     `(swiper-match-face-4                       ((,class (:weight bold :foreground ,neutral_green))
-                                                  (,t-class (:weight bold :foreground ,t-neutral_green))))
+     `(swiper-match-face-4                       ((,class (:weight bold :foreground ,neutral_yellow))
+                                                  (,t-class (:weight bold :foreground ,t-neutral_yellow))))
 
      ;; Term
      `(term-color-black                          ((,class (:foreground ,dark1))
@@ -1290,14 +1298,18 @@
                                     (,t-class (:inherit ,font-lock-function-name-face))))
      `(web-mode-html-attr-name-face ((,class (:foreground ,neutral_red))
                                      (,t-class (:foreground ,t-neutral_red))))
-     `(web-mode-html-attr-value-face ((,class (:foreground ,neutral_blue))
-                                      (,t-class (:foreground ,t-neutral_blue))))
-     `(web-mode-html-tag-face ((,class (:foreground ,bright_cyan))
-                               (,t-class (:foreground ,t-bright_cyan))))
+     `(web-mode-html-attr-value-face ((,class (:foreground ,light0_hard))
+                                      (,t-class (:foreground ,t-light0_hard))))
+     `(web-mode-html-tag-face ((,class (:foreground ,neutral_cyan))
+                               (,t-class (:foreground ,t-neutral_cyan))))
+     `(web-mode-json-key-face ((,class (:inherit ,font-lock-preprocessor-face))
+                               (,t-class (:inherit ,font-lock-preprocessor-face))))
+     `(web-mode-json-string-face ((,class (:inherit ,font-lock-string-face))
+                                  (,t-class (:inherit ,font-lock-string-face))))
      `(web-mode-keyword-face ((,class (:foreground ,neutral_blue))
                               (,t-class (:foreground ,t-neutral_blue))))
-     `(web-mode-string-face ((,class (:foreground ,neutral_green))
-                             (,t-class (:foreground ,t-neutral_green))))
+     `(web-mode-string-face ((,class (:inherit ,font-lock-string-face))
+                             (,t-class (:inherit ,font-lock-string-face))))
      `(web-mode-type-face ((,class (:inherit ,font-lock-type-face))
                            (,t-class (:inherit ,font-lock-type-face))))
      `(web-mode-warning-face ((,class (:inherit ,font-lock-warning-face))
@@ -1350,7 +1362,7 @@
                      ,neutral_blue ,bright_blue
                      ,neutral_purple ,bright_purple
                      ,neutral_cyan ,bright_cyan
-                     ,light0_soft ,light3)))
+                     ,light1 ,light0_hard)))
 
 
     (custom-theme-set-variables
@@ -1366,10 +1378,10 @@
                                 ,neutral_blue
                                 ,dark_purple
                                 ,neutral_cyan
-                                ,light3])
-     `(xterm-color-names [,dark3 ,neutral_red ,neutral_green ,neutral_yellow ,neutral_blue ,dark_purple ,neutral_cyan ,light3])
+                                ,light1])
+     `(xterm-color-names [,dark3 ,neutral_red ,neutral_green ,neutral_yellow ,neutral_blue ,dark_purple ,neutral_cyan ,light1])
      `(xterm-color-names-bright
-       [,dark4 ,bright_red ,bright_green ,bright_yellow ,bright_blue ,bright_purple ,bright_cyan ,light4])))
+       [,dark4 ,bright_red ,bright_green ,bright_yellow ,bright_blue ,bright_purple ,bright_cyan ,light0_hard])))
 
 
 
