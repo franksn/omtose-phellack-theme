@@ -1,6 +1,6 @@
 ;;; omtose-darker-theme.el --- A dark, soothing theme with a cold bluish touch.
 
-;; Created 2016 by Alexander F. Adhyatma
+;; Copyright (c) 2016 Alexander F. Adhyatma
 
 ;; Author: Alexander F. Adhyatma
 ;; URL: http:/github.com/franksn/omtose-darker/
